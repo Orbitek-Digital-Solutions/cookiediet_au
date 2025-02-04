@@ -1,3 +1,4 @@
+httpRoot: ""
 sass:
   # Source *.scss files to build.
   # @see gulpfiles/styles.js

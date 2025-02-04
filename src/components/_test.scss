@@ -18,5 +18,9 @@ div[data-id="5505065910426"] .price-item--last:after {
 }
 
 h1 {
-  color: blue;
+  color: red;
+
+  @include respond-to(tablet-portrait-up) {
+    color: blue;
+  }
 }

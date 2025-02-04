@@ -9,9 +9,6 @@ import yaml from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
 
-const sass = require('gulp-sass')(require('node-sass'));
-
-
 let config = {};
 try {
   // At this stage we are only using one gulpfile.yml.
@@ -43,23 +40,5 @@ config.sassOptions = {
     }
   }
 };
-
-// We want to watch/lint all the js files provided in gulpfile.yml.
-let jsSrc = [
-  ...config.js.src
-];
-// Create a new array to exclude any files that might already be minified.
-let jsMin = jsSrc.map(f => '!' + f + '/**/*.min.js');
-// Now we can add the js files glob into the original array.
-jsSrc = jsSrc.map(f => f + '/**/*.js');
-
-// Combine the jsSrc and jsMin arrays to give us the full list of js files
-// to lint and minified files to ignore.
-config.jsFiles = [
-  ...jsSrc,
-  ...jsMin,
-  '!**/vendor/**/*.js',
-  '!**/components/responsive-iframe/jquery.responsiveiframe.js'
-];
 
 export default config;

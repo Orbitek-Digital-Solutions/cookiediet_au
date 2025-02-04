@@ -6,19 +6,15 @@
 'use strict';
 
 import gulp from 'gulp';
-import gulpSass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import sourcemaps from 'gulp-sourcemaps';
 import eyeglass from 'eyeglass';
 import autoprefixer from 'gulp-autoprefixer';
-import browserSync from 'browser-sync';
 import size from 'gulp-size';
-import NodeSass from 'node-sass';
 
 import config from './config';
-import * as clean from './clean';
 
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('node-sass'));
 
 
 // The scss files we are compiling.
@@ -38,12 +34,11 @@ const development = function() {
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.sass.dest))
-    .pipe(browserSync.stream({ match: '**/*.css' }));
+    .pipe(gulp.dest(config.sass.dest));
 };
 
 development.description = 'Output CSS and sourcemaps for development use only.';
-gulp.task('styles:development', gulp.series('clean:css', development));
+gulp.task('styles:development', gulp.series( development));
 
 /**
  * Outputs CSS only.
@@ -58,7 +53,7 @@ const production = function() {
 };
 
 production.description = 'Outputs CSS ready for production.';
-gulp.task('styles:production', gulp.series('clean:css', production));
+gulp.task('styles:production', gulp.series(production));
 
 // Export all functions.
 export { development, production };
