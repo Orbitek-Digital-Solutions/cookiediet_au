@@ -35,7 +35,7 @@ config.sassOptions = {
       // Add assets except for js, sass, and twig files.
       // The url passed to the sass asset-url() function should be relative to this directory.
       sources: [
-        { directory: config.sass.src, globOpts: { ignore: ['**/*.js', '**/*.scss', '**/*.twig'] }}
+        { directory: config.sass.src, globOpts: { ignore: ['**/*.js', '**/*.scss'] }}
       ]
     }
   }
