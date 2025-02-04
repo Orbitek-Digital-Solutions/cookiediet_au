@@ -13,7 +13,7 @@ import config from './config';
 // Define the globs to delete (or leave alone).
 let cleanFiles = {
   css: [
-    config.sass.dest + '/**/*.css',
+    config.sass.dest + '/theme.css',
     config.sass.dest + '/**/*.map',
   ]
 }

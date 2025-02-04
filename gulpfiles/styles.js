@@ -13,6 +13,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import size from 'gulp-size';
 
 import config from './config';
+import * as clean from './clean';
 
 const sass = require('gulp-sass')(require('node-sass'));
 
@@ -38,7 +39,7 @@ const development = function() {
 };
 
 development.description = 'Output CSS and sourcemaps for development use only.';
-gulp.task('styles:development', gulp.series( development));
+gulp.task('styles:development', gulp.series('clean:css', development));
 
 /**
  * Outputs CSS only.
@@ -53,7 +54,7 @@ const production = function() {
 };
 
 production.description = 'Outputs CSS ready for production.';
-gulp.task('styles:production', gulp.series(production));
+gulp.task('styles:production', gulp.series('clean:css', production));
 
 // Export all functions.
 export { development, production };
