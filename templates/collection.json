@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-2"
+      }
+    },
+    "73b584ba-a0ed-4d5e-91d1-c96b6698a722": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15930693714074__73b584ba-a0ed-4d5e-91d1-c96b6698a722-1666715330f2cbc894-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Cyber <span class=\"primary-light\">Monday</span> Special<br>\n<span class=\"primary-light\">$25 OFF</span> Our Best-Sellers",
+            "heading_size": "h0"
+          }
+        },
+        "5105da5a-312b-4cd8-a9b9-ed60b3d35489": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"text-center\">\n{% render 'countdown-timer', end_date: \"Nov 30, 2023\" %}\n</div>"
+          }
+        },
+        "liquid_GcebnB": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div>\n{% render 'countdown-timer', end_date: \"May 22, 2024\", title: '<span style=\"font-size: 2em;margin-bottom:10px !important;display:block\">Hurry, Cookie Frenzy Sale ends in:</span>' %}\n</div>"
+          }
+        },
+        "2d197347-7d60-46f1-a598-cbf53f021989": {
+          "type": "heading",
+          "settings": {
+            "heading": "Enjoy a sweet treat <span class=\"primary-light\">without the guilt</span>",
+            "heading_size": "h0"
+          }
+        },
+        "template--15930693714074__73b584ba-a0ed-4d5e-91d1-c96b6698a722-1666715330f2cbc894-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Cookie Diet is a convenient on-the-go snack that requires no preparation.<br/>Just take a bag of cookies with you for the day.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15930693714074__73b584ba-a0ed-4d5e-91d1-c96b6698a722-1666715330f2cbc894-0",
+        "5105da5a-312b-4cd8-a9b9-ed60b3d35489",
+        "liquid_GcebnB",
+        "2d197347-7d60-46f1-a598-cbf53f021989",
+        "template--15930693714074__73b584ba-a0ed-4d5e-91d1-c96b6698a722-1666715330f2cbc894-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 40
+      }
+    },
+    "61d68504-dd63-40d5-92c3-b7ab5b68c75f": {
+      "type": "collection-instructions",
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": true,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "7d121e15-839b-4f21-93ff-34174e16232c": {
+      "type": "customer-testimonials-slider",
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "title": "Real People. <span class=\"primary-light\">Real Results</span>.",
+        "heading_size": "h1"
+      }
+    },
+    "0ff72185-81b8-4121-9fc7-2391e712bc1c": {
+      "type": "text-with-video",
+      "blocks": {
+        "template--15960162599066__0ff72185-81b8-4121-9fc7-2391e712bc1c-1669083675ca6950dc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Convenience:</strong> An easy on-the-go snack that requires no preparation.</p><p><strong>Control Hunger:</strong> A special mix of proteins within the cookies that naturally suppresses your hunger.</p><p><strong>Continue:</strong> Once your goal weight is achieved, eat healthy meals and enjoy the cookies as a low-calorie snack</p><p><strong>Confirmation :</strong> This diet is not a fad, it has been going strong for the last 40 years.</p><p>They are just as delicious as your favourite cookies and come in four mouth-watering flavours: <strong>Chocolate brownie, Butterscotch, Maple Pancake, Cinnamon Oatmeal.</strong></p><p>For a fresh baked taste, pop them in the microwave for 5-10 seconds!</p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "template--15960162599066__0ff72185-81b8-4121-9fc7-2391e712bc1c-1669083675ca6950dc-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "38419924-4201-4b3c-934b-c4ae66a6b174": {
+          "type": "button",
+          "settings": {
+            "button_label": "Know More",
+            "button_link": "shopify://pages/weight-loss-plans"
+          }
+        }
+      },
+      "block_order": [
+        "template--15960162599066__0ff72185-81b8-4121-9fc7-2391e712bc1c-1669083675ca6950dc-1",
+        "template--15960162599066__0ff72185-81b8-4121-9fc7-2391e712bc1c-1669083675ca6950dc-2",
+        "38419924-4201-4b3c-934b-c4ae66a6b174"
+      ],
+      "settings": {
+        "cover_image": "shopify://shop_images/9News_Queensland-Father-John_News-Story_33b9fd5b-fac9-4b09-8a3f-235252fdae47.jpg",
+        "video_url": "https://youtu.be/EMhBzadzF80",
+        "description": "Brisbane father loses 50 kilos on 'cookie diet'",
+        "title": "Why Is <span class=\"primary-light\">Dr. Siegal’s Cookie Diet</span> So Effective?",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "b2d38c77-db8c-4b3b-bccd-4c938fb5c8fb": {
+      "type": "reviewsio-all",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "background-2"
+      }
+    },
+    "1bb106e0-7149-496a-9255-022d785e0ed8": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>MORE PROOF THAT THE COOKIE DIET<br><span class=\"primary-light\">HELPS ACHIEVE RESULTS</span></p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-heading-1",
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-text-1",
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "169166547590e8e306": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_6LMYiA": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_6LMYiA"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "c00c3651-0f85-425a-896a-c644a4754881": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'klaviyo-collection' %}",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "419d4194-7037-4c3b-b6e4-fb588c9017e3": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\"><h2>Meal Replacement to Lose Weight</h2>\n<p>What if we told you that you could lose weight by eating cookies? You’d probably think we were crazy, right? Wrong. We have a proven, specially formulated meal replacement plan to help you do it!<span id=\"dots\">...</span>\n</p>\n<div id=\"more\">\n\n<p>That’s where the Cookie Diet comes in – an effective meal replacement diet plan where you replace meals with low-calorie cookies. This diet is designed to help you lose weight with our delicious weight-loss cookies that are designed to suppress your appetite.</p>\n<p>With just 9 cookies a day, and a healthy dinner of protein and leafy greens, you can effectively suppress your hunger and lose weight to achieve your goal weight. Check out our delicious range today to become a new, healthier version of you!</p>\n<h2>Our Formulated Meal Replacements</h2>\n<p>Since 1975, Dr. Siegal’s Cookie Diet has helped over 6 million people reach their weight goals. This proven, three-step meal replacement diet plan works to control your hunger and suppress your appetite.</p>\n<p>The diet is simple to follow. During the weight-loss phase, we recommend having 9 of our weight-loss cookies each day, with 1-2 every 2 hours. Then finish the day with a simple, healthy dinner (500-700 calories).</p>\n<p>The cookies act as a hunger suppressant as they are made with a blend of natural proteins. Replacing your meals with these low-calorie snacks will help you to achieve your goal weight. Then once you’ve reached your goal, have 1-2 cookies between meals as a healthy snack to keep the weight off and avoid overeating.</p>\n<h2>Our Natural Hunger Suppressants in Australia</h2>\n<p>All of our cookies are freshly made right here in Sydney, using all-natural ingredients and no artificial flavours or sweeteners. We have a range of delicious flavours to choose from, with:</p>\n<ul>\n<li>    Butterscotch</li>\n<li>    Chocolate Brownie</li>\n<li>    Maple Pancakes</li>\n<li>    Cinnamon Oatmeal</li>\n</ul>\n<p>If you’re just starting out, why not sample our flavours with a <a href=\"https://www.cookiediet.com.au/products/1-week-supply\">1 week supply</a> in one of our Variety Boxes? Each box has 7 trays of 9 cookies for a total of 63 cookies per box.</p>\n<p>You can then increase your supply to last for 1 month, 2, 3 or 4 months. Our plan is entirely flexible – you can stock up with as little or as much as you need. Take a look through our range and get started today.</p>\n<h3>Get Set with Our Diet Plans Today</h3>\n<p>Still not sure about our hunger suppressants for weight loss? Check out what everyone’s been saying about our revolutionary Cookie Diet at our <a href=\"https://www.cookiediet.com.au/pages/reviews\">Reviews</a> page!</p>\n<p>For more information, give us a call on 1300 077 707 or get in touch at info@cookiediet.com.au. We’ll be with you every step of the way, and we’re always on hand to answer your questions and offer further tips and advice.</p>\n</div>\n<a onclick=\"readmorecontent()\" id=\"myBtn\">Read more</a><br>\n</div>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "b4764630-e308-4503-982b-3db9b126a626": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"application/ld+json\">\n{\n\"@context\": \"https://schema.org/\",\n\"@type\": \"Product\",\n\"name\": \"Diet Cookies\",\n\"image\": [\"https://www.cookiediet.com.au/cdn/shop/files/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png?crop=center&height=32&v=1690789045&width=32\"],\n\"description\": \"What if we told you that you could lose weight by eating cookies? You’d probably think we were crazy, right? Wrong. We have a proven, specially formulated meal replacement plan to help you do it!\",\n\"review\": {\n\"@type\": \"Review\",\n\"reviewBody\": \"love all the flavors, the only diet that work for me, down 10 pounds in 30 days\",\n\"reviewRating\": {\n\"@type\": \"Rating\",\n\"ratingValue\": \"5\",\n\"bestRating\": \"5\"\n},\n\"author\": {\n\"@type\": \"Person\",\n\"name\": \"Hanh P.\"\n}\n},\n\"aggregateRating\": {\n\"@type\": \"AggregateRating\",\n\"ratingValue\": \"4.8\",\n\"reviewCount\": \"1317\"\n}\n};\n</script>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "73b584ba-a0ed-4d5e-91d1-c96b6698a722",
+    "61d68504-dd63-40d5-92c3-b7ab5b68c75f",
+    "product-grid",
+    "7d121e15-839b-4f21-93ff-34174e16232c",
+    "0ff72185-81b8-4121-9fc7-2391e712bc1c",
+    "b2d38c77-db8c-4b3b-bccd-4c938fb5c8fb",
+    "1bb106e0-7149-496a-9255-022d785e0ed8",
+    "169166547590e8e306",
+    "c00c3651-0f85-425a-896a-c644a4754881",
+    "419d4194-7037-4c3b-b6e4-fb588c9017e3",
+    "b4764630-e308-4503-982b-3db9b126a626"
+  ]
+}

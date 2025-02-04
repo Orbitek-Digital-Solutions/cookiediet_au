@@ -1,0 +1,586 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#ff734c",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#4caf50",
+    "gradient_accent_2": "",
+    "colors_text": "#000",
+    "colors_outline_button_labels": "#ff734c",
+    "colors_background_1": "#fff",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "type_header_font": "helvetica_n4",
+    "heading_scale": 100,
+    "type_body_font": "raleway_n4",
+    "body_scale": 110,
+    "page_width": 1400,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 32,
+    "spacing_grid_vertical": 32,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 12,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": -12,
+    "buttons_shadow_vertical_offset": -12,
+    "buttons_shadow_blur": 0,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "card",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-1",
+    "card_border_thickness": 0,
+    "card_border_opacity": 0,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 0,
+    "card_shadow_blur": 20,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 0,
+    "media_border_opacity": 0,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "social_twitter_link": "https://twitter.com/CookieDietAus",
+    "social_facebook_link": "https://www.facebook.com/CookieDietAustralia",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://www.instagram.com/cookie.diet/",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https://www.youtube.com/channel/UCoaoyYdPy-41fIZjmNIeWmg/videos",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": false,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": true,
+    "favicon": "shopify://shop_images/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png",
+    "currency_code_enabled": true,
+    "cart_type": "drawer",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "checkout_logo_image": "shopify://shop_images/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_heading_font": "Lato",
+    "checkout_body_font": "Raleway",
+    "checkout_accent_color": "#1773b0",
+    "checkout_button_color": "#ff734c",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "custom_liquid": "",
+              "color_scheme": "background-1",
+              "link": ""
+            }
+          },
+          "cfd42ce2-124b-4dad-98b9-7b493acbfdb3": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "<span style=\"font-weight: bold\">Get 2024 off to a great start with 10% OFF</span>",
+              "custom_liquid": "",
+              "color_scheme": "inverse",
+              "link": "https://www.cookiediet.com.au/discount/EOFYDEAL?redirect=/collections/all"
+            }
+          },
+          "9f357e81-9f32-4d93-92c0-d71597523a35": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "⏳ Ending soon: <span style=\"font-weight: bold\">Get 2024 off to a great start with 10% OFF 🤑</span>",
+              "custom_liquid": "{% comment %} {% if template == 'index' %}<div class=\"text-center\">\n{% render 'countdown-timer', end_date: \"Jan 15, 2024\" %}\n</div>\n{% endif %}\n{% endcomment %}",
+              "color_scheme": "background-2",
+              "link": "shopify://collections/all"
+            }
+          },
+          "25a7df9d-9b7a-4cdd-b33c-f303dd85f840": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "<p class=\"h2 m-0\">2 Week Supply<span class=\"primary-light\"> ONLY $99</span> RRP $159.90</p>",
+              "custom_liquid": "",
+              "color_scheme": "inverse",
+              "link": ""
+            }
+          },
+          "announcement_YabAg9": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "🇦🇺 Happy Australia Day<br class=\"visible-xs\"> <span style=\"color:#F1B730\">10% OFF</span> Min. Spend $99 🇦🇺",
+              "custom_liquid": "{% unless product %}\n<div class=\"text-center\">\n{% render 'countdown-timer', end_date: \"Jan 29, 2024\" %}\n</div>\n{% endunless %}",
+              "color_scheme": "background-2",
+              "link": "shopify://products/variety-pack"
+            }
+          },
+          "announcement_aNAL8m": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "",
+              "custom_liquid": "{% if localization.country.iso_code == \"AU\" %}\n📦 Winter offer - free shipping from 8-17th July!\n{% unless product %}\n{% render 'countdown-timer', end_date: 'Jul 17, 2024' %}\n{% endunless %}\n{% endif %}",
+              "color_scheme": "accent-2",
+              "link": "shopify://collections/all"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "cfd42ce2-124b-4dad-98b9-7b493acbfdb3",
+          "9f357e81-9f32-4d93-92c0-d71597523a35",
+          "25a7df9d-9b7a-4cdd-b33c-f303dd85f840",
+          "announcement_YabAg9",
+          "announcement_aNAL8m"
+        ],
+        "custom_css": [
+          ".announcement-bar__link {text-align: center; line-height: 1.6em;}",
+          ".announcement-bar {font-weight: 600; line-height: 1.4; background: #3c9edb; text-transform: uppercase;}",
+          ".announcement-bar .timer {transform: scale(0.8); transform-origin: center;}",
+          ".announcement-bar .announcement-bar__message {font-size: 1.2em; font-weight: bold;}"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "custom_css": [],
+        "settings": {
+          "color_scheme": "background-2",
+          "logo": "{{ shop.brand.logo }}",
+          "logo_width": 130,
+          "logo_position": "top-left",
+          "menu": "main-menu-new",
+          "menu_type_desktop": "none",
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "margin_bottom": 0,
+          "padding_top": 8,
+          "padding_bottom": 8
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "32e3553f-72b8-4224-a280-1e522e5964ff": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Office Address",
+              "custom_liquid": "<p>16/2B Mavis St<br>Revesby NSW 2212</p>\n<p>Ph: <a href=\"tel:1300077707\">1300 077 707</a> | (<a href=\"tel:+61297731526\">+61 2 9773 1526</a>)<br>Fax: +61 2 9771 5164</p>\n\n<h3>Join Us</h3>\n<p style=\"margin-bottom: 0\">Enter your email address for an instant $10 Welcome Coupon ☺️</p>\n<div class=\"klaviyo-form-footer\">\n<div class=\"klaviyo-form-YhqS33\"></div>\n</div>\n<div style=\"text-align: left\">{% render 'social-icons' %}</div>",
+              "menu": "site-map"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Resources",
+              "custom_liquid": "",
+              "menu": "main-menu-new"
+            }
+          },
+          "125461ab-77f8-4171-897b-d86fa086a740": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Policies",
+              "custom_liquid": "<img alt=\"Cookie Diet Australia logo\" \nloading=\"lazy\" style=\"margin-top: 2rem\" width=\"150\" src=\"https://www.cookiediet.com.au/cdn/shop/files/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png?v=1690789045&width=150\"/>",
+              "menu": "footer-terms-policies"
+            }
+          }
+        },
+        "block_order": [
+          "32e3553f-72b8-4224-a280-1e522e5964ff",
+          "footer-1",
+          "125461ab-77f8-4171-897b-d86fa086a740"
+        ],
+        "settings": {
+          "color_scheme": "inverse",
+          "newsletter_enable": false,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo": "{{ shop.brand.logo }}",
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "10830403595879607806": {
+        "type": "shopify://apps/reviews-io/blocks/reviewsio-core/92a082e5-b297-4e88-b428-ac96cbc505f9",
+        "disabled": true,
+        "settings": {
+          "url_key": "cookiediet.com.au",
+          "lang": "auto"
+        }
+      },
+      "15316669992541710076": {
+        "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
+        "disabled": true,
+        "settings": {
+          "star": "#eea840",
+          "text_color": "#333",
+          "snippet_mode": "default",
+          "text": "Reviews",
+          "line_break": false,
+          "listen_for_changes": false,
+          "rating_without_brackets": false,
+          "format_review_count": false,
+          "show_popup": false,
+          "anchor_to_reviews_widget": true,
+          "show_empty_stars": false
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "15557474716127144420": {
+        "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+        "disabled": false,
+        "settings": {}
+      },
+      "733389323033596483": {
+        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "13057235355128461448": {
+        "type": "shopify://apps/cozy-country-redirect/blocks/CozyStaticScript/7b44aa65-e072-42a4-8594-17bbfd843785",
+        "disabled": true,
+        "settings": {}
+      },
+      "6174324309569838175": {
+        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {}
+      },
+      "9877325503541698247": {
+        "type": "shopify://apps/in-cart-upsell/blocks/ajax_cart_app_block/6a252f23-8726-4893-8b3b-1ae15957efc3",
+        "disabled": true,
+        "settings": {
+          "icu-ajax-selector": "",
+          "icu-ajax-action": "before"
+        }
+      },
+      "3667842014806057753": {
+        "type": "shopify://apps/one-click-upsell/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+        "disabled": false,
+        "settings": {
+          "allowed_templates": "index, cart, collection, page, blog"
+        }
+      },
+      "14327677521557774844": {
+        "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "disabled": false,
+        "settings": {}
+      },
+      "21474836472147483647": {
+        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
+        "disabled": false,
+        "settings": {}
+      },
+      "14952540001915115444": {
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": false,
+        "settings": {}
+      },
+      "6614979280454233053": {
+        "type": "shopify://apps/preorder-now-pre-order-pq/blocks/app-embed/551fab2c-3af6-4a8f-ba21-736a71cb4540",
+        "disabled": false,
+        "settings": {}
+      },
+      "9722070057798483667": {
+        "type": "shopify://apps/multivariants-bulk-order/blocks/app-embed/e556349f-fd26-4006-9dd9-dcbf70aa55b3",
+        "disabled": false,
+        "settings": {}
+      },
+      "2369874457889669609": {
+        "type": "shopify://apps/rebolt-bundle-products/blocks/app-embed/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "cart_type": "notification",
+      "show_vendor": false,
+      "show_cart_note": false,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Welcome to our store",
+                "color_scheme": "background-1",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "color_scheme": "background-1",
+            "logo": "{{ shop.brand.logo }}",
+            "logo_width": 90,
+            "logo_position": "middle-left",
+            "menu": "main-menu",
+            "show_line_separator": true,
+            "enable_sticky_header": true,
+            "margin_bottom": 0,
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info",
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission",
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "color_scheme": "background-1",
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe to our emails",
+            "show_social": true,
+            "enable_country_selector": false,
+            "enable_language_selector": false,
+            "payment_enable": true,
+            "margin_top": 48,
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo": "{{ shop.brand.logo }}",
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".custom-product-section-1 {background-color: #f9f6f2;}",
+      ".custom-product-section-1 {display: none;}",
+      ".custom-product-title-desktop {display: block;}",
+      "@media (max-width: 768px) {.custom-product-section-1 {display: block; /* Show the element */ } .custom-product-title-desktop {display: none; }}"
+    ]
+  }
+}

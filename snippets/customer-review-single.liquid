@@ -1,0 +1,54 @@
+
+
+<div class="happy-customers {% if single_card %}happy-customers--single{% endif %} grid__item">
+    {% if single_card %}<h2 class="text-center h1">Our Happy Customers</h2>{% endif %}
+     <slideshow-component class="slider-mobile-gutter">
+      <ul class="contains-content-container grid grid--1-col {% if single_card != blank %}grid--2-col-desktop{% else %}grid--2-col-tablet grid--4-col-desktop{% endif %} slider slider--everywhere"
+        id="Slider-{{ section.id }}"
+        role="list"
+        data-autoplay="true"
+        data-speed="3"
+      >
+        {% for customer_image in shop.metafields.arena.testimonial_image %}
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item slideshow__slide slider__slide{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}" {{ block.shopify_attributes }}>            
+            <div class="content-card">
+              <img src="{{ customer_image | file_img_url: '400x' }}" loading="lazy" alt="{{shop.metafields.arena.testimonial_text[forloop.index0]}} Cookie Diet testimonial" class="block-center"/>
+              <div class="content-card-content">
+                <p class="rating-wrapper">
+                  {% render 'icon-star' %}
+                  {% render 'icon-star' %}
+                  {% render 'icon-star' %}
+                  {% render 'icon-star' %}
+                  {% render 'icon-star' %}
+                </p>
+                <p class="content-card-content--testimonial-text">{{shop.metafields.arena.testimonial_text[forloop.index0]}}</p>
+                <p class="content-card-content--testimonial--name h4"><b>{{shop.metafields.arena.testimonial_name[forloop.index0]}}</b></p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+        <!-- Add Pagination -->
+      </ul>
+      <div class="slider-buttons slider-buttons-visible-all no-js-hidden">
+        <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-arrow-left' %}</button>
+        <div class="slider-counter caption">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+        </div>
+        <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-arrow-right' %}</button>
+      </div>
+      <button style="display:none" type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+        {%- render 'icon-pause' -%}
+        {%- render 'icon-play' -%}
+      </button>
+     </slideshow-component>
+</div>
+<div class="center">
+  {%- if section.settings.button_label != blank -%}
+    <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
+      {{ section.settings.button_label | escape }}
+    </a>
+  {%- endif -%}
+</div>

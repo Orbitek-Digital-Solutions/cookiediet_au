@@ -1,0 +1,139 @@
+{%- style -%}
+  .section-{{ section.id }}-padding .eat-cookies-lose-weight--content {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding .eat-cookies-lose-weight--content {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="eat-cookies-lose-weight">
+        <div class="eat-cookies-lose-weight--image">
+          <img loading="lazy" src="{{ 'CD_image_4_3f8c5270-9271-4f81-bffd-6e678b808499.jpg' | file_img_url: '550x' }}" alt="Lady smiling holding cookies"/>
+        </div>
+        <div class="eat-cookies-lose-weight--content">
+          <h2 class="image-with-text__heading h0 mt-0">WAIT, <span class="primary-light">EAT COOKIES</span> AND <span class="primary-light">LOSE WEIGHT?</span> HOW?</h2>
+          <div class="image-with-text__text rte body"><p>Half the battle with diets is convenience, the other half is hunger. This diet conquers both and gives you a way to keep the weight off afterwards.</p><p>They contain a special mixture of natural proteins that naturally control hunger. Made right here in Australia, they are all-natural with no artificial flavours or sweeteners.</p></div>
+          {% if section.settings.show_snack %}
+            {% render 'how-it-works-icons-snack' %}
+          {% else %}
+            {% render 'how-it-works-icons' %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% stylesheet %}
+  .eat-cookies-lose-weight {
+    display: grid;
+    gap: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .eat-cookies-lose-weight--image img {
+      margin: 0 -1.5rem;
+      max-width: 100%;
+      max-width: calc(100% + 2em);
+    }
+  }
+  
+  @media screen and (min-width: 750px) {
+    .eat-cookies-lose-weight--image img {
+      position: absolute;
+      left: 0;
+      object-position: center;
+      width: 33vw;
+      object-fit: cover;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+    }
+    .eat-cookies-lose-weight--content {
+      padding: 2em 0;
+    }
+    .eat-cookies-lose-weight {
+      grid-template-columns: 1fr 2fr;
+      gap: 1em;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+  {
+    "name": "Eat Cookies & Lose Weight",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label",
+        "info": "t:sections.all.colors.has_cards_info"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_snack",
+        "label": "Show snack icons",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Eat Cookies & Lose Weight",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

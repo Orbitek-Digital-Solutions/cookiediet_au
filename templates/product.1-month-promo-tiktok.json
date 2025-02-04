@@ -1,0 +1,575 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "4c867bb7-54c4-4521-a437-544a98d95a92": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-output/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "disabled": true,
+          "settings": {}
+        },
+        "8ea4be7f-f6bb-4ea2-8fb4-7bbeebdc02c7": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_gtpKCn": {
+          "type": "price",
+          "settings": {}
+        },
+        "bcefced5-b411-425e-87e1-51e8e8795241": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.handle == '1-month-cookie-supply' %}\n{% assign two_week = all_products['2-week-supply'] %}\n\n<p><b>Save 50% Now! Get our 1-month supply for just <span style=\"font-weight:bold\">{{product.price | money_with_currency}}</span></b><br>Choose from four delicious flavors to naturally control hunger and reach your goals.</p>\n\n{% elsif product.title contains '2 Week' %}\n<p>For the first time in Cookie Diet history, we're offering you two weeks' worth of your favourite bikkies. <b>Opt for the <a class=\"primary-light\" href=\"https://www.cookiediet.com.au/products/1-month-diet-cookie-supply-promo\">1 Month Supply</a> and save 33%, only \n{% assign one_month = all_products['1-month-diet-cookie-supply-promo'] %}\n<span class=\"primary-light\">{{one_month.price | money_with_currency }}</span> <s>{{one_month.compare_at_price | money_with_currency }}</s>.</b></p>\n{% elsif product.title contains '2 Week' %}\n{% elsif product.metafields.custom.short_description != blank %}\n{{ product.metafields.custom.short_description.value }}\n{% else %}\n<p>Our perfected recipe comes in four delicious flavours to help you get control of your hunger and achieve your weight-loss goals, naturally.</p>\n{% endif %}\n{{ product.metafields.descriptors.subtitle.value }}"
+          }
+        },
+        "f5558c4b-4a20-4ef6-89c4-dfb187cabc5c": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% unless product.handle contains \"subscription\" or product.price <= 9900 or product.title contains 'Bundle' or product.handle == '1-month-cookie-supply' %}\n{% comment %}\n{% render 'blackfriday-banner' %}\n{% endcomment %}\n<div style=\"text-align: left\" class=\"text-center\">\n{% render 'countdown-timer', end_date: \"Mar 18, 2024\", title: \"Hurry. Afterpay Day Sale ends in:\" %}\n</div>\n\n\n{% endunless %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "ebe3c6e1-487b-462f-a8e9-5a43908e5dc6": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "7e8a49bc-5048-4157-9149-2d2aec7ddcd5": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% unless product.handle contains \"subscription\" or product.price <= 9900 or product.title contains 'Bundle' %}\n\n\n<p class=\"text-center\">Celebrate Australia Day 🇦🇺 with Our <b>Australian Made</b> Weight Loss Cookies! 🍪 Proudly local, proudly Australian!</p>\n{% render 'blackfriday-banner' %}\n<div class=\"text-center\">\n{% render 'countdown-timer', end_date: \"Jan 29, 2024\" %}\n</div>\n\n\n{% endunless %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "5cfecbd1-e8f5-40a1-98bd-af2a1e60f618": {
+          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "disabled": true,
+          "settings": {}
+        },
+        "7142fb6b-b5bb-4ea8-8d82-15d76731a7c1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What you get",
+            "icon": "none",
+            "liquid": "{{ product.description }}",
+            "content": "",
+            "page": ""
+          }
+        },
+        "061f083a-a0a5-4e48-ac41-5193c40da50a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "liquid": "<p>Baked fresh in Sydney, our cookies are free of preservatives and artificial flavours.</p>\n\n<ul>\n  <li>2 g protein (containing Dr. Siegal’s Formula)</li>\n  <li>2g fat NO cholesterol</li>\n  <li>8g carbohydrates (4.5g of the carbs is sugar)</li>\n  <li>0.75g fibre</li>\n  <li>0.2g sodium</li>\n  <li>Total of 60 calories per cookie.</li>\n</ul>\n\n<p>For additional nutritional information  <a class=\"primary-light\" href=\"#nutritional-tabs\">click here</a></p>",
+            "content": "",
+            "page": ""
+          }
+        },
+        "8e5dae95-c8d3-4ae3-96c5-4c380a8b1710": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How it works",
+            "icon": "none",
+            "liquid": "",
+            "content": "<p>During the weight loss phase, you can eat 1 to 2 cookies every 2 hours plus dinner.</p><p>For dinner you have 500 to 700 calories. The dinner is flexible but should be high in lean protein; avoid sugar and lots of carbs.</p><p>Overall, you will have 1000-1200 calories a day, and each cookie has only 60 calories.</p><p>It is advised to take a daily multivitamin (any brand) and at least 8 glasses of water. Tea and coffee is allowed (avoid full cream milk and sugar if possible – sweeteners are allowed)</p><p>Once goal weight achieved, eat healthy meals and enjoy the cookies as a healthy, low-calorie snack between meals</p><p>If you have any more questions, check out our FAQs or email our friendly staff, and we would be more than happy to help.</p><p>*For a balanced calorie intake, we recommend that you do not exceed 9 cookies per day. Individual weight loss results may vary.</p>",
+            "page": ""
+          }
+        },
+        "d5f490fd-1efb-4dfe-8420-7ffe1cd0490e": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "<a class=\"accordion-anchor\" href=\"#faq-section\">Frequently Asked Questions</a>",
+            "icon": "none",
+            "liquid": "",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "4c867bb7-54c4-4521-a437-544a98d95a92",
+        "8ea4be7f-f6bb-4ea2-8fb4-7bbeebdc02c7",
+        "title",
+        "price_gtpKCn",
+        "bcefced5-b411-425e-87e1-51e8e8795241",
+        "f5558c4b-4a20-4ef6-89c4-dfb187cabc5c",
+        "variant_picker",
+        "ebe3c6e1-487b-462f-a8e9-5a43908e5dc6",
+        "7e8a49bc-5048-4157-9149-2d2aec7ddcd5",
+        "buy_buttons",
+        "5cfecbd1-e8f5-40a1-98bd-af2a1e60f618",
+        "7142fb6b-b5bb-4ea8-8d82-15d76731a7c1",
+        "061f083a-a0a5-4e48-ac41-5193c40da50a",
+        "8e5dae95-c8d3-4ae3-96c5-4c380a8b1710",
+        "d5f490fd-1efb-4dfe-8420-7ffe1cd0490e"
+      ],
+      "custom_css": [
+        ".timer-block {position: relative; margin-right: 5px; padding: 7px 0px; background-size: cover; width: 70px; border-radius: 5px; flex: 1;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2a0cd61f-254a-4d50-aabd-3a71d8c875f2": {
+      "type": "logo-list",
+      "blocks": {
+        "166315427963e1d03c-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/dailymail.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/news.com.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/current-affair.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/9news.png",
+            "link": ""
+          }
+        },
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/channel-7-news-logo.png",
+            "link": ""
+          }
+        },
+        "c494e547-6da9-4c54-8d87-68b43ea4d374": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/kiis1065.png",
+            "link": ""
+          }
+        },
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/morning-show.png",
+            "link": ""
+          }
+        },
+        "f0fca05a-a33d-4292-9281-15f30e4057c0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/womens-weekly.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166315427963e1d03c-0",
+        "166315427963e1d03c-1",
+        "166315427963e1d03c-2",
+        "166315427963e1d03c-3",
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca",
+        "c494e547-6da9-4c54-8d87-68b43ea4d374",
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2",
+        "f0fca05a-a33d-4292-9281-15f30e4057c0"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "logo_width": "160px",
+        "padding_top": 12,
+        "padding_bottom": 36,
+        "color_scheme": "background-1"
+      }
+    },
+    "57a77415-120e-406b-8ce5-06d23a4254e1": {
+      "type": "customer-testimonials-slider",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "title": "Our <span class=\"primary-light\">Happy Customers</span>",
+        "heading_size": "h1"
+      }
+    },
+    "0bef1dbf-7604-4b06-ad7f-0c322cc137e8": {
+      "type": "cookie-diet-product-badges",
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "show_snack": false
+      }
+    },
+    "790767a4-3a26-4baf-9bf7-216907c69d7f": {
+      "type": "eat-cookies-and-lose-weight",
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "color_scheme": "background-1",
+        "show_snack": false
+      }
+    },
+    "a59c125c-cf8d-4246-8296-14c84cfbde41": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width text-center-mob\">\n  <h3 class=\"mt-0 text-center h2\"><b>It will look a little something like this</b></h3>\n  <img alt=\"Cookie diet weight loss day plan\" class=\"hidden-xs img-responsive center-block\" loading=\"lazy style=\"width: 100%\" src=\"//cdn.shopify.com/s/files/1/0434/0246/1338/files/lose_wight_tl.svg?v=10651621381281298955\" loading=\"lazy\">\n  <img class=\"visible-xs center-block\" style=\"right: -2rem;position:relative\" id=\"timeline-mobile\" alt=\"Cookie diet weight loss day plan\" src=\"//cdn.shopify.com/s/files/1/0434/0246/1338/files/lose_wight_tlv.svg?v=4620381702146762886\">\n  <p class=\" text-center\" id=\"timeline-facts\"><strong>Total daily calories:</strong> <span class=\"primary-light\">1,000 to 1,200</span><br>\n  <strong>Time between snacks:</strong> <span class=\"primary-light\">2 hours (do not exceed or shorten)</span><br>\n  <strong>Target weight loss*:</strong> <span class=\"primary-light\">5-8 kgs per month</span><br>\n  <strong>Dinner Meal:</strong> <span class=\"primary-light\">250g of lean meat / fish / lamb / chicken / pork plus salad or veggies</span><br>\n  <small>* based on 1,000 to 1,200 daily calories. Individual results will vary based on age, weight, activity level, and other factors.</small></p>\n</div>",
+        "custom_class": "",
+        "color_scheme": "background-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "137dae46-39f8-482b-90a5-737cb58744a5": {
+      "type": "video-text-half-width",
+      "blocks": {
+        "27491d2d-8d63-4b25-91f9-d48d1809f534": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Over<br><span class=\"primary-light\">100,000 Aussies!</span>",
+            "heading_size": "h0"
+          }
+        },
+        "633a9135-30fb-4be9-b713-5d374d9ce71b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After 42 years of success and more than half a million dieters, Dr. Siegal’s COOKIE DIET is truly one of the most popular weight-loss plans ever. Our reviews speak for themselves, and our community in the cookie club can support.</p>",
+            "text_style": "body"
+          }
+        },
+        "403ae2fd-0563-4a06-99a4-882a954a2847": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read Reviews",
+            "button_link": "#ReviewsWidget"
+          }
+        }
+      },
+      "block_order": [
+        "27491d2d-8d63-4b25-91f9-d48d1809f534",
+        "633a9135-30fb-4be9-b713-5d374d9ce71b",
+        "403ae2fd-0563-4a06-99a4-882a954a2847"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "layout": "image-left-desktop",
+        "cover_image": "shopify://shop_images/Cookie_diet_montage_video_thumb_2292d7a0-b6f9-4da7-8765-f44dfd5dfa49.png",
+        "video_url": "https://www.youtube.com/watch?v=Kfu6jONkxXY",
+        "description": "Cookie Diet Video"
+      }
+    },
+    "3bd99682-781b-4f44-a340-e22f112cd64a": {
+      "type": "image-text-half-width",
+      "blocks": {
+        "adbdd0ab-49ee-4977-bcd4-02d4cde54a7f": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Tarra <span class=\"primary-light\">Lost 30KG</span> Before Her Wedding",
+            "heading_size": "h0"
+          }
+        },
+        "f776e741-878e-4563-8b4f-d75d75e8a035": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Like any working mother, Tarra Sloboduil found herself struggling to make time for exercise and healthy eating after having two children.</p><p>The real estate agent, from Melbourne, tipped the scales at 91.6kg at her heaviest after overindulging on sugary snacks, soft drinks and large portions of food.</p><p>For a typical dinner, the mother-of-two gorged on two to three massive bowls of spaghetti bolognese, hot chipsand also a meat pie in one sitting.</p>",
+            "text_style": "body"
+          }
+        },
+        "1cdbdb93-783d-49db-8c4f-ef5da0c399e1": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}<h3 style=\"margin-bottom: 0\"><a class=\"primary-light\" href=\"https://www.dailymail.co.uk/femail/article-10713595/Bride-sheds-whopping-35-kilos-special-day-eating-COOKIES.html\" target=\"_blank\">Read the article on Daily mail <span><img src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/dailymail.svg?v=1620807461\" style=\"position:relative;vertical-align: middle;margin:10px 0 10px 10px\" width=\"120px\" alt=\"Dailymail Logo\"/></span></a>{% endcomment %}\n\n<img src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/dailymail.svg?v=1620807461\" style=\"position:relative;vertical-align: middle;margin:10px 0 0 0\" width=\"170px\" alt=\"Dailymail Logo\"/>"
+          }
+        }
+      },
+      "block_order": [
+        "adbdd0ab-49ee-4977-bcd4-02d4cde54a7f",
+        "f776e741-878e-4563-8b4f-d75d75e8a035",
+        "1cdbdb93-783d-49db-8c4f-ef5da0c399e1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": "product-tarra-wedding",
+        "image": "shopify://shop_images/How-Tarra-Lost-30KG_Before-Her-Wedding.png",
+        "layout": "image-right-desktop"
+      }
+    },
+    "72b44d3e-9497-4714-aa0a-b22ac489cc29": {
+      "type": "nutrition-tabs",
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663159415ffda8ae5": {
+      "type": "reviewsio-product",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "color_scheme": "background-1"
+      }
+    },
+    "16916628629d1d2634": {
+      "type": "apps",
+      "blocks": {
+        "68799ab7-372a-4a5a-a613-41cd900120e0": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "1-month-supply",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "68799ab7-372a-4a5a-a613-41cd900120e0"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "a844fe49-e92b-4de8-bfd2-d92232a9fa30": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is Dr. Siegal’s COOKIE DIET cookies so effective?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>Half the battle with diets is convenience, the other half is hunger and this diet conquers both and gives you a way to keep the weight afterwards.</p>\n\n<ul>\n\t<li>Convenience: The cookies are so convenient as you have nothing to prepare or make up, you just take 1 bag of cookies with you for the day and eat 1 or 2 cookies every 2 hours, then dinner is a simple lean meat plus salad or veggies. Simple.</li>\n\t<li>Hunger: The success behind this diet is that it helps you stick to a low calorie diet (1000-1200 calories/day) without feeling hungry. Of course it takes a few days to adjust to the change in diet, but after that the cookies really suppress your hunger and help you stick to the diet without those pesky hunger pangs.</li>\n\t<li>Afterwards: Once goal weight achieved, eat healthy meals and enjoy the cookies as a healthy, low calorie, hunger suppressing snack between meals so you don&#39;t over eat.</li>\n\t<li>Proof: This diet is not a fad, it has been going strong and only growing by word of mouth for the last 40 years.</li>\n</ul>\n\n<p>In depth:</p>\n\n\n<p>The reason this diet is so effective is because it trains your body to eat the way its suppose to.</p>\n\n<p><strong>Weight Loss Phase:</strong> 9 Cookies a Day, 1 or 2 cookies every 2 hours (do not exceed 2 hours) + Dinner (250g lean meat plus salad/veggies) + Light exercise (20-30min walk, 2-3 times a week)</p>\n\n<p>A lot people don&#39;t eat for 5 or 6 hours, then have a big meal, and that causes the weight to pile on. In the weight losing phase, Dr. Siegal&#39;s Cookie Diet trains your body to eat small portions frequently, this helps spike your metabolism throughout the day and facilitates weight loss. It also helps you get used to preparing one healthy meal per day (dinner).</p>\n\n<p><strong>The reason you WILL BE successful is 3 fold:</strong>\n\t<br>1. You don&#39;t feel hungry so you can stick to this low calorie diet\n\t<br>2. The diet super simple &amp; convenient, so it is easy for you to stick to it\n\t<br>3. You will be equipped to enter the weight maintenance stage</p>\n\n<p><strong>Weight Maintenance Phase</strong>: Healthy Breakfast, Lunch &amp; Dinner, 1-2 cookies inbetween meals + Moderate exercise (30-40 minutes of exercise, 2-3 times a week)</p>\n\n<p>After you reach your goal weight you move to the maintenance phase. Now that your body is accustomed to eating small, frequent portions, you have had practice preparing healthy meals and you also have got into the routine of doing some light exercise, you are now prepared to scale that up slightly to prepare 3 healthy meals (can be found in our <a href=\"https://www.cookiediet.com.au/products/the-cookie-diet-cookbook\">cookbook</a>), and increase your exercise. The cookies you will eat in between your meals will help curb your sweet tooth and help control your hunger so you don&#39;t over eat.</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you use Dr. Siegal’s COOKIE DIET cookies?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>We don&#39;t actually have the diet plan on the box, as people can use them as they please. There are people that choose to use them as a healthy snack alternative. However if you are interested in how Dr. Siegal has been using them in the U.S below are the details</p>\n\n<p>The purpose of the cookies is to control your hunger so you can stick to a reduced-calorie diet. They contain a particular mixture of proteins, derived from various food substances, that Dr. Siegal has been personally making in his Miami bakery since 1975. There are no drugs or added stimulants in the products.</p>\n\n<p>The way Dr. Siegal designed it, and has been using it on over 500, 000 patients over the last 37 years is to have <strong>1 to 2 cookies every 2 hours plus dinner</strong><strong>.</strong></p>\n\n<p>For dinner, you have 500 to 700 calories. As a guide we recommend <strong>250g of lean meat (chicken, fish, lamb) plus salad/veggies.</strong></p>\n\n\n<li>Overall you will have 1000-1200 calories a day.</li>\n<li>Each cookie has only 60 calories.</li>\n<li>It is advised to take a daily multivitamin (any brand) and at least 8 glasses of water.</li>\n<li>Tea and coffee is allowed (avoid milk, cream and sugar if possible &ndash; sweeteners are allowed)</li>\n\n<p>The first few days will take you some time to adjust to the change in diet, but usually after 2-4 days you will find it very easy and convenient to follow.</p>\n\n<p>The following table shows the Dr. Siegal&#39;s Eating Plan. This timetable will work for most people who have a typical workday schedule. It assumes that you wake up at around 7am, work from 9pm to 5pm or so, have dinner around 8pm, and go to bed around 11pm. It also assumes that you will have your one &ldquo;real&rdquo; meal in the evening (but you can adjust the time to suit your lifestyle). Under this plan, you never go more than two hours without eating in order to reduce the opportunity for serious hunger to develop.</p>\n\n<div class=\"text-center\">\n\n\t<p><strong>8 AM:</strong> 2 cookies (120 calories) <strong>10 AM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>NOON:</strong> 1 cookie (60 calories) <strong>2 PM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>4 PM:</strong> 2 cookies (120 calories) <strong>6 PM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>8 PM:</strong> DINNER (500-700 calories) <strong>10 PM</strong>: 1 cookies (60 calories)</p>\n</div>\n\n<p>If you have any more questions please don&#39;t hesitate to call us on 1300 077 707</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much exercise should I do?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<ol>\n\t<li>Weight Losing Phase: 9 Cookies (1-2 cookies every 2 hours) plus Dinner (lean meat plus salad/veggies) &ndash; exercise is not absolutely necessary as you will already be in a caloric deficit, but if you would like to exercise &ndash; only light exercise recommended (30min walk 3 times a week)</li>\n\t<li>Weight Maintenance Phase: Once goal weight achieved, eat healthy meals and enjoy the cookies as a healthy, low calorie snack between meals &ndash; intermediate to advanced exercise recommended based on fitness level.</li>\n</ol>\n\n<p>Exercising too much during weight losing phase may make your net calories too low and cause you to hold on to weight, so you might need to either decrease exercise during weight losing phase or add a 200-300 calorie meal in the day to make up for it.Everyone is different so you may have to do trial and error to find your optimal calorie intake for weight loss.</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I Get Best Results?",
+            "icon": "none",
+            "row_content": "<p>For best results, use the diet at least one month, and also measure your waist as well as your weight once a week.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "752d53a8-2b95-428b-b721-dbe67c287186": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to receive the cookies once I place an order?",
+            "icon": "none",
+            "row_content": "<p>The cookies are baked here in Sydney, Australia for your convenience</p><p>Due to the high demand please allow 2-6 working days. We are doing everything we can to get them to you as soon as possible.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "08ff62f3-bb28-4c0a-bf5a-4f73c8836fef": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use them if I have Diabetes or any other Medical Conditions?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>Questions about medical conditions must be directed to your doctor. Show the ingredients to your doctor and always follow his or her instructions. We are actually a company owned and operated by Australian pharmacists. </p>\n\n<p>If you are diabetic, we recommend that you consult your GP before starting any diet. Dr. Siegal has treated many diabetics with great success, however every case is different, so please consult your doctor, and if you or your doctor has any questions he can contact us directly on <a href=\"tel:1300077707\">1300 077 707</a>.</p>\n\n<p>There is nothing harmful in the cookies, they are normal low calorie cookies with a special combination of natural proteins that naturally suppress hunger.</p>\n\n<p>Please see story here on cookie diet and diabetes:</p>\n\n<p><a href=\"https://www.youtube.com/watch?v=3upB-nv_Ci8\">https://www.youtube.com/watch?v=3upB-nv_Ci8</a></p>\n\n<p>Dr. Siegal has been using it on over 500,000 patients over the last 40 years.</p>",
+            "page": ""
+          }
+        },
+        "99b3abc7-f6b4-4225-bd2a-f13f5c03fdbf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use them if I am Pregnant or Lactating?",
+            "icon": "none",
+            "row_content": "<p>Whilst pregnant or lactating, before going on any diet you must consult your doctor. Dr. Siegal's Cookies do not contain any harmful ingredients or drugs. They are normal cookies, the only difference is that they are low calorie and contain a special combination of natural proteins which help control hunger. The Cookies may be taken in many ways. Having the cookies as a healthy snack alternative to chips, muffins or other cookies maybe the best way you can use it while pregnant/lactating.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "4ba471f1-4431-4b19-babd-4db6b670db3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do the Cookies Contain Sugar?",
+            "icon": "none",
+            "row_content": "<p>There are only 4g of sugar per cookie. During the weight losing phase when a user eats 9 cookies a day, the total sugar intake per day is 36g which is well below average daily sugar intake of an adult.</p><p>The reason the cookies contain sugar, is so that when a user stops using the diet, they do not put on rebound weight when they move to the maintenance phase or return to normal eating.</p><p>This amount of sugar does not raise red flag even for diabetic users as it is still below daily averages.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "c90c816a-fe05-413f-9c80-6945f30372fa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do the Cookies Contain Gluten?",
+            "icon": "none",
+            "row_content": "<p>All of our cookies currently contain gluten. However a lot of our customers who have gluten intolerance have been using our cookies and taking GluteGuard tablets with great success.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "9598875e-d661-4442-a434-973967c7bc8f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do the Cookies Contain Milk?",
+            "icon": "none",
+            "row_content": "<p>All of our cookies currently contain milk. However a lot of our customers who have lactose intolerance have been our cookies and taking Lacteeze tablets with great success.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "26d64294-d3d1-4ace-b423-b886bddbac19": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is this Cost Effective?",
+            "icon": "none",
+            "row_content": "<p>Our cookies are baked in Australia in a high quality facility, with premium all natural ingredients. A lot of our customers say, “It’s cheaper to be on the diet than off it!” How does that make sense?</p><p>The reason being is when your in the weight losing phase you’re eating 9 cookies a day plus dinner, dinner is the only meal you this diet doesn’t cover. So when you buy a month supply for $189.95, thats $47.49/week and that covers essentially breakfast and lunch for 7 days, so if you divide that by 14 meals that works out to $3.39 per meal and thats definitely cost effective.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-0",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-1",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-2",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-3",
+        "752d53a8-2b95-428b-b721-dbe67c287186",
+        "08ff62f3-bb28-4c0a-bf5a-4f73c8836fef",
+        "99b3abc7-f6b4-4225-bd2a-f13f5c03fdbf",
+        "4ba471f1-4431-4b19-babd-4db6b670db3c",
+        "c90c816a-fe05-413f-9c80-6945f30372fa",
+        "9598875e-d661-4442-a434-973967c7bc8f",
+        "26d64294-d3d1-4ace-b423-b886bddbac19"
+      ],
+      "settings": {
+        "caption": "",
+        "custom_id": "faq-section",
+        "heading": "<span class=\"primary-light\">Frequently</span> Asked Questions",
+        "heading_size": "h1",
+        "accordion_title_heading_size": "h2",
+        "button_label": "",
+        "button_link": "",
+        "button_class": "button--primary",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "470e13e6-9c5f-43db-8530-37667b04f728": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"text/javascript\">\nvar _learnq = _learnq || [];\n  var classname = document.getElementsByClassName(\"add-to-cart\");\nvar addToCart = function() {\n_learnq.push(['track', 'Added to Cart', item]);\n}; for (var i = 0; i < classname.length; i++) {\nclassname[i].addEventListener('click', addToCart, false);\n}\n</script>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2a0cd61f-254a-4d50-aabd-3a71d8c875f2",
+    "57a77415-120e-406b-8ce5-06d23a4254e1",
+    "0bef1dbf-7604-4b06-ad7f-0c322cc137e8",
+    "790767a4-3a26-4baf-9bf7-216907c69d7f",
+    "a59c125c-cf8d-4246-8296-14c84cfbde41",
+    "137dae46-39f8-482b-90a5-737cb58744a5",
+    "3bd99682-781b-4f44-a340-e22f112cd64a",
+    "72b44d3e-9497-4714-aa0a-b22ac489cc29",
+    "product-recommendations",
+    "1663159415ffda8ae5",
+    "16916628629d1d2634",
+    "a844fe49-e92b-4de8-bfd2-d92232a9fa30",
+    "470e13e6-9c5f-43db-8530-37667b04f728"
+  ]
+}

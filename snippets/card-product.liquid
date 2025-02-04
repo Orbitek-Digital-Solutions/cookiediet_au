@@ -1,0 +1,189 @@
+{%- if card_product and card_product != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == null
+      assign ratio = 1
+    endif
+  -%}
+  <div class="card-wrapper product-card-wrapper">
+    <div
+      class="
+        card
+        card--{{ settings.card_style }}
+        {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
+        {% if extend_height %} card--extend-height{% endif %}
+        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
+        {% if horizontal_class %} card--horizontal{% endif %}
+      "
+      data-id="{{ card_product.id }}"
+      data-title="{{ card_product.title }}"
+      data-url="https://www.cookiediet.com.au/{{ card_product.url }}"
+      data-price="{{ card_product.variants[0].price | money }}"
+      data-image="https:{{ card_product.featured_image.src }}"
+      data-collections="{% for collection in card_product.collections %}{{ collection.title }}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      {% render 'product-card-badges', card_product: card_product %}
+
+      <div
+        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      >
+        {%- if card_product.featured_media -%}
+          <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+            <div class="media media--transparent media--hover-effect">
+              <img
+                srcset="
+                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+                "
+                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ card_product.featured_media.alt | escape }}"
+                class="motion-reduce"
+                width="{{ card_product.featured_media.width }}"
+                height="{{ card_product.featured_media.height }}"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+        <div class="card__content">
+          <div class="card__information">
+            <h3
+              class="card__heading"
+              {% if card_product.featured_media == null and settings.card_style == 'standard' %}
+                id="title-{{ section_id }}-{{ card_product.id }}"
+              {% endif %}
+            >
+              <a
+                href="{{ card_product.url }}"
+                id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
+                class="full-unstyled-link"
+                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+              >
+                {% if card_product.metafields.custom.product_title_override != blank %}
+                  {{ card_product.metafields.custom.product_title_override }}
+                {% else %}
+                  {{ card_product.title | escape }}
+                {% endif %}
+                {% if card_product.metafields.descriptors.subtitle != blank %}
+                  <div class="h2 mb-0">{{ card_product.metafields.descriptors.subtitle }}</div>
+                {% endif %}
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3
+            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h2{% endif %}"
+            {% if card_product.featured_media or settings.card_style == 'card' %}
+              id="title-{{ section_id }}-{{ card_product.id }}"
+            {% endif %}
+          >
+            <a
+              href="{{ card_product.url }}"
+              id="CardLink-{{ section_id }}-{{ card_product.id }}"
+              class="full-unstyled-link"
+              aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
+            >
+              {% if card_product.metafields.custom.product_title_override != blank %}
+                {{ card_product.metafields.custom.product_title_override }}
+              {% else %}
+                {{ card_product.title | escape }}
+              {% endif %}
+              {% if card_product.metafields.descriptors.subtitle != blank %}
+                <div class="h2 mb-0">{{ card_product.metafields.descriptors.subtitle }}</div>
+              {% endif %}
+            </a>
+            {% render 'okendo-reviews-product-rating-summary', product: card_product %}
+          </h3>
+
+          <div class="price-info">
+            {% if card_product.title == 'The Cookie Diet - Value Packs' %}
+              <div class="price">Starting from $489.95</div>
+            {% else %}
+              {% render 'price', product: card_product, price_class: '' %}
+            {% endif %}
+            <a href="{{ card_product.url }}" aria-label="Shop {{ card_product.title }}" class="more-info-holder"
+              >More info
+              <div class="slider-button circle-button">{% render 'icon-arrow-right' %}</div>
+            </a>
+          </div>
+
+          <div class="view-product" style="margin-top: 10px;">
+            <a href="{{ card_product.url }}" class="button" style="display: block; width: 100%; text-align: center;"
+              >View Product</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- else -%}
+  <div class="product-card-wrapper card-wrapper">
+    <div
+      class="
+        card
+        card--{{ settings.card_style }}
+        card--text
+        {% if extend_height %} card--extend-height{% endif %}
+        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
+        {{ horizontal_class }}
+      "
+      style="--ratio-percent: 100%;"
+    >
+      <a
+        href="{{ card_product.url }}"
+        id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
+        class="full-unstyled-link"
+        aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+      >
+        <div
+          class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
+          style="--ratio-percent: 100%;"
+        >
+          <div class="card__content">
+            <div class="card__information">
+              <h3 class="card__heading">
+                <a role="link" aria-disabled="true" class="full-unstyled-link">
+                  {{ 'onboarding.product_title' | t }}
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" aria-disabled="true" class="full-unstyled-link">
+              {{ 'onboarding.product_title' | t }}
+            </a>
+          </h3>
+          <div class="card-information">
+            {%- if show_vendor -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+            {%- endif -%}
+            {% render 'price' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

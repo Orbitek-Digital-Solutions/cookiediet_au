@@ -1,0 +1,644 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "da53f1df-f100-4b04-b6d0-5d552a9f7c29": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<p style=\"margin: 0\"   class=\"text-center\"><img src=\"https://www.cookiediet.com.au/cdn/shop/files/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png?v=1690789045&width=150\"></p>\n{% render 'navigation-promo-slider' %}",
+        "custom_class": "",
+        "color_scheme": "background-2",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "56ec079b-0b44-4a6e-98aa-f9274eacf112": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16138118004890__56ec079b-0b44-4a6e-98aa-f9274eacf112-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<div style=\"font-size: 1.5em;line-height: 1\">Eat <span class=\"primary-light\">Cookies</span> <br>and <span class=\"primary-light\">Lose Weight</span>\n</div>",
+            "heading_icon": "",
+            "heading_size": "h0"
+          }
+        },
+        "8b354282-b7c3-4e7b-bf3e-523ccce0e011": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"width: 100%;line-height:1.2;font-size:21px;font-weight: 500\">New customers get<br><span style=\"font-size:3em;font-weight: bold\">10% OFF</span><br>Our 1 month supply</div>"
+          }
+        },
+        "template--16138118004890__56ec079b-0b44-4a6e-98aa-f9274eacf112-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET ME SOME COOKIES!",
+            "button_link": "#ProductInfo-template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a",
+            "new_window_link": false,
+            "button_class": "button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16138118004890__56ec079b-0b44-4a6e-98aa-f9274eacf112-heading-1",
+        "8b354282-b7c3-4e7b-bf3e-523ccce0e011",
+        "template--16138118004890__56ec079b-0b44-4a6e-98aa-f9274eacf112-button-1"
+      ],
+      "custom_css": [
+        ".image-with-text {padding: 0; max-width: 100%;}",
+        "@media screen and (max-width: 749px) {.image-with-text__content {padding: 30px 10px 20px 10px !important; justify-content: center; } .image-with-text .image-with-text__text-item {order: 2 !important; }}",
+        ".button {display: flex; text-align: center; margin: 20px auto; padding-top: 15px; padding-bottom: 15px; background: #ff734c; justify-content: center;}",
+        ".image-with-text__content {justify-content: center;}",
+        ".image-with-text__heading {line-height: 54px !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot2023-05-19at3.48.58pm.png-v_1684741621.jpg",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "image_contained": false,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "template--16138118004890__cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1-1689119573a4e01aa3-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<div style=\"font-size: 54px\">Eat <span class=\"primary-light\">Cookies</span> and <span class=\"primary-light\">Lose Weight</span>\n</div>",
+            "heading_size": "h0"
+          }
+        },
+        "3bb0d0e6-0585-41d0-8008-006c699748e8": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"line-height:1.2;font-size:21px;font-weight: 500\">New customers get<br><span style=\"font-size:58px;font-weight: bold\">10% OFF</span><br>Our 1 month supply</div>"
+          }
+        },
+        "template--16138118004890__cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1-1689119573a4e01aa3-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "GET ME SOME COOKIES!",
+            "button_link_1": "#GalleryViewer-template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16138118004890__cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1-1689119573a4e01aa3-0",
+        "3bb0d0e6-0585-41d0-8008-006c699748e8",
+        "template--16138118004890__cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1-1689119573a4e01aa3-2"
+      ],
+      "custom_css": [
+        ".banner__buttons {width: 100%;}",
+        ".button {padding: 15px 10px; width: 100%;}",
+        "#Banner-template--16138118004890__cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1.banner {flex-direction: column-reverse; align-items: center; justify-content: center;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/cookie-diet-lifestyle-collage-text_e916f8e5-4d95-4a77-b26d-f7fcea2a9d4e.jpg",
+        "responsive_image": true,
+        "image_2": "shopify://shop_images/Screenshot2023-05-19at3.48.58pm_174d92e6-f0b3-4bf7-b754-54034e5c0519.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "link": "",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "0ec66ee6-8d06-4c70-8814-f821db8c9738": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--16138118004890__0ec66ee6-8d06-4c70-8814-f821db8c9738-168903933756e0b280-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Eat <span class=\"primary-light\">Cookies</span> and <span class=\"primary-light\">Lose Weight</span>",
+            "heading_size": "h0"
+          }
+        },
+        "26e8ab59-f627-4a8d-afa0-00bb4c0c9e3b": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<h1 class=\"h0\">Eat <span class=\"primary-light\">Cookies</span> and <span class=\"primary-light\">Lose Weight</span></h1>\n\n<p style=\"margin-bottom: 0 !important\">New customers get</p>\n<div class=\"h0\" style=\"font-size: 64px;margin-top:20px\">10% OFF</div>\n<p style=\"margin-bottom: 0 !important; margin-top: 10px\">Our 1 month supply</p>"
+          }
+        },
+        "7d174d91-0f38-4869-9e08-ecd2a80536be": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET ME SOME COOKIES!",
+            "button_link": "#ProductInfo-template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16138118004890__0ec66ee6-8d06-4c70-8814-f821db8c9738-168903933756e0b280-0",
+        "26e8ab59-f627-4a8d-afa0-00bb4c0c9e3b",
+        "7d174d91-0f38-4869-9e08-ecd2a80536be"
+      ],
+      "custom_css": [
+        ".rich-text__blocks.center {font-size: 24px; margin: 0 !important; line-height: 1;}",
+        ".rich-text__buttons .button {background: #ff734c;}",
+        ".rich-text {border-top: 10px solid #ff734c;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "36c2ecce-8a71-4fd6-9df3-852e5c36d745": {
+      "type": "logo-list",
+      "blocks": {
+        "166315427963e1d03c-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/dailymail.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/cm_3kb.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/current-affair.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/9news.png",
+            "link": ""
+          }
+        },
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/channel-7-news-logo.png",
+            "link": ""
+          }
+        },
+        "c494e547-6da9-4c54-8d87-68b43ea4d374": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/cm_4kb.png",
+            "link": ""
+          }
+        },
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/jpeg-optimizer_com_5kb_160x160_2x_160x160_2x_785cdef4-834b-43d0-8973-b36681a427c6.png",
+            "link": ""
+          }
+        },
+        "f0fca05a-a33d-4292-9281-15f30e4057c0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/womens-weekly.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166315427963e1d03c-0",
+        "166315427963e1d03c-1",
+        "166315427963e1d03c-2",
+        "166315427963e1d03c-3",
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca",
+        "c494e547-6da9-4c54-8d87-68b43ea4d374",
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2",
+        "f0fca05a-a33d-4292-9281-15f30e4057c0"
+      ],
+      "settings": {
+        "title": "The Diet Everyone's talking about",
+        "heading_size": "h2",
+        "logo_width": "160px",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "background-1"
+      }
+    },
+    "3c142903-468a-4eff-b94a-977b8b501620": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16138118004890__3c142903-468a-4eff-b94a-977b8b501620-1689040235bc3c09b9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "On average, customers start losing",
+            "heading_size": "h0"
+          }
+        },
+        "template--16138118004890__3c142903-468a-4eff-b94a-977b8b501620-1689040235bc3c09b9-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "a6fab769-d394-4230-9f84-f20a5f4fade6": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"line-height:1;vertical-align:middle;align-items:center;display:flex;flex-wrap: wrap; justify-content: center;\">\n  <div style=\"background:#000;margin-bottom: 0 !important;line-height:1;padding: 8px 8px 5px 8px;border-top:5px solid #fff;border-radius:5px;font-size: 52px\" class=\"font-heading\">3.5kg</div>\n  <div style=\"line-height:1;margin:10px 10px !important;font-weight:bold;font-size: 24px;\">in</div>\n  <div style=\"line-height: 1;margin: 0;background:#000;padding: 8px 8px 5px 8px;border-top:5px solid #fff;border-radius:5px;font-size: 52px\" class=\"mt-0 font-heading\">3 Weeks</div>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16138118004890__3c142903-468a-4eff-b94a-977b8b501620-1689040235bc3c09b9-0",
+        "template--16138118004890__3c142903-468a-4eff-b94a-977b8b501620-1689040235bc3c09b9-1",
+        "a6fab769-d394-4230-9f84-f20a5f4fade6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "d62fc19d-f495-4359-9340-0210b2f1b5c2": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "#how-it-works--icons {max-width: 900px; margin: auto;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"page-width text-center\"><h2 class=\"h1\">Wait, <span class=\"primary-light\">Eat Cookies</span> and <span class=\"primary-light\">Lose Weight</span>? How?</h2></div>\n{% render 'how-it-works-icons' %}",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "c8350c07-0cd8-4f9d-9c93-1d0aa48b218f": {
+      "type": "customer-testimonials-slider",
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "title": "Our <span class=\"primary-light\">Happy Customers</span>",
+        "heading_size": "h1"
+      }
+    },
+    "5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a": {
+      "type": "featured-product",
+      "blocks": {
+        "f7b879bd-6975-46fd-b932-9cd4a5dab046": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h2 style=\"margin-bottom: 0px !important\" class=\"h1\">Start your weight loss journey</h2>\n<p>New customers get 10% off our 1 month supply! Just pick a flavour and start losing weight.</p>"
+          }
+        },
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "b9a8eced-9837-4379-bd63-6f59e8738bb3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"text-center\" style=\"line-height:1;font-size: 32px\"><s>$199.95</s> <span class=\"primary-light\">$179.95</span></div>"
+          }
+        },
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-3": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "skip_cart": true
+          }
+        },
+        "929deb43-84e0-4d1c-9908-89fd4d114032": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<a href=\"#nutritional-tabs\" class=\"flex\" style=\"justify-content:center;text-decoration: none;color:#000 !important\">Ingredients & Nutritional Facts <span style=\"background:#ff734c;border-radius: 50%;width:30px;height:30px;display: inline-block;padding: 5px;transform\n: rotate(90deg);margin-left: 10px\" class=\"slider-button\">{% render 'icon-arrow-right' %}</span></div>"
+          }
+        }
+      },
+      "block_order": [
+        "f7b879bd-6975-46fd-b932-9cd4a5dab046",
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-4",
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-1",
+        "b9a8eced-9837-4379-bd63-6f59e8738bb3",
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-3",
+        "template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a-1689039869bba36ba7-6",
+        "929deb43-84e0-4d1c-9908-89fd4d114032"
+      ],
+      "custom_css": [
+        ".product__info-wrapper {text-align: center;}",
+        ".product__view-details {display: none;}",
+        ".button--full-width {min-height: 44px; margin-bottom: 10px;}"
+      ],
+      "settings": {
+        "product": "1-month-supply",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "fc71d317-16a9-4996-9815-34afb6e4e9c7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is Dr. Siegal’s COOKIE DIET cookies so effective?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>Half the battle with diets is convenience, the other half is hunger and this diet conquers both and gives you a way to keep the weight afterwards.</p>\n\n<ul>\n\t<li>Convenience: The cookies are so convenient as you have nothing to prepare or make up, you just take 1 bag of cookies with you for the day and eat 1 or 2 cookies every 2 hours, then dinner is a simple lean meat plus salad or veggies. Simple.</li>\n\t<li>Hunger: The success behind this diet is that it helps you stick to a low calorie diet (1000-1200 calories/day) without feeling hungry. Of course it takes a few days to adjust to the change in diet, but after that the cookies really suppress your hunger and help you stick to the diet without those pesky hunger pangs.</li>\n\t<li>Afterwards: Once goal weight achieved, eat healthy meals and enjoy the cookies as a healthy, low calorie, hunger suppressing snack between meals so you don&#39;t over eat.</li>\n\t<li>Proof: This diet is not a fad, it has been going strong and only growing by word of mouth for the last 40 years.</li>\n</ul>\n\n<p>In depth:</p>\n\n\n<p>The reason this diet is so effective is because it trains your body to eat the way its suppose to.</p>\n\n<p><strong>Weight Loss Phase:</strong> 9 Cookies a Day, 1 or 2 cookies every 2 hours (do not exceed 2 hours) + Dinner (250g lean meat plus salad/veggies) + Light exercise (20-30min walk, 2-3 times a week)</p>\n\n<p>A lot people don&#39;t eat for 5 or 6 hours, then have a big meal, and that causes the weight to pile on. In the weight losing phase, Dr. Siegal&#39;s Cookie Diet trains your body to eat small portions frequently, this helps spike your metabolism throughout the day and facilitates weight loss. It also helps you get used to preparing one healthy meal per day (dinner).</p>\n\n<p><strong>The reason you WILL BE successful is 3 fold:</strong>\n\t<br>1. You don&#39;t feel hungry so you can stick to this low calorie diet\n\t<br>2. The diet super simple &amp; convenient, so it is easy for you to stick to it\n\t<br>3. You will be equipped to enter the weight maintenance stage</p>\n\n<p><strong>Weight Maintenance Phase</strong>: Healthy Breakfast, Lunch &amp; Dinner, 1-2 cookies inbetween meals + Moderate exercise (30-40 minutes of exercise, 2-3 times a week)</p>\n\n<p>After you reach your goal weight you move to the maintenance phase. Now that your body is accustomed to eating small, frequent portions, you have had practice preparing healthy meals and you also have got into the routine of doing some light exercise, you are now prepared to scale that up slightly to prepare 3 healthy meals (can be found in our <a href=\"https://www.cookiediet.com.au/products/the-cookie-diet-cookbook\">cookbook</a>), and increase your exercise. The cookies you will eat in between your meals will help curb your sweet tooth and help control your hunger so you don&#39;t over eat.</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you use Dr. Siegal’s COOKIE DIET cookies?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>We don&#39;t actually have the diet plan on the box, as people can use them as they please. There are people that choose to use them as a healthy snack alternative. However if you are interested in how Dr. Siegal has been using them in the U.S below are the details</p>\n\n<p>The purpose of the cookies is to control your hunger so you can stick to a reduced-calorie diet. They contain a particular mixture of proteins, derived from various food substances, that Dr. Siegal has been personally making in his Miami bakery since 1975. There are no drugs or added stimulants in the products.</p>\n\n<p>The way Dr. Siegal designed it, and has been using it on over 500, 000 patients over the last 37 years is to have <strong>1 to 2 cookies every 2 hours plus dinner</strong><strong>.</strong></p>\n\n<p>For dinner, you have 500 to 700 calories. As a guide we recommend <strong>250g of lean meat (chicken, fish, lamb) plus salad/veggies.</strong></p>\n\n\n<li>Overall you will have 1000-1200 calories a day.</li>\n<li>Each cookie has only 60 calories.</li>\n<li>It is advised to take a daily multivitamin (any brand) and at least 8 glasses of water.</li>\n<li>Tea and coffee is allowed (avoid milk, cream and sugar if possible &ndash; sweeteners are allowed)</li>\n\n<p>The first few days will take you some time to adjust to the change in diet, but usually after 2-4 days you will find it very easy and convenient to follow.</p>\n\n<p>The following table shows the Dr. Siegal&#39;s Eating Plan. This timetable will work for most people who have a typical workday schedule. It assumes that you wake up at around 7am, work from 9pm to 5pm or so, have dinner around 8pm, and go to bed around 11pm. It also assumes that you will have your one &ldquo;real&rdquo; meal in the evening (but you can adjust the time to suit your lifestyle). Under this plan, you never go more than two hours without eating in order to reduce the opportunity for serious hunger to develop.</p>\n\n<div class=\"text-center\">\n\n\t<p><strong>8 AM:</strong> 2 cookies (120 calories) <strong>10 AM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>NOON:</strong> 1 cookie (60 calories) <strong>2 PM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>4 PM:</strong> 2 cookies (120 calories) <strong>6 PM:</strong> 1 cookie (60 calories)</p>\n\n\t<p><strong>8 PM:</strong> DINNER (500-700 calories) <strong>10 PM</strong>: 1 cookies (60 calories)</p>\n</div>\n\n<p>If you have any more questions please don&#39;t hesitate to call us on 1300 077 707</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much exercise should I do?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<ol>\n\t<li>Weight Losing Phase: 9 Cookies (1-2 cookies every 2 hours) plus Dinner (lean meat plus salad/veggies) &ndash; exercise is not absolutely necessary as you will already be in a caloric deficit, but if you would like to exercise &ndash; only light exercise recommended (30min walk 3 times a week)</li>\n\t<li>Weight Maintenance Phase: Once goal weight achieved, eat healthy meals and enjoy the cookies as a healthy, low calorie snack between meals &ndash; intermediate to advanced exercise recommended based on fitness level.</li>\n</ol>\n\n<p>Exercising too much during weight losing phase may make your net calories too low and cause you to hold on to weight, so you might need to either decrease exercise during weight losing phase or add a 200-300 calorie meal in the day to make up for it.Everyone is different so you may have to do trial and error to find your optimal calorie intake for weight loss.</p>",
+            "page": ""
+          }
+        },
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I Get Best Results?",
+            "icon": "none",
+            "row_content": "<p>For best results, use the diet at least one month, and also measure your waist as well as your weight once a week.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "752d53a8-2b95-428b-b721-dbe67c287186": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to receive the cookies once I place an order?",
+            "icon": "none",
+            "row_content": "<p>The cookies are baked here in Sydney, Australia for your convenience</p><p>Due to the high demand please allow 2-6 working days. We are doing everything we can to get them to you as soon as possible.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "08ff62f3-bb28-4c0a-bf5a-4f73c8836fef": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Can I use them if I have Diabetes or any other Medical Conditions?",
+            "icon": "none",
+            "row_content": "",
+            "row_liquid_content": "<p>Questions about medical conditions must be directed to your doctor. Show the ingredients to your doctor and always follow his or her instructions. We are actually a company owned and operated by Australian pharmacists. </p>\n\n<p>If you are diabetic, we recommend that you consult your GP before starting any diet. Dr. Siegal has treated many diabetics with great success, however every case is different, so please consult your doctor, and if you or your doctor has any questions he can contact us directly on <a href=\"tel:1300077707\">1300 077 707</a>.</p>\n\n<p>There is nothing harmful in the cookies, they are normal low calorie cookies with a special combination of natural proteins that naturally suppress hunger.</p>\n\n<p>Please see story here on cookie diet and diabetes:</p>\n\n<p><a href=\"https://www.youtube.com/watch?v=3upB-nv_Ci8\">https://www.youtube.com/watch?v=3upB-nv_Ci8</a></p>\n\n<p>Dr. Siegal has been using it on over 500,000 patients over the last 40 years.</p>",
+            "page": ""
+          }
+        },
+        "99b3abc7-f6b4-4225-bd2a-f13f5c03fdbf": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Can I use them if I am Pregnant or Lactating?",
+            "icon": "none",
+            "row_content": "<p>Whilst pregnant or lactating, before going on any diet you must consult your doctor. Dr. Siegal's Cookies do not contain any harmful ingredients or drugs. They are normal cookies, the only difference is that they are low calorie and contain a special combination of natural proteins which help control hunger. The Cookies may be taken in many ways. Having the cookies as a healthy snack alternative to chips, muffins or other cookies maybe the best way you can use it while pregnant/lactating.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "4ba471f1-4431-4b19-babd-4db6b670db3c": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Do the Cookies Contain Sugar?",
+            "icon": "none",
+            "row_content": "<p>There are only 4g of sugar per cookie. During the weight losing phase when a user eats 9 cookies a day, the total sugar intake per day is 36g which is well below average daily sugar intake of an adult.</p><p>The reason the cookies contain sugar, is so that when a user stops using the diet, they do not put on rebound weight when they move to the maintenance phase or return to normal eating.</p><p>This amount of sugar does not raise red flag even for diabetic users as it is still below daily averages.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "c90c816a-fe05-413f-9c80-6945f30372fa": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Do the Cookies Contain Gluten?",
+            "icon": "none",
+            "row_content": "<p>All of our cookies currently contain gluten. However a lot of our customers who have gluten intolerance have been using our cookies and taking GluteGuard tablets with great success.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "9598875e-d661-4442-a434-973967c7bc8f": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Do the Cookies Contain Milk?",
+            "icon": "none",
+            "row_content": "<p>All of our cookies currently contain milk. However a lot of our customers who have lactose intolerance have been our cookies and taking Lacteeze tablets with great success.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        },
+        "26d64294-d3d1-4ace-b423-b886bddbac19": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is this Cost Effective?",
+            "icon": "none",
+            "row_content": "<p>Our cookies are baked in Australia in a high quality facility, with premium all natural ingredients. A lot of our customers say, “It’s cheaper to be on the diet than off it!” How does that make sense?</p><p>The reason being is when your in the weight losing phase you’re eating 9 cookies a day plus dinner, dinner is the only meal you this diet doesn’t cover. So when you buy a month supply for $189.95, thats $47.49/week and that covers essentially breakfast and lunch for 7 days, so if you divide that by 14 meals that works out to $3.39 per meal and thats definitely cost effective.</p>",
+            "row_liquid_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-0",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-1",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-2",
+        "template--15817866051738__a844fe49-e92b-4de8-bfd2-d92232a9fa30-166845241429e74497-3",
+        "752d53a8-2b95-428b-b721-dbe67c287186",
+        "08ff62f3-bb28-4c0a-bf5a-4f73c8836fef",
+        "99b3abc7-f6b4-4225-bd2a-f13f5c03fdbf",
+        "4ba471f1-4431-4b19-babd-4db6b670db3c",
+        "c90c816a-fe05-413f-9c80-6945f30372fa",
+        "9598875e-d661-4442-a434-973967c7bc8f",
+        "26d64294-d3d1-4ace-b423-b886bddbac19"
+      ],
+      "custom_css": [
+        ".collapsible-content__heading {margin-bottom: 10px;}",
+        "h3.accordion__title.h2 {color: #fff !important;}"
+      ],
+      "settings": {
+        "caption": "",
+        "custom_id": "faq-section",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "accordion_title_heading_size": "h2",
+        "button_label": "",
+        "button_link": "",
+        "button_class": "button--primary",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "accent-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "64cfb2a1-4b0e-466c-a29f-150b611fb47f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16138118004890__64cfb2a1-4b0e-466c-a29f-150b611fb47f-16890418936c7f01b5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<div style=\"width:100%;text-align:center;\">You heard us!<br>\n<span class=\"primary-light\">Eat Cookies and Lose Weight</span><br>\nWhat are you waiting for?</div>",
+            "heading_icon": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16138118004890__64cfb2a1-4b0e-466c-a29f-150b611fb47f-16890418936c7f01b5-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "TAKE ME BACK TO THE COOKIES",
+            "button_link": "#MediaGallery-template--16138118004890__5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a",
+            "new_window_link": false,
+            "button_class": "button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16138118004890__64cfb2a1-4b0e-466c-a29f-150b611fb47f-16890418936c7f01b5-0",
+        "template--16138118004890__64cfb2a1-4b0e-466c-a29f-150b611fb47f-16890418936c7f01b5-2"
+      ],
+      "custom_css": [
+        ".image-with-text__content {flex-direction: column; justify-content: center;}",
+        ".image-with-text__text-item {justify-content: center;}",
+        ".button {margin: 10px auto 0 auto !important;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Sup6_cbdb066b-ae66-42e9-bf52-30fed0b4f43b.jpg",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "image_contained": false,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 44,
+        "padding_bottom": 48
+      }
+    },
+    "ebd63381-25d4-4c5f-a1bd-82033875838a": {
+      "type": "nutrition-tabs",
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "39e02e61-907d-4e55-9412-9248dba51b09": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.footer,.mail-button,.header-wrapper,#smile-ui-lite-container{\ndisplay:none !important}</style>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "da53f1df-f100-4b04-b6d0-5d552a9f7c29",
+    "main",
+    "56ec079b-0b44-4a6e-98aa-f9274eacf112",
+    "cfb4eae9-ef6a-4bab-96ef-eec1de05d9f1",
+    "0ec66ee6-8d06-4c70-8814-f821db8c9738",
+    "36c2ecce-8a71-4fd6-9df3-852e5c36d745",
+    "3c142903-468a-4eff-b94a-977b8b501620",
+    "d62fc19d-f495-4359-9340-0210b2f1b5c2",
+    "c8350c07-0cd8-4f9d-9c93-1d0aa48b218f",
+    "5c6e3434-9796-4ecc-b1d6-ac2adadd5c9a",
+    "fc71d317-16a9-4996-9815-34afb6e4e9c7",
+    "64cfb2a1-4b0e-466c-a29f-150b611fb47f",
+    "ebd63381-25d4-4c5f-a1bd-82033875838a",
+    "39e02e61-907d-4e55-9412-9248dba51b09"
+  ]
+}

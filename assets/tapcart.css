@@ -1,0 +1,342 @@
+/* GENERAL + HELPER CLASSES */
+h1, h2, h3, h4, h5, .heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slider, .slider {
+  height: initial !important;
+}
+
+body {
+  line-height: 1.2;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.mb-sm {
+  margin-bottom: 15px;
+}
+
+.mb-xs {
+  margin-bottom: 7.5px;
+}
+.my-xs {
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+}
+
+.mt {
+  margin-top: 30px;
+}
+
+.mt-sm {
+  margin-top: 15px;
+}
+
+.primary-bg {
+  background: #ff734c;
+}
+
+.primary-text {
+  color: #ff734c !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.toast {
+  position: fixed !important;
+  z-index: 10000 !important;
+  text-align: center !important;
+  background: #ff734c;
+  color: #fff;
+  top: initial !important;
+  width: calc(100% - 20px) !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  left: 10px !important;
+  margin: auto !important;
+  display: block !important;
+}
+/* END GENERAL + HELPER CLASSES */
+
+
+#app-holder {
+  height: 100%;
+  min-height: 500px;
+  z-index: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+/* BOTTOM NAVIGATION BAR */
+.mail-button, .oke-reviewsTab {
+  display: none !important;
+}
+
+.bottom-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 1;
+  padding: 1em 0;
+  /* font-size: 14px; */
+  color: #fff;
+  gap: 15px;
+}
+
+.bottom-bar--item span {
+  /* color: #333; */
+}
+
+.bottom-bar--item .material-icons {
+  font-size: 40px;
+ color: #ff734c;
+}
+
+.bottom-bar--item {
+  text-align: center;
+  font-size: 16px;
+  color:#777;
+  border: 0;
+  padding: 1em;
+  border: 1px solid #f3f3f3;
+  background: linear-gradient(to bottom right, #f3f3f3, #f1f1f1);
+  border-radius: 10px;
+  gap: 10px;
+  transition: .3s ease-in-out;
+}
+
+.bottom-bar--item:focus, .bottom-bar--item:hover {
+    background: #f2f2f2;
+}
+
+.bottom-bar--header .btn {
+  box-shadow: none;
+}
+.bottom-bar--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdbd6;
+  margin-bottom: 10px;
+}
+
+/* END BOTTOM NAVIGATION BAR */
+
+/* TRACK COOKIE CARD */
+.track-cookie-card .row {
+  margin-bottom: 0;
+}
+
+#modal-tracking canvas {
+  height: 200px;
+}
+
+/* COOKIE TABLE */
+.cookie-tl {
+  width: 180px;
+  display: block;
+  margin:auto;
+}
+
+#cookie-counter {
+  display:flex;
+  justify-content: space-evenly;
+  color: rgba(0,0,0,.3);
+}
+
+#cookie-counter .material-icons {
+  font-size: 28px;
+}
+
+#cookieTable td {
+  padding: 5px;
+}
+
+#cookieTable * {
+  text-align: center;
+}
+/* END COOKIE TABLE */
+
+/* FB GROUP */
+/* .fb-group iframe  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100% !important;
+  width: 100% !important;
+  margin: auto !important;
+}
+
+.fb-group > span {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.fb-group ._65wk{
+  margin:auto !important;
+  width: 100% !important;
+}
+
+.fb-group {
+  height: 300px !important;
+  margin: auto !important;
+  width: 280px !important;
+  display: block !important;
+  position: relative !important;
+} */
+/* END FB GROUP */
+
+/* WAISTLINE AND WEIGHT CHART */
+#waistlineChart, #weightChart {
+  height: 0;
+}
+/* END WAISTLINE AND WEIGHT CHART */
+
+/* ACCOUNT */
+#profile-pic {
+  object-fit: cover;
+  border-radius: 50%;
+  margin:auto;
+  display: block;
+}
+/* END ACCOUNT */
+
+/* MODAL GENERAL */
+.social-media-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-media-container a {
+  font-size: 30px;
+  padding: 5px;
+  color: #ff734c;
+  transition: all 0.3s ease;
+}
+
+.social-media-container a:hover {
+  color: #3F51B5;
+  transform: scale(1.1);
+}
+
+.social-media-container a svg {
+  height: 30px;
+  width: 30px;
+  fill: #777;
+  transition: all 0.3s ease;
+}
+
+.social-media-container a svg:hover {
+  fill: #3F51B5;
+  transform: scale(1.1);
+}
+
+.full-screen-modal.modal {
+  max-width: 100% !important;
+  width: 600px;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  position: fixed !important;
+  height: 100vh;
+  max-height: 100vh !important;
+}
+
+.app-feature {
+  max-width: 100% !important;
+  position: relative !important;
+  flex-direction: column;
+}
+
+.modal {
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.modal .modal-content {
+  background: #fff;
+  overflow-y: auto;
+  flex: 1;
+}
+.modal-image {
+  margin: -24px;
+  margin-bottom: 24px !important;
+  width: calc(100% + 48px);
+  max-width: initial;
+}
+
+.modal .modal-footer {
+  z-index: 1;
+}
+
+.modal-header,
+.modal-footer {
+  flex-shrink: 0;
+}
+
+.modal .modal-close {
+  position: absolute;
+  right: 15px;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.modal .modal-close i {
+  font-size: inherit;
+}
+
+.modal-header {
+  background: #ff734c;
+  margin: 0;
+  padding: 16px 24px;
+  color: #fff;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 5px #0000004d;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+}
+
+.modal .counter-flex > div {
+  flex: 1;
+}
+.modal .counter-flex {
+    flex-direction: column;
+    gap: 2rem;
+}
+.counter-flex svg {
+    width: 25px;
+    height: 25px;
+    margin: auto auto auto 6px;
+    fill: #fff;
+}
+/* END MODAL GENERAL */
+
+/* hide klaviyo popup form */
+.kl-private-reset-css-Xuajs1 {
+  display: none !important;
+}
+
+/* Additional styles for other sections go here */

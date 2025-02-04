@@ -1,0 +1,104 @@
+{% assign faq_question = page.metafields.arena.faq_question %}
+{% assign faq_answer = page.metafields.arena.faq_answer %}
+
+{% if faq_question.size > 0 and faq_answer.size > 0 %}
+  <div class="faq m-b section-custom">
+    {% for title in faq_question %}
+      <div class="tab__item" id="{{title | handleize}}">
+        <h3 class="tab__question">{{ title }}</h3>
+        <div class="tab__answer rte">
+          {{ faq_answer[forloop.index0] }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {%- for title in faq_question -%}
+    {
+      "@type": "Question",
+      "name": {{- title | json -}},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq_answer[forloop.index0] | json }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+  {%- endfor -%}
+  ]
+}
+</script>
+
+<script type="text/javascript">
+  var acc = document.getElementsByClassName("tab__item");
+  var answer = document.getElementsByClassName("tab__answer");
+  for (var i = 0; i < answer.length; i++) {
+    answer[i].addEventListener("click", function(e) {
+      e.stopPropagation();
+    });
+  }
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function(e) {
+      this.classList.toggle("show-tab");
+    });
+  }
+</script>
+
+<style>
+  .tab__separator  {
+    text-align: center;
+  }
+
+  .tab__item  {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 22px 70px 22px 22px;
+    width: 100%;
+    scroll-margin-top: 144px;
+    position: relative;
+    outline: none;
+    transition: 0.4s;
+    background-color: #f7f7f7;
+  }
+  .tab__item:before  {
+    content: "+";
+    text-align: center;
+    font-size: 40px;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    max-height: 72px;
+    position: absolute;
+  }
+
+  .show-tab .tab__question {
+    color: #ff734c;
+  }
+  .show-tab:before {
+    content: '-';
+    color: #ff734c;
+    top: 35px;
+  }
+
+  .show-tab .tab__answer {
+    display: block;
+  }
+  .tab__question {
+    margin: 0 !important;
+    font-size: 2rem;
+  }
+
+  .tab__answer {
+    margin-top: 20px;
+    display: none;
+    cursor: default;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+  }
+</style>

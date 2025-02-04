@@ -1,0 +1,58 @@
+<a href="mailto:info@cookiediet.com.au" onclick="copyToClipboard(this)" clipboard="info@cookiediet.com.au" class="mail-button">
+    <div id="clipboard-text"></div>  
+  {% include 'icon-email-fa' %}
+</a>
+
+<script>
+  function copyToClipboard(element) {
+    const clipboardValue = element.getAttribute("clipboard");
+    const copiedText = document.getElementById("clipboard-text");
+    navigator.clipboard.writeText(clipboardValue)
+      .then(function() {
+        copiedText.innerText = "Copied email!";
+        copiedText.style.display = "inline-block";
+        setTimeout(function() {
+          copiedText.innerText = "";
+          copiedText.style.display = "none";
+        }, 3000); 
+      })
+  }
+</script>
+
+<style>
+  .mail-button {
+    background: linear-gradient(#ff734c, #ff5323);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.8);
+    fill: #fff;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #clipboard-text {
+    position: absolute;
+    background: #000;
+    right: 110%;
+    font-size: 12px;
+    margin: auto;
+    padding: 5px;
+    width: max-content;
+    max-width: initial;
+    line-height: 1;
+    color: #fff;
+    border-radius: 5px;
+  }
+  .mail-button svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    color: #fff;
+  }
+  
+</style>

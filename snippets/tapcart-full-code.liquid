@@ -1,0 +1,328 @@
+{% if handle contains 'tapcart-test' %}
+  <meta name="robots" content="noindex">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M07T6YZXCC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-M07T6YZXCC');
+  </script>
+{% endif %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+<script src="{{ 'materialize.js' | asset_url }}" defer="defer"></script>
+{{ 'tapcart.css' | asset_url | stylesheet_tag }}
+{{ 'materialize.css' | asset_url | stylesheet_tag }}
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-functions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="{{ 'tapcart-new.js' | asset_url }}" defer="defer"></script>
+<script src="https://cdn.tapcart.com/webbridge-sdk/webbridge.umd.js"></script>
+
+{% render 'navigation-promo-slider' %}
+
+<div>
+  <div id="modal-account" class="modal app-feature full-screen-modal modal-fixed-footer--ignore">
+      <h4 class="modal-header">Account <a href="#!" class="modal-close waves-effect waves-white"><i class="material-icons">close</i></a></h4>
+      <div class="modal-content text-center">
+        <div id="account-content"">
+          <form id="profile-form" class="mb">
+            <div class="file-field input-field">
+                <input type="file" id="file-input" accept="image/*">
+                <img id="profile-pic" src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/user-profile-placeholder.png?v=1694655743" width="150" height="150" alt="profile picture">
+
+              <div class="file-path-wrapper hide">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+            <button type="submit" class="btn submit">Upload</button>
+          </form>
+
+          <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <input type="text" placeholder="First Name" id="first-name"/>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <input type="text" placeholder="Last Name" id="last-name"/>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input type="text" placeholder="Email" id="email"/>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">calendar_month</i>
+            <input type="date" placeholder="Dob" type="date" id="dob"/>
+            <span class="helper-text left">Date of birth</span>
+          </div>
+          
+          <button id="save-account-details" type="submit" class="mt-sm btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-cookie" class="modal app-feature full-screen-modal modal-fixed-footer--ignore">
+    <h4 class="modal-header">Track Cookies <a href="#!" class="modal-close waves-effect waves-white"><i class="material-icons">close</i></a></h4>
+    <div class="modal-content center-align">
+      <div class="h2 mb-sm">See how you're doing for the day!</div>
+      <div id="last-cookie" class="mb-sm"></div>
+      <div id="cookie-counter" class="mb-sm">
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+        <i class="material-icons">cookie</i>
+      </div>
+
+      <!-- HTML code -->
+      <form id="cookie-form" onsubmit="event.preventDefault();">
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field">
+              <!-- <i class="material-icons prefix">calendar_month</i> -->
+              <input id="cookieDate" type="date" class="datepicker" />
+              <label for="cookieDate">Date</label>
+            </div>
+          </div>
+          <div class="col s12">
+            <div class="input-field">
+              <!-- <i class="material-icons prefix">schedule</i> -->
+              <input id="cookieTime" type="time" class="timepicker" />
+              <label for="cookieTime">Time</label>
+            </div>
+          </div>
+          <!-- <div class="col s12">
+            <div class="input-field">
+              <i class="material-icons prefix">tagxr</i>
+              <input id="cookieNumber" type="number" class="validate" />
+              <label for="cookieNumber"
+                >Cookie Number <small>(1-9)</small></label
+              >
+            </div>
+          </div> -->
+          <div class="col s12">
+            <div class="input-field w-full s12 center-align">
+              <button class="btn" id="submit-cookie-form">
+                Add
+                <i class="material-icons right">cookie</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+     <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">date_range</i>
+          <input type="text" id="cookie-from-date" class="datepicker">
+          <label for="cookie-from-date">From Date</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">date_range</i>
+          <input type="text" id="cookie-to-date" class="datepicker">
+          <label for="cookie-to-date">To Date</label>
+        </div>
+        <div class="col s12">
+          <button id="cookie-filter-button" class="btn btn-small waves-effect waves-light">Filter History</button>
+        </div>
+      </div>
+
+      <div id="cookie-data" class="mt-sm">
+        <div class="h2">History</div>
+        <table id="cookieTable" class="text-center">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th class="center-align">Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="modal-social" class="modal app-feature full-screen-modal modal-fixed-footer--ignore">
+    <h4 class="modal-header">Social <a href="#!" class="modal-close waves-effect waves-white"><i class="material-icons">close</i></a></h4>
+    <div class="modal-content center-align">
+      <img class="modal-image" src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/cookie-diet-banner-lose-weight.jpg?v=1694430247" />
+      <h2 class="h1">Cookie Club - <span class="primary-light">You Are Not Alone!</span></h2>
+      <p>Join over <b>9000 people</b> sharing their Cookie Diet experience online.</p>
+      <div id="cookie-diet-stats">
+        <div class="counter-flex text-center" id="cookie-club-counter">
+          <div>
+            <div class="count-value"><span class="counter-value" data-count="9">9</span>K</div>
+            <p class="count-text">Over 9,000 real customers on the diet</p>
+            <a href="https://www.facebook.com/groups/cookiedietclub/" class="button button--primary">Join Group
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M184 88c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zM568 88c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm8 157.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 160c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z"/>                  </svg>
+            </a>
+          </div>
+          <div>
+            <div class="count-value"><span class="counter-value" data-count="22">22</span>K</div>
+            <p class="count-text">Over 22,000 Likes On Facebook</p>
+            <a href="https://www.facebook.com/pg/107297232754038" class="button button--primary">Like
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" /></svg>
+            </a>
+          </div>
+          <div>
+            <div class="count-value"><span class="counter-value" data-count="4">4</span>K</div>
+            <p class="count-text">Over 4,000 followers On Instagram</p>
+            <a href="https://www.instagram.com/cookie.diet/" class="button button--primary">Follow
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- <div style="font-size: 21px;" class="mb">Follow us on Social Media</div>
+    <div class="social-media-container">
+      <a href="https://www.facebook.com/CookieDietAustralia" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/cookie.diet/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCoaoyYdPy-41fIZjmNIeWmg/videos" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+        </svg>
+      </a>
+      <a href="https://twitter.com/CookieDietAus" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+        </svg>
+      </a>
+    </div> -->
+  </div>
+
+  <div id="modal-tracking" class="modal app-feature full-screen-modal modal-fixed-footer--ignore">
+    <h4 class="modal-header">Track Body Measurements <a href="#!" class="modal-close waves-effect waves-white"><i class="material-icons">close</i></a></h4>
+    <div class="modal-content text-center">
+      <!-- Weight input form -->
+      <div class="row">
+        <div class="col s12 mb-sm" id="target-weight">
+          <!-- <div class="h2 mb-xs">Goal Progress</div> -->
+            <span style="display:block;margin-bottom: 5px" id="goalDifference"></span>
+            <span id="currentWeight"></span><br>
+            <span id="targetWeight"></span>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">monitor_weight</i>
+          <input type="number" id="weightInput" />
+          <label for="weightInput">Weight (kg)</label>
+        </div>
+        <div class="col s12">
+          <!-- <button class="waves-effect btn btn-small" id="load-weight-button">History</button> -->
+          <button class="waves-effect btn btn-small right" id="add-weight-button">Save</button>
+        </div>
+      </div>
+      <!-- Weight input form -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">monitor_weight</i>
+          <input type="number" id="targetWeightInput" />
+          <label for="targetWeightInput">Target Weight Goal (kg)</label>
+        </div>
+        <div class="col s12">
+          <!-- <button class="waves-effect btn btn-small right" id="load-weight-button">History</button> -->
+          <button class="waves-effect btn btn-small right" id="add-target-weight-button">Save</button>
+        </div>
+      </div>
+
+      <!-- Waistline measurement input form -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">straighten</i>
+          <input type="number" id="waistlineMeasurementInput" />
+          <label for="waistlineMeasurementInput"
+            >Waistline Measurement (cm)</label
+          >
+        </div>
+        <div class="col s12">
+          <!-- <button class="waves-effect btn btn-small right" id="load-waistline-button">History</button> -->
+          <button class="waves-effect btn btn-small right" id="add-waistline-button">Save</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">date_range</i>
+          <input type="text" id="from-date" class="datepicker">
+          <label for="from-date">From Date</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">date_range</i>
+          <input type="text" id="to-date" class="datepicker">
+          <label for="to-date">To Date</label>
+        </div>
+        <div class="col s12">
+          <button id="filter-button" class="btn btn-small right waves-effect waves-light">Filter Graphs</button>
+        </div>
+      </div>
+
+      <canvas id="weightChart"></canvas>
+
+      <canvas id="waistlineChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div id="bottom-bar-section" class="page-width">
+  <div class="bottom-bar">
+    <!-- <button class="bottom-bar--item modal-open modal-trigger">
+      <i class="material-icons">home</i><span>Home</span>
+    </button> -->
+
+    <button class="bottom-bar--item modal-open modal-trigger" data-target="modal-account" id="modal-account-button">
+      <div class="bottom-bar--header mb-xs">
+        <i class="material-icons">person</i>
+        <div class="h2 mb-0">Profile Hub</div>
+        <div class="btn btn-small">View</div>
+      </div>
+      <div>Manage your personal information and showcase your unique identity by uploading a profile picture. Your gateway to personalized experiences within the app.</div>
+    </button>
+    <button class="bottom-bar--item modal-open modal-trigger" data-target="modal-cookie" id="modal-cookie-button">
+      <div class="bottom-bar--header mb-xs">
+        <i class="material-icons">cookie</i>
+        <div class="h2 mb-0">Crunch Counter</div>
+        <div class="btn btn-small">View</div>
+      </div>
+      <div>Keep a tally of your daily weight loss cookie consumption. Stay on track with your nutrition goals, one cookie at a time.</div>
+    </button>
+    <button class="bottom-bar--item modal-open modal-trigger" data-target="modal-tracking" id="modal-tracking-button">
+      <div class="bottom-bar--header mb-xs">
+        <i class="material-icons">monitor_weight</i>
+        <div class="h2 mb-0">Progress Tracker</div>
+        <div class="btn btn-small">View</div>
+      </div>
+      <div>Visualize your fitness journey with interactive graphs, tracking weight progress and waistline measurements over time. Your path to a healthier you, graphed for success.</div>
+    </button>
+    <button class="bottom-bar--item modal-open modal-trigger" data-target="modal-social" id="modal-social-button">
+      <div class="bottom-bar--header mb-xs">
+        <i class="material-icons">groups</i>
+        <div class="h2 mb-0">Community Connect</div>
+        <div class="btn btn-small">View</div>
+      </div>
+      <div>Dive into our private Facebook group and explore links to all our social media channels. Stay engaged, share experiences, and connect with others on the same wellness journey.</div>
+    </button>
+  </div>
+</div>

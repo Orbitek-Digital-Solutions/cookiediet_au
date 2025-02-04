@@ -1,0 +1,12 @@
+{% if card_product.metafields.custom.bestseller_badge == true %}
+  <div class="bestseller-badge">
+    <img loading="lazy" src="{{'best-seller.svg' | file_url }}" alt="Value Pack - {{card_product.name}}"/>
+  </div>
+{% endif %}
+
+
+{% if card_product.metafields.custom.best_value_badge == true %}
+  <div class="bestseller-badge">
+    <img loading="lazy" src="{{'value-pack.svg' | file_url }}" alt="Bestseller - {{card_product.name}}"/>
+  </div>
+{% endif %}

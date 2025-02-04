@@ -1,0 +1,17 @@
+{% if product.price > 9900 %}
+<div class="product-sale-banner color-background-2 text-center">
+  <p class="announcement-bar__message product-sale-banner--text">
+    {% comment %}{% render 'icon-discount' %}{% endcomment %}
+    🇦🇺 10% OFF applied at checkout! 🎉
+  </p>
+</div>
+{% endif %}
+    
+{% comment %}
+
+{% render 'countdown-timer', end_date: "Mar 20, 2023" %}
+{% endcomment %}
+
+{% comment %}<p class="product-sale-banner--subtext">Min. spend $199.95 | Ends 19/03/23 23:59 AEDT</p>{% endcomment %}
+
+

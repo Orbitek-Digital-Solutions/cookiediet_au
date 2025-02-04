@@ -1,0 +1,20 @@
+  <ul class="contact-icons list-unstyled" role="list">
+    <li>
+      <a href="tel:{{ shop.phone | remove: ' ' }}" class="link list-contact__item" >
+        <div class="icon">{%- render 'icon-phone-fa' -%}</div>
+        <span>1300 077 707 or +61 2 9773 1526</span>
+      </a>
+    </li>
+    <li>
+      <a href="tel:+61297715164" class="link list-contact__item" >
+        <div class="icon">{%- render 'icon-fax-fa' -%}</div>
+        <span>+61 2 9771 5164</span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:{{ shop.email }}" class="link list-contact__item" >
+        <div class="icon">{%- render 'icon-email-fa' -%}</div>
+        <span>{{ shop.email }}</span>
+      </a>
+    </li>
+  </ul>

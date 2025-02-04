@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "608d0a68-b01e-401e-b7ff-08633578eb26": {
+      "type": "image-banner-metafields",
+      "blocks": {
+        "template--15817866182810__608d0a68-b01e-401e-b7ff-08633578eb26-1667592173ea1c02ae-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15817866182810__608d0a68-b01e-401e-b7ff-08633578eb26-1667592173ea1c02ae-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "link": "",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "4eeb0742-0490-4798-9cdd-bf0b191a7638": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thank You for Joining Our <span class=\"primary-light\">VIP Early Access!</span>",
+            "heading_size": "hxl"
+          }
+        },
+        "ea1c56c3-beab-4b53-b311-5c535b3a2fa2": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"icon-holder-check\">{% render 'icon-tick' %}</span>\n<meta name=\"robots\" content=\"noindex\">"
+          }
+        },
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p> Get ready to unlock exclusive Black Friday deals and discounts before anyone else!</p>"
+          }
+        },
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-heading-1",
+        "ea1c56c3-beab-4b53-b311-5c535b3a2fa2",
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-text-1",
+        "template--16187249066138__4eeb0742-0490-4798-9cdd-bf0b191a7638-button-1"
+      ],
+      "custom_css": [
+        ".icon-holder-check .icon {width: 60px; margin-top: 2rem; border-radius: 50%; fill: #ff734c !important; border: 4px solid #0f8043;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "608d0a68-b01e-401e-b7ff-08633578eb26",
+    "main",
+    "4eeb0742-0490-4798-9cdd-bf0b191a7638"
+  ]
+}

@@ -1,0 +1,9 @@
+{% assign urls_hreflang = "https://www.cookiediet.com.au/,https://www.cookiediet.com.au/products/weight-loss-subscription-monthly-supply,https://www.cookiediet.com.au/products/variety-pack,https://www.cookiediet.com.au/products/the-cookie-diet-cookbook,https://www.cookiediet.com.au/products/maintenance-subscription-monthly-supply,https://www.cookiediet.com.au/products/4-month-supply,https://www.cookiediet.com.au/products/3-month-supply,https://www.cookiediet.com.au/products/2-month-supply,https://www.cookiediet.com.au/products/1-week-supply,https://www.cookiediet.com.au/products/1-month-supply,https://www.cookiediet.com.au/pages/weight-loss-plans,https://www.cookiediet.com.au/pages/refer-a-friend,https://www.cookiediet.com.au/pages/privacy-policy,https://www.cookiediet.com.au/pages/in-the-news,https://www.cookiediet.com.au/pages/faqs,https://www.cookiediet.com.au/pages/disclaimer,https://www.cookiediet.com.au/pages/contact-us,https://www.cookiediet.com.au/pages/about-us,https://www.cookiediet.com.au/collections/all" | split: ','%}
+
+{% for url_hreflang in urls_hreflang %}
+	{% if canonical_url == url_hreflang %}
+		  	<link rel="alternate" href="{{ canonical_url | replace: '.com.au', '.com' }}" hreflang="en-us" />
+  			<link rel="alternate" href="{{ canonical_url }}" hreflang="en-au" />
+  			<link rel="alternate" href="{{ canonical_url }}" hreflang="x-default" />
+	{% endif %}
+{% endfor %}

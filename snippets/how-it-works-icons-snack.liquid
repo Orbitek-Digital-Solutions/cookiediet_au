@@ -1,0 +1,59 @@
+<div id="how-it-works--icons">
+  <div>
+    <img loading="lazy" width="120" src="{{ 'eat-every-2hrs.svg' | file_url }}" alt="Snack smart icon"/>
+    <h3 class="h2">SNACK SMART</h3>
+    <p>Enjoy 1-2 Cookies between meals to keep hunger at bay.</p>
+  </div>
+
+  <div>
+    <img loading="lazy" width="120" src="{{ 'dinner-meal.svg' | file_url }}" alt="Dinner meal icon"/>
+    <h3 class="h2">REDUCE MEAL SIZES</h3>
+    <p>Cookies help control your hunger so you don’t overeat.</p>
+  </div>
+
+  <div>
+    <img loading="lazy" width="120" src="{{ 'weight-maintain.svg' | file_url }}" alt="Maintain weight icon"/>
+    <h3 class="h2">MAINTAIN WEIGHT</h3>
+    <p>Feel the difference with consistent, healthy snacking.</p>
+  </div>
+
+  <div>
+    <img loading="lazy" width="120" src="{{ 'live-your-best.svg' | file_url }}" alt="Live your best life icon"/>
+    <h3 class="h2">LIVE YOUR BEST LIFE</h3>
+    <p>Enjoy a healthier lifestyle with our convenient cookies.</p>
+  </div>
+</div>
+
+<style>
+  #how-it-works--icons {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: .5em 1em;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #how-it-works--icons * {
+    margin: 5px 0;
+  }
+  #how-it-works--icons > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  #how-it-works--icons img {
+    height: 120px;
+  }
+  .color-accent-1 #how-it-works--icons {
+    filter: brightness(100);
+  }
+  @media screen and (max-width: 749px) {
+    #how-it-works--icons {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+</style>

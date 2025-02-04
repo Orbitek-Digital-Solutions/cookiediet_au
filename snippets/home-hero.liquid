@@ -1,0 +1,49 @@
+<div class="section home-hero section-home-hero-mobile">
+  <div class="page-width">
+    <div class="flex" style="text-align: center;">
+      <div>
+      
+        
+        {% if shop.metafields.arena.sale_status %}
+          <h1 class="home-hero--title primary-light h0">
+            EOFY SALE<br><span style="color: #000">20% OFF STOREWIDE</span></h1>
+          <p>Our Biggest Sale Yet.</p>
+
+          <a href="/collections/all" class="button button--primary">Shop Now</a>
+          <p style="font-size: 60%;">Min spend $100*</p>
+
+        {% else %}
+          {% comment %}
+          {% if localization.country.iso_code == "AU" %}
+            <p class="home-free-shipping"><img class="ship-icon" alt="Rapid delivery truck icon" src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/fast-shipping.svg?v=9988712727189471356" loading="lazy"> <b>FREE Shipping</b> 8-17th July!</p>
+          {% endif %}
+          {% endcomment %}
+        
+          <!-- <h1 class="home-hero--title h0">Eat Cookies<br><span class="primary-light">and Lose Weight</span></h1> -->
+            <p class="new-flavour-badge-container"><span class="new-flavour-badge">New Flavour Alert</span></p>
+          <h1 class="home-hero--title h0" style="color: white;">say hello to the<span class="primary-light"> world's first</span></h1>
+          <h1 class="home-hero--title h0" style="color: white;">Savoury Diet Cookie</h1>
+          <p class="home-hero--text" style="color: white;"></p>
+          <a href="/products/sun-dried-tomato-parmesan" class="button button--primary">Shop Now</a>
+          
+        {% endif %}
+        
+          {% comment %}
+        <h2 class="h1 m-0"><span class="primary-light h0">Click Frenzy</span><br>
+        <span class="h1 m-0">2 Week Supply</span><br>
+        <span class="h1 m-0"><span class="primary-light">ONLY $99</span> </span>
+        <span class="h1 m-0" style="text-decoration: line-through;">RRP $159.90</span></h2>
+        <a href="/discount/CLICKCOOKIE?redirect=%2Fproducts%2F2-week-supply-exclusive-click-frenzy" class="button button--primary">Shop Now</a>
+        {% render 'countdown-timer', end_date: "Oct 30, 2023" %}
+{% endcomment %}
+        
+      
+      </div>
+    </div>
+  </div>
+
+</div>
+<img class="visible-xs" style="display:block" src="{{'mobile-hero-gb-bottom.jpg?v=1737290125' | file_img_url: '750x'}}" alt="Cookie Diet hero"/>
+
+
+

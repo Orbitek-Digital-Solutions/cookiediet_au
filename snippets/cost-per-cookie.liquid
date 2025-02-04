@@ -1,0 +1,22 @@
+{% comment %}<span class="cookie-cost-wrapper">
+{% if card_product.metafields.custom.cookie_qty != blank %}
+  {% assign cookie_qty = card_product.metafields.custom.cookie_qty %}
+  {% assign price_to_use = card_product.price %}
+
+  {% if card_product.compare_at_price < card_product.price %}
+    {% assign price_to_use = card_product.compare_at_price %}
+  {% endif %}
+
+  {% assign cost_per_cookie = price_to_use | divided_by: cookie_qty %}
+  {% unless formula %}
+    <div class="cookie-cost"><small>({{ cost_per_cookie | money }} Per Cookie)</small></div>
+  {% endunless %}
+  {% if formula %}
+    <div class="cookie-cost-formula">🍪 Cost Per Cookie: <span class="primary-light">{{ cost_per_cookie | money }}</span></div>
+  {% endif %}
+{% endif %}
+{% if card_product.title contains 'Variety Pack' %}
+  <div class="cookie-cost"><small>(From $0.59 Per Cookie)</small></div>
+{% endif %}
+</span>
+{% endcomment %}

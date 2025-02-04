@@ -1,0 +1,522 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "28ef03d0-b4b1-489d-90bc-9b6c7b703151": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<a style=\"display:block;cursor:pointer;display:block;line-height: 0.9;margin:0\" href=\"https://www.cookiediet.com.au/products/1-month-supply\"><img style=\"width:100%;display:block;\" class=\"hidden-xs\" src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/Australia_Day_Desktop_gold_green.jpg?v=1705958032\" alt=\"Australia Day Sale Banner\"><img style=\"width:100%;display:block;\" class=\"visible-xs\" src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/Australia_Day_Mobile_gold_green.jpg?v=1705958033\" alt=\"Australia Day Sale Banner\"/></a>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_8HAni7": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<a href=\"/collections/all\"><img src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/National_Choc_Day_Mob_AU.jpg?v=1719768515&width=749\" class=\"visible-xs\" style=\"\n    display: block;\n\">\n<img src=\"https://cdn.shopify.com/s/files/1/0434/0246/1338/files/Choc_Day_AU_Desk.jpg?v=1719768516&width=2000\" class=\"hidden-xs\" style=\"\n    line-height: 0;\nwidth: 100%;\n    margin: 0;\n    gap: 0;\n    display: block;\n\">\n</a>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "7820b316-ab69-43d1-8f62-5e9c1f860459": {
+      "type": "hero-html",
+      "settings": {}
+    },
+    "16631542796ef9a762": {
+      "type": "logo-list",
+      "blocks": {
+        "166315427963e1d03c-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/dailymail.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/cm_3kb.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/current-affair.png",
+            "link": ""
+          }
+        },
+        "166315427963e1d03c-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/9news.png",
+            "link": ""
+          }
+        },
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/channel-7-news-logo.png",
+            "link": ""
+          }
+        },
+        "c494e547-6da9-4c54-8d87-68b43ea4d374": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/cm_4kb.png",
+            "link": ""
+          }
+        },
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/jpeg-optimizer_com_5kb_160x160_2x_160x160_2x_785cdef4-834b-43d0-8973-b36681a427c6.png",
+            "link": ""
+          }
+        },
+        "f0fca05a-a33d-4292-9281-15f30e4057c0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/womens-weekly.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166315427963e1d03c-0",
+        "166315427963e1d03c-1",
+        "166315427963e1d03c-2",
+        "166315427963e1d03c-3",
+        "7ede3aaf-4f50-450b-963e-41ba268bfdca",
+        "c494e547-6da9-4c54-8d87-68b43ea4d374",
+        "e2cc63f7-c77b-403d-80c7-69b1cc36f0a2",
+        "f0fca05a-a33d-4292-9281-15f30e4057c0"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "heading_size": "h2",
+        "logo_width": "160px",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "color_scheme": "background-2"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Most <span class=\"primary-light\">Popular</span>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "product-slider",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "0237daa7-08f7-4286-8d5c-3926894b6354": {
+      "type": "customer-testimonials-slider",
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "title": "Real People. <span class=\"primary-light\">Real Results</span>.",
+        "heading_size": "h1"
+      }
+    },
+    "166334972172286190": {
+      "type": "number-counter",
+      "blocks": {
+        "166334972164465452-0": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Orders World Wide",
+            "hide_text_mobile": false,
+            "number": "6",
+            "unit": "M",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "166334972164465452-1": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Achieved goal",
+            "hide_text_mobile": false,
+            "number": "87",
+            "unit": "%",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "166334972164465452-2": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Kept their weight off",
+            "hide_text_mobile": false,
+            "number": "76",
+            "unit": "%",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166334972164465452-0",
+        "166334972164465452-1",
+        "166334972164465452-2"
+      ],
+      "settings": {
+        "title": "",
+        "custom_liquid": "",
+        "custom_id": "quick-facts-counter",
+        "heading_size": "h1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "color_scheme": "accent-1"
+      }
+    },
+    "16633542288efba4ad": {
+      "type": "text-with-video",
+      "blocks": {
+        "1663354228caff66a5-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Convenience:</strong> An easy on-the-go snack that requires no preparation.</p><p><strong>Control Hunger:</strong> A special mix of proteins within the cookies that naturally suppresses your hunger.</p><p><strong>Continue:</strong> Once your goal weight is achieved, eat healthy meals and enjoy the cookies as a low-calorie snack</p><p><strong>Confirmation :</strong> This diet is not a fad, it has been going strong for the last 40 years.</p><p>They are just as delicious as your favourite cookies and come in four mouth-watering flavours: <strong>Chocolate brownie, Butterscotch, Maple Pancake, Cinnamon Oatmeal.</strong></p><p>For a fresh baked taste, pop them in the microwave for 5-10 seconds!</p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "27143d8e-f8a9-4452-9b7b-76ed8a3d3663": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "1663354228caff66a5-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Know More",
+            "button_link": "shopify://pages/weight-loss-plans"
+          }
+        }
+      },
+      "block_order": [
+        "1663354228caff66a5-1",
+        "27143d8e-f8a9-4452-9b7b-76ed8a3d3663",
+        "1663354228caff66a5-2"
+      ],
+      "custom_css": [
+        ".image-with-text__grid {align-items: center;}"
+      ],
+      "settings": {
+        "cover_image": "shopify://shop_images/Screenshot_2023-08-28_at_16.56.19.png",
+        "video_url": "https://youtu.be/EMhBzadzF80",
+        "description": "Brisbane father loses 50 kilos on 'cookie diet' featured on 9 News",
+        "title": "Why Is <span class=\"primary-light\">Dr. Siegal’s Cookie Diet</span> So Effective?",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "5992e90c-2c58-4089-b850-d4ea9159336a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15817866084506__5992e90c-2c58-4089-b850-d4ea9159336a-1667987922be68c105-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "How it Works",
+            "heading_size": "h0"
+          }
+        },
+        "template--15817866084506__5992e90c-2c58-4089-b850-d4ea9159336a-1667987922be68c105-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Half the battle with diets is convenience, the other half is hunger. This diet conquers both and gives you a way to keep the weight off afterwards.</p><p>The Cookie Diet is a convenient on-the-go snack that requires no preparation. Just take a bag of cookies with you for the day.</p><p>Once your goal weight is achieved, eat healthy meals, and enjoy the cookies as a low calorie snack between meals.</p>"
+          }
+        },
+        "9721ba74-6bc2-4ceb-9215-60d0a35e939d": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "{% render 'how-it-works-icons' %}"
+          }
+        },
+        "d33e2911-acdb-4bdf-9600-bbd85f5f9382": {
+          "type": "button",
+          "settings": {
+            "button_label": "Weight Loss Plans",
+            "button_link": "shopify://pages/weight-loss-plans",
+            "button_style_secondary": false,
+            "button_label_2": "Quick Facts",
+            "button_link_2": "shopify://pages/faqs",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15817866084506__5992e90c-2c58-4089-b850-d4ea9159336a-1667987922be68c105-0",
+        "template--15817866084506__5992e90c-2c58-4089-b850-d4ea9159336a-1667987922be68c105-1",
+        "9721ba74-6bc2-4ceb-9215-60d0a35e939d",
+        "d33e2911-acdb-4bdf-9600-bbd85f5f9382"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "19e463e7-36d3-41cb-8a6b-0ee14926483c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16157132390554__19e463e7-36d3-41cb-8a6b-0ee14926483c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Enhance Your Diet with Our <span class=\"primary-light\">Recommended</span> Premium Multivitamin 200 Tablets",
+            "heading_icon": "",
+            "heading_size": "h1"
+          }
+        },
+        "258ae604-5639-468b-b4ba-aa3dc94e4fd3": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div>\n    <ul class=\"list-unstyled mb-0\">\n        <li>🇦🇺 Made in Australia</li>\n        <li>🌟 Premium Quality</li>\n        <li>💪 22 Essential Vitamins & Minerals</li>\n        <li>💊 Easy-to-Swallow Mini Tabs</li>\n        <li>💰 Great Value: 200 Tablets</li>\n    </ul>\n    <p class=\"mb-0\"><b>Daily Multivitamin is recommended</b> when starting any diet. OzHealth Premium Multivitamin is specifically designed to support your nutritional needs while dieting.\n</p>\n\n\n \n</div>"
+          }
+        },
+        "template--16157132390554__19e463e7-36d3-41cb-8a6b-0ee14926483c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/ozhealth-premium-multivitamin-200-tablets",
+            "new_window_link": true,
+            "button_class": "button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--16157132390554__19e463e7-36d3-41cb-8a6b-0ee14926483c-heading-1",
+        "258ae604-5639-468b-b4ba-aa3dc94e4fd3",
+        "template--16157132390554__19e463e7-36d3-41cb-8a6b-0ee14926483c-button-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1.jpg",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "image_contained": false,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "974d45e5-2b5c-408c-a772-737249d5f078": {
+      "type": "cookie-diet-product-badges",
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_snack": false
+      }
+    },
+    "166366745268646769": {
+      "type": "number-counter",
+      "blocks": {
+        "16636674526917761a-0": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Over 22,000 Likes On Facebook",
+            "hide_text_mobile": true,
+            "number": "22",
+            "unit": "K",
+            "button_label": "Like",
+            "button_link": "https://www.facebook.com/CookieDietAustralia"
+          }
+        },
+        "16636674526917761a-1": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Over 9,000 real customers on the diet",
+            "hide_text_mobile": true,
+            "number": "9",
+            "unit": "K",
+            "button_label": "Join Group",
+            "button_link": "https://www.facebook.com/groups/cookiedietclub/"
+          }
+        },
+        "16636674526917761a-2": {
+          "type": "counter_item",
+          "settings": {
+            "text": "Over 4,000 followers On Instagram",
+            "hide_text_mobile": true,
+            "number": "4",
+            "unit": "K",
+            "button_label": "Follow",
+            "button_link": "https://www.instagram.com/cookie.diet/"
+          }
+        }
+      },
+      "block_order": [
+        "16636674526917761a-0",
+        "16636674526917761a-1",
+        "16636674526917761a-2"
+      ],
+      "settings": {
+        "title": "Cookie Club - <span class=\"primary-light\">You Are Not Alone!</span>",
+        "custom_liquid": "<p style=\"font-size: 1.2em;line-height: 1.2;margin-bottom: 1.5em\">\nJoin over 9000 people sharing their Cookie Diet experience online.</p>",
+        "custom_id": "cookie-club-counter",
+        "heading_size": "h1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "color_scheme": "background-1"
+      }
+    },
+    "c71f2760-064d-4ce4-aac1-c7fda36c8611": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>MORE PROOF THAT THE COOKIE DIET<br><span class=\"primary-light\">HELPS ACHIEVE RESULTS</span></p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-heading-1",
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-text-1",
+        "template--16157132390554__c71f2760-064d-4ce4-aac1-c7fda36c8611-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "section_id": "",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "16916627404debff82": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_nTM7yt": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": false,
+            "heading": "",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_nTM7yt"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "background-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1663157782be9cce51": {
+      "type": "reviewsio-all",
+      "disabled": true,
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "color_scheme": "background-2"
+      }
+    },
+    "5e62d9be-983c-44e3-9905-c735a292958b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\"><h2>Our Low-Calorie Cookies in Australia</h2>\n<p>That&rsquo;s right, you can actually lose weight by eating our low-calorie cookies! With just 9 cookies a day and a simple, healthy dinner, you&rsquo;ll be a new, healthier you. It couldn&rsquo;t be easier or more delicious.&nbsp;<span id=\"dots\">...</span>\n</p>\n<div id=\"more\">\n<p>Designed by Dr. Sanford Siegal, our innovative low-calorie snacks in Australia have helped countless people just like you to achieve their goal weight. Dr. Siegal has been practicing medicine for over 60 years, and has helped over 500,000 patients to lose weight in the process.</p>\n<p>Our diet cookies are freshly baked here in Australia from high-quality, all-natural ingredients. Take a look through our range today, and start enjoying the benefits!</p>\n<h2>Our Delicious Diet Cookies for Weight Loss</h2>\n<p>In 1975,&nbsp;<a href=\"https://www.cookiediet.com.au/pages/about-us/\">Dr. Siegal&rsquo;s Cookie Diet</a> was introduced, and it&rsquo;s been changing lives ever since!</p>\n<p>The way that the diet works is that we use a specially formulated recipe to control your hunger. With a special mixture of natural proteins, our low calorie-snacks in Australia are all-natural with no artificial flavours or sweeteners.</p>\n<p>Get started today with a 1 week or&nbsp;<a href=\"https://www.cookiediet.com.au/products/1-month-supply\">1 month supply</a>. We then have our low-calorie cookies available in convenient 2, 3 or 4 month supplies. With delicious flavours such as Butterscotch, Chocolate Brownie, Maple Pancakes and Cinnamon Oatmeal, you&rsquo;ll wonder why you didn&rsquo;t start earlier!</p>\n<h2>Discover Our Delicious Weight Loss Products in Australia Today</h2>\n<p>The key to a healthier lifestyle all starts here. Sign up to our newsletter for your instant $10 Welcome Coupon. You&rsquo;ll gain access to our exclusive deals and discounts. Even better, when you refer a friend they&rsquo;ll receive a $20 voucher, and so will you!</p>\n<p>We&rsquo;ll be with you every step of the way to offer tips, guidance and support. We also have a special online community with over 8,000 members to connect with and share the journey.</p>\n<p>For more information, get in touch with us at <a href=\"mailto:info@cookiediet.com.au\">info@cookiediet.com.au</a> or give us a call on 1300 077 707. You can also read more in our&nbsp;<a href=\"https://www.cookiediet.com.au/products/the-cookie-diet-cookbook\">e-book The Cookie Doctor Cookbook</a> by Sanford Siegal.</p>\n  </div>\n<a onclick=\"readmorecontent()\" id=\"myBtn\">Read more</a><br>\n</div>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "28ef03d0-b4b1-489d-90bc-9b6c7b703151",
+    "custom_liquid_8HAni7",
+    "7820b316-ab69-43d1-8f62-5e9c1f860459",
+    "16631542796ef9a762",
+    "featured_collection",
+    "0237daa7-08f7-4286-8d5c-3926894b6354",
+    "166334972172286190",
+    "16633542288efba4ad",
+    "5992e90c-2c58-4089-b850-d4ea9159336a",
+    "19e463e7-36d3-41cb-8a6b-0ee14926483c",
+    "974d45e5-2b5c-408c-a772-737249d5f078",
+    "166366745268646769",
+    "c71f2760-064d-4ce4-aac1-c7fda36c8611",
+    "16916627404debff82",
+    "1663157782be9cce51",
+    "5e62d9be-983c-44e3-9905-c735a292958b"
+  ]
+}

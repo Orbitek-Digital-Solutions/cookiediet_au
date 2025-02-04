@@ -1,0 +1,103 @@
+{% if end_date != blank %}
+
+<div class="timer" data-end-date="{{ end_date }}">
+  {% if title != blank %}<h3 class="timer__title">{{ title }}</h3>{% endif %}
+  <div class="timer-display">
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-days h3">00</span>
+      <span class="timer-block__unit">Days</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-hours h3">00</span>
+      <span class="timer-block__unit">Hours</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-minutes h3">00</span>
+      <span class="timer-block__unit">Minutes</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-seconds h3">00</span>
+      <span class="timer-block__unit">Seconds</span>
+    </div>
+  </div>
+</div>
+<style>
+  .timer {
+    width: 100%;
+  }
+  .timer--expired {
+    display: none;
+  }
+  .timer__title {
+    margin: 0;
+    color:#000;
+  }
+  .timer-display {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .timer-block {
+    position: relative;
+    margin-right: 5px;
+    background: #e0f3ff;
+    color: #3c9edb;
+    padding: 10px 5px;
+    width: 80px;
+    border-radius: 5px;
+    flex: 1;
+  }
+  .timer-block:before {
+    inset: 0;
+    position:absolute;
+    content: "";
+  }
+  .timer-block:last-of-type {
+    margin: 0;
+  }
+  .timer-block h3 {
+   margin: 0;
+  }
+  .timer-block__num {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .timer-block__unit {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .timer-block__num,
+  .timer-block__unit {
+    display: block;
+    position: relative;
+    z-index:1;
+    text-align: center;
+    color: inherit;
+    line-height: 1;
+  }
+  .countdown-timer-collection {
+    text-align: center;
+  }
+  @media only screen and (max-width: 749px) {
+    .home-hero .timer-display {
+     margin: 10px auto 10px auto;
+    }
+    .timer-block__unit {
+      font-size: 11px;
+    }
+  }
+  .countdown-timer-collection .timer-display {
+   margin: 10px auto 10px auto;
+  }
+  .countdown-timer-collection h3 {
+    font-size: 34px;
+  }
+</style>
+
+    <script src="{{ 'countdown-timer.js' | asset_url }}" defer="defer"></script>
+
+
+{% endif %}

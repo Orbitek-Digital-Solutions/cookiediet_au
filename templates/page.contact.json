@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact Us",
+        "custom_id": "contact-us-form",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "1664179681397ad632": {
+      "type": "rich-text",
+      "blocks": {
+        "1664179681df7bb964-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>HEAD OFFICE ADDRESS</p>",
+            "heading_size": "h2"
+          }
+        },
+        "1664179681df7bb964-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>16/2B Mavis St<br/>Revesby NSW 2212<br/>(By Appointment Only)</p>"
+          }
+        },
+        "67cff5c7-5b23-4fc9-93c3-c136c1a290ba": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Postal Address</p>",
+            "heading_size": "h2"
+          }
+        },
+        "01114e91-f5d5-497d-ab59-f806637d0ebe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PO Box 306<br/>Hurstville, NSW 1481, Australia</p><p>If you have any questions regarding our products feel free to call our friendly team of oncall pharmacists on:</p>"
+          }
+        },
+        "dcedf71e-cb2d-437d-affb-e525d5bf7fad": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "{% render 'contact-icons' %}"
+          }
+        },
+        "d96bb203-533d-4ffa-be85-88cad20fdbf0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Follow Us</p>",
+            "heading_size": "h2"
+          }
+        },
+        "6bd347c6-688b-448e-b767-0b336c35223a": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "{% render 'social-icons' %}"
+          }
+        }
+      },
+      "block_order": [
+        "1664179681df7bb964-0",
+        "1664179681df7bb964-1",
+        "67cff5c7-5b23-4fc9-93c3-c136c1a290ba",
+        "01114e91-f5d5-497d-ab59-f806637d0ebe",
+        "dcedf71e-cb2d-437d-affb-e525d5bf7fad",
+        "d96bb203-533d-4ffa-be85-88cad20fdbf0",
+        "6bd347c6-688b-448e-b767-0b336c35223a"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "section_id": "contact-us-info",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form",
+    "1664179681397ad632"
+  ]
+}

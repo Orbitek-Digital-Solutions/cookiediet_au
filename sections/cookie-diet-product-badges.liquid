@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    background: #ffe3dc;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="cookie-diet-badges">
+      {% unless section.settings.show_snack %} 
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'est-1975.svg' | file_url | svg_filter }}" alt="most convenient diet" width="160"/>
+        <h3 class="cookie-diet-badges--title h2">Australia's Most<br>Convenient Diet</h3>
+      </div>
+      {% endunless %}
+     {% unless section.settings.show_snack %} 
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'baked-fresh.svg' | file_url | svg_filter }}" alt="baked fresh in australia" width="160"/>
+       <h3 class="cookie-diet-badges--title h2">Baked Fresh<br>In Australia</h3>
+      </div>
+      {% endunless %}
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'natural-ingredients.svg' | file_url | svg_filter }}" alt="natual ingredients" width="160"/>
+        <h3 class="cookie-diet-badges--title h2">100% Natural<br>Ingredients</h3>
+      </div>
+      {% unless section.settings.show_snack %} 
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'weight-loss.svg' | file_url | svg_filter }}" alt="weight loss and maintenance" width="160"/>
+        <h3 class="cookie-diet-badges--title h2">Weight Loss &<br>Maintenance</h3>
+      </div>
+      {% endunless %}
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'helping-6m-people-worldwide.svg' | file_url | svg_filter }}" alt="helping people worldwide" width="160"/>
+        <h3 class="cookie-diet-badges--title h2">Helped 6m +<br>People Worldwide</h3>
+      </div>
+      <div class="cookie-diet-badges--item">
+        <img loading="lazy" src="{{ 'five-stars.svg' | file_url | svg_filter }}" alt="over 1500 5* reviews" width="160"/>
+        <h3 class="cookie-diet-badges--title h2">1500+ Five<br>Star Reviews</h3>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .cookie-diet-badges {
+    display: flex;
+    gap: 0 2rem;
+    align-items: baseline;
+    justify-content: stretch;
+    flex: 1;
+  }
+  .cookie-diet-badges--item img {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fd7251;
+    height: auto;
+    border-radius: 50%;
+  }
+  .cookie-diet-badges .cookie-diet-badges--title { 
+    margin-bottom: 0;
+    display: flex;
+  }
+  .cookie-diet-badges--item {
+    width: 170px;
+    text-align: center;
+    margin: 15px auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: 750px) {
+    .cookie-diet-badges--title { 
+      display: flex;
+      flex: 1;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .cookie-diet-badges--item img {
+      width: 140px;
+    }
+    .cookie-diet-badges {
+      flex-flow: wrap row;
+      justify-content: center;
+      gap: 2rem 0;
+    }
+    .cookie-diet-badges--item {
+      padding: 0 2rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 1 50%;
+      margin: 0;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+  {
+    "name": "Cookie diet badges",
+    "settings": [
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label"
+      },
+       {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      },
+      {
+        "type": "checkbox",
+        "id": "show_snack",
+        "default": false,
+        "label": "Show snack pack"
+      }
+    ],
+    "presets": [{
+      "name": "Cookie diet badges"
+    }]
+  }
+{% endschema %}

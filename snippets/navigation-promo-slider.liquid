@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="multicolumn navbar-slider color-accent-1 gradient background-none no-heading">
+  <div class="page-width">
+  <slideshow-component class="slider-mobile-gutter">
+    <ul class="grid grid--1-col grid--2-col-tablet grid--4-col-desktop slider slider--mobile slider--tablet"
+     id="Slider-template--15817866084506__1663161130fdb3a7df"
+     data-autoplay="true"
+     data-speed="3"
+     role="list"
+    >
+      <li id="Slide-template--15817866084506__1663161130fdb3a7df-1" class="slideshow__slide  grid__item slider__slide center" aria-hidden="false" tabindex="-1">            
+            <div class="navbar-slider--icon">
+            <img alt="Rapid delivery truck icon" src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/fast-shipping.svg?v=9988712727189471356">
+            Flat Rate Shipping AUS</div>
+      </li>
+      <li id="Slide-template--15817866084506__1663161130fdb3a7df-2" class="slideshow__slide  grid__item slider__slide center" aria-hidden="true">            
+            <div class="navbar-slider--icon">
+            <img alt="Star icon" src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/star.svg?v=9825215536938564640">
+            1500+ Five Star Reviews</div>
+      </li>
+      <li id="Slide-template--15817866084506__1663161130fdb3a7df-3" class="slideshow__slide  grid__item slider__slide center" aria-hidden="true" tabindex="-1">            
+            <div class="navbar-slider--icon">
+            <img alt="Afterpay logo icon" src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/Afterpay_Sticker.svg?v=8133369304724889946">
+            Pay with Afterpay</div>
+      </li>
+      <li id="Slide-template--15817866084506__1663161130fdb3a7df-4" class="slideshow__slide  grid__item slider__slide center" aria-hidden="true" tabindex="-1">            
+            <div class="navbar-slider--icon">
+            <img alt="Australian Made icon" src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/australia-made_30x.png?v=6387439159475208880">
+            Freshly Baked in Australia</div>
+      </li>
+    </ul>
+  
+    <div class="slider-buttons-wrap slider-buttons no-js-hidden " style="display: none">
+     <button style="display:none" type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+        {%- render 'icon-pause' -%}
+        {%- render 'icon-play' -%}
+      </button>
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+    </div>
+  
+  </slideshow-component>
+  </div>
+</div>

@@ -1,0 +1,193 @@
+{% comment %}
+  Renders a list of product's price (regular, sale)
+
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
+  - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
+  - price_class: {String} Adds a price class to the price element (optional)
+
+  Usage:
+  {% render 'price', product: product %}
+{% endcomment %}
+{%- liquid
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  assign available = target.available | default: false
+  assign money_price = price | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+
+  if target == product and product.price_varies
+    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+
+  assign money_off_price = price | minus: 5000
+  assign money_off_price_percent = price | times: 0.70
+-%}
+
+<div
+  class="
+    price
+    {%- if price_class %} {{ price_class }}{% endif -%}
+    {%- if available == false %} price--sold-out {% endif -%}
+    {%- if compare_at_price > price %} price--on-sale {% endif -%}
+    {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
+    {%- if show_badges %} price--show-badge{% endif -%}
+  "
+>
+  <div class="price__container">
+    {%- comment -%}
+      Explanation of description list:
+        - div.price__regular: Displayed when there are no variants on sale
+        - div.price__sale: Displayed when a variant is a sale
+    {%- endcomment -%}
+
+    <div class="price__regular">
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      {% comment %}
+        <span class="price-item hide price-item--regular">
+          {{ money_price }} {% render 'cost-per-cookie', card_product:product %}
+        </span>
+      {% endcomment %}
+
+      {% if product.price > 15000 %}
+        {% if product.title contains 'Subscription' %}
+          <span class="price-item hide price-item--regular">
+            {{ money_price }}
+          </span>
+
+        {% else %}
+          {% comment %}
+            <span class="price-item hide price-item--regular">
+              <s>{{ money_price }}</s>
+            </span>
+
+            <span class="price-item price-item--last remove">
+            {{ money_off_price | money_with_currency }}
+            </span>
+          {% endcomment %}
+          <span class="price-item price-item--last remove">
+            {{ money_price }}
+          </span>
+
+          {% comment %}
+            {% unless product.title contains 'Bundle' or product.title contains 'Subscription' or product.price < 19900  or product.handle contains '1-month-cookie-supply' %}
+            <div style="color:#fff !important;background: #3C9EDB;" class="save-badge-value-product">$30 OFF</div>
+            {% endunless %}
+
+             {% if product.metafields.custom.rrp_saving != blank %}
+              <span class="rrp-saving">{{ product.metafields.custom.rrp_saving | prepend: "Save $" }}{% unless collection %} off RRP{% endunless %}!</span>
+            {% endif %}
+
+            {% if product.selected_or_first_available_variant.metafields.custom.rrp_saving_variant %}
+              <span class="rrp-saving">{{ product.selected_or_first_available_variant.metafields.custom.rrp_saving_variant | prepend: "Save $" }}{% unless collection %} off RRP{% endunless %}!</span>
+            {% endif %}
+          {% endcomment %}
+        {% endif %}
+      {% else %}
+        <span class="price-item hide price-item--regular">
+          {{ money_price }}
+        </span>
+      {% endif %}
+    </div>
+    <div class="price__sale">
+      {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+        <span>
+          <s class="price-item price-item--regular">
+            {% if settings.currency_code_enabled %}
+              {{ compare_at_price | money_with_currency }}
+            {% else %}
+              {{ compare_at_price | money }}
+            {% endif %}
+          </s>
+        </span>
+      {%- endunless -%}
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+      <span class="custom-price  price-item price-item--sale price-item--last">
+        {{ money_price }}
+        {% render 'cost-per-cookie', card_product: product %}
+
+        {% unless product.title contains 'Bundle'
+          or product.title contains 'Subscription'
+          or product.title contains '1 Week'
+          or product.price < 19900
+          or product.handle contains '1-month-cookie-supply'
+          or product.title contains 'The Cookie Cutter'
+          or product.title contains 'Buy 3 Get 1 Free'
+        %}
+          <div class="save-badge-value-product">Save {{ product.compare_at_price | minus: product.price | money }}</div>
+        {% endunless %}
+        {% if product.title contains 'The Cookie Cutter' %}
+          <div class="save-badge-value-product">$380 OFF</div>
+        {% endif %}
+
+        {% if product.title contains 'Buy 3 Get 1 Free' %}
+          <div class="save-badge-value-product">Buy 3 Get 1 Free</div>
+        {% endif %}
+
+        {% if product.title contains 'Tomato' %}
+          {% assign selected_variant = product.selected_or_first_available_variant %}
+          {% if selected_variant.compare_at_price > selected_variant.price %}
+            <div class="custom-price">
+              <span class="custom-saving"
+                >Save {{ selected_variant.compare_at_price | minus: selected_variant.price | money -}}
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% comment %}
+          {% if product.handle == '1-month-supply' %}
+              <div style="color:#e65989;background: #ffe2ec;" class="save-badge-value-product">$30 OFF</div>
+            {% endif  %}
+        {% endcomment %}
+      </span>
+    </div>
+
+    <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+      <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+      <span class="price-item price-item--last">
+        <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+        <span aria-hidden="true">/</span>
+        <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+        <span>
+          {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+            {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+          {%- endif -%}
+          {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+        </span>
+      </span>
+    </small>
+  </div>
+  {% if product.compare_at_price > product.price and product.title contains 'Promo' %}
+    <span style="font-weight: bold" class="badge price__badge-sale color-accent-1">
+      {% assign savings = product.compare_at_price
+        | minus: product.price
+        | times: 100
+        | divided_by: product.compare_at_price
+      %}
+      {{ savings | round | prepend: 'Save ' }}%
+    </span>
+  {% endif %}
+
+  {% comment %}
+    {%- if show_badges -%}
+      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+        {{ 'products.product.on_sale' | t }}
+      </span>
+
+      <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
+        {{ 'products.product.sold_out' | t }}
+      </span>
+    {%- endif -%}
+  {% endcomment %}
+</div>

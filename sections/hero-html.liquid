@@ -1,0 +1,153 @@
+{% render 'home-hero' %}
+{% comment %}{% render 'home-hero-black-friday' %}{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Hero HTML",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Hero HTML"
+      }
+    ]
+  }
+{% endschema %}  
+
+{% stylesheet %}
+
+  #shopify-section-template--16102576586906__7820b316-ab69-43d1-8f62-5e9c1f860459 {
+    line-height: 1 !important;
+  }
+  .home-hero .home-free-shipping .ship-icon {
+    height: 17px;
+    display: inline-block;
+    margin: auto;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+  }
+  .home-hero .home-free-shipping {
+    background: linear-gradient(90deg, #3c9edb, #3c8edb);
+    color: #fff;
+    width: fit-content;
+    display: flex;
+    font-size: 16px;
+    gap: 8px;
+    letter-spacing: 2px;
+    margin: 0 auto 20px !important;
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #0000004d;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    animation: pulseship 1.5s infinite;
+  }
+  
+  @keyframes pulseship {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .home-hero .button {
+    /*   mother day edits */
+      padding: 0.6em 1.2em !important;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff734c, #ff7167);
+  }
+  .home-hero .flex>div>*:not(.home-free-shipping) {
+    margin: 7.5px 0 !important;
+  }
+  .home-hero .timer-block__unit {
+    font-size: 9px;
+  }
+  .home-hero .timer-block {
+    width: 60px !important;
+  }
+  .home-hero .page-width {
+    flex: 1;
+  }
+  .home-hero .home-hero--text {
+    line-height: 1.2;
+    font-size: 1.4em;
+  }
+  .home-hero .home-hero--title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3em !important;
+  }
+  .home-hero {
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: right;
+  }
+  .home-hero:before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #fafafa;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+  @media screen and (max-width: 749px) {
+    .home-hero {
+        text-align: center;
+    padding: 20px 0 10px 0 !important
+    }
+    .home-hero:before {
+      background: #ffffff !important; 
+    }
+    .home-hero .button {
+      padding: 1.1rem 2rem
+    }
+    .home-hero .flex {
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .home-hero {
+      background-image: -webkit-image-set(
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/hero.jpg?v=1737287930") 1x, 
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/hero.jpg?v=1737287930") 2x);
+      background-image: image-set(
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/hero.jpg?v=1737287930") 1x,
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/hero.jpg?v=1737287930") 2x);
+      min-height: 50vh;
+      align-items: center;
+      display: flex;
+      background-size: cover;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    .section-home-hero-mobile {
+      background-image: -webkit-image-set(
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/bg-mobile.jpg?v=1737290410") 1x, 
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/bg-mobile.jpg?v=1737290410") 2x);
+      background-image: image-set(
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/bg-mobile.jpg?v=1737290410") 1x,
+      url("https://cdn.shopify.com/s/files/1/0434/0246/1338/files/bg-mobile.jpg?v=1737290410") 2x);
+      background-position: bottom;
+      background-size: cover;
+      margin-bottom: -1px;
+      
+    }
+  }
+
+{% endstylesheet %}
+
+
+{% javascript %}
+{% endjavascript %}
+
+    
+

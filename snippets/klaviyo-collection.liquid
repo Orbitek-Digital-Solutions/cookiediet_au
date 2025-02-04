@@ -1,0 +1,118 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var _learnq = _learnq || []; 
+    var cards = document.querySelectorAll('.card');
+
+    // Function to handle "Viewed Product" event
+    function trackViewedProduct(card) {
+        var variantSelect = card.querySelector('.product-variant-select');
+        var variantId, variantTitle, variantPrice, variantImage;
+
+        if (variantSelect) {
+            var selectedVariant = variantSelect.selectedOptions[0];
+            variantId = selectedVariant.getAttribute('data-variant-id');
+            variantTitle = selectedVariant.getAttribute('data-variant-title');
+            variantPrice = selectedVariant.getAttribute('data-variant-price');
+            variantImage = selectedVariant.getAttribute('data-variant-image') || card.getAttribute('data-image');
+        } else {
+            variantId = card.getAttribute('data-id');
+            variantTitle = card.getAttribute('data-title');
+            variantPrice = card.getAttribute('data-price');
+            variantImage = card.getAttribute('data-image');
+        }
+
+        _learnq.push(['track', 'Viewed Product', {
+            "ProductID": variantId,
+            "Price": parseFloat(variantPrice.replace(/[^0-9.-]+/g,"")),
+            "URL": card.getAttribute('data-url'),
+            "ImageURL": variantImage.startsWith('http') ? variantImage : 'https:' + variantImage,
+            "Name": variantTitle,
+            "Categories": card.getAttribute('data-collections').split('|')
+        }]);
+    }
+
+    // Track "Viewed Product" for each card on page load
+    cards.forEach(card => {
+        trackViewedProduct(card);
+    });
+
+    var buttons = document.querySelectorAll('.card .add-to-cart');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior if needed
+
+            var card = button.closest('.card');
+            var variantSelect = card.querySelector('.product-variant-select');
+            var variantId, variantTitle, variantPrice, variantImage;
+
+            if (variantSelect) {
+                var selectedVariant = variantSelect.selectedOptions[0];
+                variantId = selectedVariant.getAttribute('data-variant-id');
+                variantTitle = selectedVariant.getAttribute('data-variant-title');
+                variantPrice = selectedVariant.getAttribute('data-variant-price');
+                variantImage = selectedVariant.getAttribute('data-variant-image') || card.getAttribute('data-image');
+            } else {
+                variantId = card.getAttribute('data-id');
+                variantTitle = card.getAttribute('data-title');
+                variantPrice = card.getAttribute('data-price');
+                variantImage = card.getAttribute('data-image');
+            }
+
+            // Add the product to the cart
+            fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    items: [{
+                        id: variantId, // Variant ID
+                        quantity: 1
+                    }]
+                })
+            })
+            .then(response => response.json())
+            .then(() => {
+                // Send a request to Shopify for the current cart contents
+                fetch(window.Shopify.routes.root + 'cart.js')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Build the array of products in the cart
+                        var itemList = [];
+                        data.items.forEach(function (item) {
+                            var itemObj = {
+                                variantId: item.variant_id,
+                                sku: item.sku,
+                                title: item.product_title,
+                                quantity: item.quantity,
+                                price: item.price / 100,
+                                rowTotal: item.line_price / 100,
+                                url: 'https://www.cookiediet.com.au' + item.url,
+                                image: item.featured_image.url.startsWith('http') ? item.featured_image.url : 'https:' + item.featured_image.url
+                            };
+                            itemList.push(itemObj);
+                        });
+
+                        // Push the add to cart event to Klaviyo
+                        _learnq.push(['track', 'Added to Cart', {
+                            "ProductID": variantId,
+                            "Quantity": 1,
+                            "Price": parseFloat(variantPrice.replace(/[^0-9.-]+/g,"")), // Ensure price is a number
+                            "URL": card.getAttribute('data-url'),
+                            "ImageURL": variantImage.startsWith('http') ? variantImage : 'https:' + variantImage,
+                            "Name": variantTitle,
+                            "Categories": card.getAttribute('data-collections').split('|'),
+                            "items": itemList,
+                            "Value": itemList.reduce((acc, item) => acc + item.rowTotal, 0)
+                        }]);
+                    });
+            })
+            .catch(error => {
+                console.error('Error adding product to cart:', error);
+            });
+        });
+    });
+</script>

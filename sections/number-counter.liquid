@@ -1,0 +1,227 @@
+
+
+<div class="text-center section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="page-width">
+    <div>
+      <div class="title-wrapper--no-top-margin {% if section.settings.custom_liquid != blank %}title-wrapper--no-bottom-margin{% endif %} text-center">
+        <h2 class="title text-center {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+        {{ section.settings.custom_liquid }}
+      </div>
+      <div id="cookie-diet-stats">
+        <div class="counter-flex text-center" id="{{ section.settings.custom_id }}">
+        {%- for block in section.blocks -%}
+          <div>
+            <div class="count-value"><span class="counter-value" data-count="{{ block.settings.number }}"></span>{{ block.settings.unit }}</div>
+            <p class="count-text {% if block.settings.hide_text_mobile %}hidden-xs{% endif %} ">{{ block.settings.text }}</p>
+            {%- if block.settings.button_label != blank -%}
+              <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
+                {{ block.settings.button_label | escape }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>
+</div>
+
+{% style %}
+  @media only screen and (min-width: 750px) {
+    .counter-flex > div {
+      padding: 0 1em;
+      
+    }
+  }
+  
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<script>
+// Selector
+{% assign selector =  section.settings.custom_id | replace: "-", "_" %}
+const {{selector}} = document.querySelectorAll('#{{ section.settings.custom_id }} .counter-value');
+// Main function
+for(let n of {{selector}}) {
+  const updateCount = () => {
+    const target = + n.getAttribute('data-count');
+    const count = + n.innerText;
+    const speed = 1000; // change animation speed here
+    const inc = target / speed; 
+    if(count < target) {
+      n.innerText = Math.ceil(count + inc);
+      setTimeout(updateCount, 10);
+    } else {
+      n.innerText = target;
+    }
+  }
+  updateCount();
+}
+</script>
+
+
+{% schema %}
+{
+  "name": "Number counter",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Heading",
+      "default": "Number counter"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Custom liquid (below title)"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Section ID (required)",
+      "default": "cookie-club-counter"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "counter_item",
+      "name": "Counter Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Counter text"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_text_mobile",
+          "label": "Hide Counter text on mobile"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Counter Number",
+          "info": "Number used to count up from 0"
+        },
+        {
+          "type": "text",
+          "id": "unit",
+          "label": "Unit",
+          "info": "Unit used after number (%, CM, M)"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Number Counter",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "counter_item"
+        },
+        {
+          "type": "counter_item"
+        },
+        {
+          "type": "counter_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

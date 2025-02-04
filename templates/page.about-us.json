@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1304651a-0f40-4783-b41c-e7f69035e0dc": {
+      "type": "image-banner-metafields",
+      "blocks": {
+        "template--15937493860506__1304651a-0f40-4783-b41c-e7f69035e0dc-166726216800910491-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15937493860506__1304651a-0f40-4783-b41c-e7f69035e0dc-166726216800910491-0"
+      ],
+      "settings": {
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "link": "",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "44cd3517-887f-4350-90c3-6efe9c0ffcd1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15937493860506__44cd3517-887f-4350-90c3-6efe9c0ffcd1-1667262676a51db360-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FROM DR. SIEGAL TO YOU!",
+            "heading_icon": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--15937493860506__44cd3517-887f-4350-90c3-6efe9c0ffcd1-1667262676a51db360-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Having treated more than <strong>500,000 </strong>overweight patients, designer and physician Dr. Sanford Siegal knows that the best way to lose weight is not by starving but by eating—often! How often? <strong>Every two hours between wake-up and bedtime</strong>, to include nine small snacks and one generous meal. Why? Because less time without food means less time to get hungry and, as Dr. Siegal famously says,<strong>“Hunger Wrecks Diets!”</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15937493860506__44cd3517-887f-4350-90c3-6efe9c0ffcd1-1667262676a51db360-0",
+        "template--15937493860506__44cd3517-887f-4350-90c3-6efe9c0ffcd1-1667262676a51db360-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/dr-siegal-to-you.webp",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "image_contained": true,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c90f9f12-853e-4ba3-b3da-caacf33759bb": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15937493860506__c90f9f12-853e-4ba3-b3da-caacf33759bb-16673002899e8c170f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The COOKIE DIET is the key to reaching and maintaining a <strong>healthy control on your weight and eating habits</strong>. Each day, you will eat nine specially-formulated cookies (just 60 calories each) with one substantial <strong>500-700 calorie meal</strong>, all adding up to <strong>1,000 to 1,200 daily calories</strong>. At this calorie level EVERYONE, <strong>without fail, will lose weight.</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15937493860506__c90f9f12-853e-4ba3-b3da-caacf33759bb-16673002899e8c170f-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/cookie-shoot-trim.png",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "image_contained": true,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "right",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "9c3b0313-3d77-4878-8ac4-80746df52725": {
+      "type": "image-text-half-width",
+      "blocks": {
+        "b45e479a-0573-4cd3-aaee-6b2aa41eced5": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"primary-light\">HISTORY</span> OF THE COOKIE DIET",
+            "heading_size": "h1"
+          }
+        },
+        "3bdba333-3a45-4337-a884-8b7661b6ecea": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dr. Sanford Siegal began practicing medicine in <strong>Miami in 1957</strong> and has been limiting his South Florida medical practice to the treatment of overweight patients <strong>since 1960</strong>. While he was writing a book on what natural foods suppress hunger, he decided to formulate a food that would do just that, and in 1975, <strong>Dr. Siegal’s COOKIE DIET was born.</strong></p><p>He has now been using this diet for <strong>over 40 years</strong> in his medical practice and has treated <strong>over 500, 000 patients</strong> successfully. Initially it was only available from Dr. Siegal’s own medical practice, followed by 13 more, and then in 2007, began his venture into the world of the internet to help <strong>150,000 more people</strong> begin their weightloss journey.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "b45e479a-0573-4cd3-aaee-6b2aa41eced5",
+        "3bdba333-3a45-4337-a884-8b7661b6ecea"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "image": "shopify://shop_images/cookiediet-click-frenzy.png",
+        "layout": "image-right-desktop"
+      }
+    },
+    "666999c1-2b03-4437-83da-7274cb0430c1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15937493860506__666999c1-2b03-4437-83da-7274cb0430c1-16673002899e8c170f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who is <span class=\"primary-light\">OzHealth Pharma</span>",
+            "heading_icon": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--15937493860506__666999c1-2b03-4437-83da-7274cb0430c1-16673002899e8c170f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OzHealth Pharma is an Australian Pharmaceutical Company owned and operated by a Team of Pharmacists, dedicated to meeting your specific health needs. Our goal is to provide safe products with a clinical base that enhance the quality of everyday life.</p><p><strong>OzHealth Pharma also specialises in a wide range of health products including:</strong></p><p>- <a href=\"https://ozhealthpharma.com.au/products/ozhealth-arthritis-cream\" target=\"_blank\" title=\"https://ozhealthpharma.com.au/products/ozhealth-arthritis-cream\">OzHealth Arthritis Cream</a><br/>- <a href=\"https://ozhealthpharma.com.au/products/ozhealth-ice-pain-relief-roll-on\" target=\"_blank\" title=\"https://ozhealthpharma.com.au/products/ozhealth-ice-pain-relief-roll-on\">OzHealth ICE Pain Relief Roll-On</a><br/>- <a href=\"https://ozhealthpharma.com.au/products/podiatrist-formula-nail-revive\" target=\"_blank\" title=\"https://ozhealthpharma.com.au/products/podiatrist-formula-nail-revive\">Podiatrist Formula Nail Revive</a><br/>- <a href=\"https://ozhealthpharma.com.au/products/urebalm-heel-balm\" target=\"_blank\" title=\"https://ozhealthpharma.com.au/products/urebalm-heel-balm\">Urebalm Heel Balm</a><br/>- <a href=\"https://ozhealthpharma.com.au/products/cefaly-magnetic-device\" target=\"_blank\" title=\"Cefaly Headache/Migraine Device\">Cefaly Headache/Migraine Device</a></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15937493860506__666999c1-2b03-4437-83da-7274cb0430c1-16673002899e8c170f-0",
+        "template--15937493860506__666999c1-2b03-4437-83da-7274cb0430c1-16673002899e8c170f-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ozhealth-website-screenshot_18f16e2e-9ab8-4d88-8d2d-7e9b2650c667.png",
+        "custom_class": "",
+        "full_width": true,
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "image_contained": true,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16173fd6-fc3d-4b63-8ceb-132982d2b811": {
+      "type": "image-text-half-width",
+      "blocks": {
+        "41810644-01fc-445c-b23d-72e17163df93": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The COOKIE DIET is the key to reaching and maintaining a <strong>healthy control on your weight and eating habits</strong>. Each day, you will eat nine specially-formulated cookies (just 60 calories each) with one substantial <strong>500-700 calorie meal</strong>, all adding up to <strong>1,000 to 1,200 daily calories</strong>. At this calorie level EVERYONE, <strong>without fail, will lose weight.</strong></p><p>After <strong>42 years of success</strong> and more than half a million dieters, Dr. Siegal’s COOKIE DIET is truly one of the most popular weight-loss plans ever. Just ask the countless Hollywood stars, professional athletes or media outlets including Good Morning America, Today Show, <span style=\"text-decoration:underline\"><strong>Entertainment Tonight, The New York Times, and the cover of People magazine.</strong></span></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "41810644-01fc-445c-b23d-72e17163df93"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "image": "shopify://shop_images/hand_mask_b9fcfcbb-ebe2-4ecd-9eba-7e02a5babacc.png",
+        "layout": "image-left-desktop"
+      }
+    },
+    "3517f007-075e-4911-bb70-fdfac4add4f9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Most <span class=\"primary-light\">Popular</span>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "1304651a-0f40-4783-b41c-e7f69035e0dc",
+    "main",
+    "44cd3517-887f-4350-90c3-6efe9c0ffcd1",
+    "c90f9f12-853e-4ba3-b3da-caacf33759bb",
+    "9c3b0313-3d77-4878-8ac4-80746df52725",
+    "666999c1-2b03-4437-83da-7274cb0430c1",
+    "16173fd6-fc3d-4b63-8ceb-132982d2b811",
+    "3517f007-075e-4911-bb70-fdfac4add4f9"
+  ]
+}

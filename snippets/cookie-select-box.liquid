@@ -1,0 +1,297 @@
+
+<form action="/cart/add" id="custom-form" method="post" class="add-to-cart-form">
+
+  <input type="hidden" name="id" id="custom-variant-id" />
+
+  <label class="h2" for="box_size">Choose Box Size:</label>
+  <div id="box_sizes">
+    <input type="radio" id="size1" name="box_size" value="1" checked>
+    <label for="size1">1 Month</label>
+    <input type="radio" id="size2" name="box_size" value="2">
+    <label for="size2">2 Month</label>
+    <input type="radio" id="size3" name="box_size" value="3">
+    <label for="size3">3 Month</label>
+    <input type="radio" id="size4" name="box_size" value="4">
+    <label for="size4">4 Month</label>
+  </div>
+
+  <div id="flavour_options">
+    {% for i in (1..4) %}
+    <div class="flavour-set" id="box{{i}}" style="display: none;">
+      <label class="h3">Box {{i}}</label>
+      <div class="flavour">
+        <img src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/flying_cookie-Chocolate_Brownie.jpg?width=200" alt="Chocolate Brownie">
+        <input type="radio" id="flavour1-box{{i}}" name="flavour-box{{i}}" value="Chocolate Brownie">
+        <label for="flavour1-box{{i}}">Chocolate Brownie</label>
+      </div>
+      <div class="flavour">
+        <img src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/flying-cookie-Maple-Pancake.jpg?width=200" alt="Maple Pancake">
+        <input type="radio" id="flavour2-box{{i}}" name="flavour-box{{i}}" value="Maple Pancake">
+        <label for="flavour2-box{{i}}">Maple Pancake</label>
+      </div>
+      <div class="flavour">
+        <img src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/flying-cookie-Butter-scotch.jpg?width=200" alt="Butterscotch">
+        <input type="radio" id="flavour3-box{{i}}" name="flavour-box{{i}}" value="Butterscotch">
+        <label for="flavour3-box{{i}}">Butterscotch</label>
+      </div>
+      <div class="flavour">
+        <img src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/flying-cookie-variety.jpg?width=200" alt="Variety Pack">
+        <input type="radio" id="flavour4-box{{i}}" name="flavour-box{{i}}" value="Variety Pack">
+        <label for="flavour4-box{{i}}">Variety Pack</label>
+      </div>
+      <div class="flavour">
+        <img src="https://cdn.shopify.com/s/files/1/0434/0246/1338/files/flying-cookie-Cinnamon-Oat.jpg?width=200" alt="Cinnamon Oatmeal">
+        <input type="radio" id="flavour5-box{{i}}" name="flavour-box{{i}}" value="Cinnamon Oatmeal">
+        <label for="flavour5-box{{i}}">Cinnamon Oatmeal</label>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div class="product-form__buttons">
+  {% comment %}<button type="button" class="product-form__submit button button--full-width" name="add" type="submit" onclick="addCustomToCart()">Add to Cart</button>{% endcomment %}
+    <button
+      onclick="addCustomToCart(event)"
+      name="add"
+      class="product-form__submit add-to-cart-button button button--full-width button--secondary"
+    >
+      <!-- custom id used for global.js - don't remove  -->
+      <span id="price-button-{{ section.id }}">
+          {{ 'products.product.add_to_cart' | t }}
+      </span>
+    </button>  
+  </div>
+</form>
+
+<!-- JavaScript for Handling Logic -->
+<!-- JavaScript for Handling Logic -->
+<script>
+  document.querySelectorAll('input[name="box_size"]').forEach(input => {
+    input.addEventListener('change', function() {
+      updateFlavourOptions(parseInt(this.value));
+    });
+  });
+
+  function updateFlavourOptions(size) {
+    // Show only the relevant number of flavour boxes
+    document.querySelectorAll('.flavour-set').forEach((set, index) => {
+      set.style.display = index < size ? 'grid' : 'none'; // Adjust based on selected size
+      if (index >= size) {
+        set.querySelectorAll('input[type="radio"]').forEach(radio => {
+          radio.checked = false; // Uncheck all radios in hidden sets
+        });
+      }
+    });
+  }
+
+function addCustomToCart(event) {
+  event.preventDefault();
+  const selectedSize = document.querySelector('input[name="box_size"]:checked').value;
+  const selectedFlavours = [];
+  for (let i = 1; i <= selectedSize; i++) {
+    const flavour = document.querySelector(`input[name="flavour-box${i}"]:checked`);
+    if (!flavour) {
+      alert(`Please select a flavour for Box ${i}.`);
+      return;
+    }
+    selectedFlavours.push(flavour.value);
+  }
+
+  const variantId = findVariantId(selectedSize, selectedFlavours);
+  if (!variantId) {
+    alert('Unable to find the variant. Please try again.');
+    return;
+  }
+    document.getElementById('custom-variant-id').value = variantId;
+    document.getElementById('custom-form').submit()
+  
+
+  // fetch('/cart/add.js', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify({
+  //     items: [{
+  //       id: variantId,
+  //       quantity: 1
+  //     }]
+  //   })
+  // })
+  // .then(response => {
+  //   if (!response.ok) {
+  //     throw new Error('Network response was not ok');
+  //   }
+  //   return response.json();
+  // })
+  // .then(data => {
+  //   console.log('Item added to cart', data);
+  //   document.getElementById('custom-variant-id').value = variantId;
+  //   document.getElementById('custom-form').submit()
+
+  // })
+  // .catch(error => {
+  //   console.error('Error adding item to cart', error);
+  // });
+}
+
+
+  function findVariantId(size, flavours) {
+    // Sort the flavours to ensure the order does not affect the lookup
+    const sortedFlavours = flavours.sort().join(',');
+
+    // Map flavours to variant IDs
+    const variantMap = {
+      '1': {
+        'Butterscotch': '12345680',
+        'Chocolate Brownie': '12345678',
+        'Cinnamon Oatmeal': '12345682',
+        'Maple Pancake': '12345679',
+        'Variety Pack': '12345681'
+      },
+      '2': {
+        'Butterscotch,Chocolate Brownie': '22345678',
+        'Butterscotch,Cinnamon Oatmeal': '22345679',
+        'Butterscotch,Maple Pancake': '22345680',
+        'Butterscotch,Variety Pack': '22345681',
+        'Chocolate Brownie,Cinnamon Oatmeal': '22345682',
+        'Chocolate Brownie,Maple Pancake': '36162536603802',
+        'Chocolate Brownie,Variety Pack': '22345684',
+        'Cinnamon Oatmeal,Maple Pancake': '22345685',
+        'Cinnamon Oatmeal,Variety Pack': '36162536603802',
+        'Maple Pancake,Variety Pack': '22345687'
+      },
+      '3': {
+        'Butterscotch,Chocolate Brownie,Cinnamon Oatmeal': '32345678',
+        'Butterscotch,Chocolate Brownie,Maple Pancake': '32345679',
+        'Butterscotch,Chocolate Brownie,Variety Pack': '32345680',
+        'Butterscotch,Cinnamon Oatmeal,Maple Pancake': '32345681',
+        'Butterscotch,Cinnamon Oatmeal,Variety Pack': '32345682',
+        'Butterscotch,Maple Pancake,Variety Pack': '32345683',
+        'Chocolate Brownie,Cinnamon Oatmeal,Maple Pancake': '32345684',
+        'Chocolate Brownie,Cinnamon Oatmeal,Variety Pack': '32345685',
+        'Chocolate Brownie,Maple Pancake,Variety Pack': '32345686',
+        'Cinnamon Oatmeal,Maple Pancake,Variety Pack': '32345687'
+      },
+      '4': {
+        'Butterscotch,Chocolate Brownie,Cinnamon Oatmeal,Maple Pancake': '42345678',
+        'Butterscotch,Chocolate Brownie,Cinnamon Oatmeal,Variety Pack': '42345679',
+        'Butterscotch,Chocolate Brownie,Maple Pancake,Variety Pack': '42345680',
+        'Butterscotch,Cinnamon Oatmeal,Maple Pancake,Variety Pack': '42345681',
+        'Chocolate Brownie,Cinnamon Oatmeal,Maple Pancake,Variety Pack': '42345682'
+      }
+    };
+
+    return variantMap[size][sortedFlavours];
+  }
+
+  // Initialize with default selection
+  updateFlavourOptions(1);
+</script>
+
+
+<style>
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.flavour {
+display: grid;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    flex: 1;
+    grid-template-columns: 60px auto;
+}
+
+.flavour input[type="radio"]:checked + img {
+    border: 2px solid #ff734c;
+}
+
+.flavour input[type="radio"]:checked + label  {
+    color: #ff734c;
+}
+
+.flavour img {
+    width: 50px;
+    height: 50px;
+    margin: auto 10px auto 0;
+    border-radius: 50%;
+}
+
+.flavour-set {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.flavour-set .h3 {
+    grid-column: span 2;
+margin-top: 15px
+}
+
+/* Box Size styles */
+#box_sizes { 
+    display: flex;
+  flex-wrap: wrap;
+    gap: 10px;
+  margin-top: 10px;
+    justify-content: space-around;
+}
+
+#box_sizes label {
+    flex: 1;
+    text-align: center;
+    padding: 5px 10px;
+    line-height: 1.2;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+}
+
+input[type="radio"] {
+  display: none; /* Hide the radio button */
+}
+
+#box_sizes input[type="radio"]:checked + label {
+    border: 2px solid #ff734c !important;
+    color: #000;
+}
+
+/* Flavour options styles */
+#flavour_options {
+  margin-top: 10px;
+}
+
+/* Button styles */
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  
+  .flavour img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+</style>

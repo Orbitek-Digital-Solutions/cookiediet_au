@@ -1,0 +1,102 @@
+<div class="page-width">
+  <h2 class="h1 text-center">Celebrity <span class="primary-light">Testimonials</span></h2>
+  <div id="celebrity-testimonials">
+    <div class="celebrity-testimonials--item">
+      <div class="celeb-content">
+        <img src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/Mask-Group-15_180x.png?v=6864910167615019296" alt="Tamara Joy celebrity testimonials">
+        <div>
+          <p><b class="primary-light">Tamara Joy</b><br>MAFs star</p>
+          <p class="rating-wrapper">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </p>
+          <button aria-label="Video Modal" data-toggle="modal" data-target="#videoPopup" embedlink="https://www.youtube.com/embed/mhyPTHclo5M" class="button button--primary video-link">{% render 'icon-play' %}&nbsp;Play Video</button>
+        </div>
+      </div>
+      <p>“I love the cookies, it helps me keep my cravings in check and maintain my weight. They taste amazing, especially the maple pancakes. I recommend it to anyone that needs a healthy treat between meals that won’t add to your waistline, It really does control your hunger”</p>
+    </div>
+    <div class="celebrity-testimonials--item">
+      <div class="celeb-content">
+        <img src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/Mask-Group-16_180x.png?v=7909758836463995405" alt="Rita Agoulian celebrity testimonials">
+        <div>
+          <p><b class="primary-light">Rita Agoulian</b><br>Of LickYourPhone</p>
+          <p class="rating-wrapper">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </p>
+          <button aria-label="Video Modal" data-toggle="modal" data-target="#videoPopup" embedlink="https://www.youtube.com/embed/NoikZKDwqXI" class="button button--primary video-link">{% render 'icon-play' %}&nbsp;Play Video</button>
+        </div>
+      </div>
+      <p>“I love the Cookie Diet, I only needed to lose a few kilos, and this did the trick and quickly. This diet was great cause it’s so convenient, don’t even have to think about anything or plan anything. And now I’m just using the cookies as snacks and I’m keeping the weight off!”</p>
+    </div>
+    <div class="celebrity-testimonials--item">
+      <div class="celeb-content">
+        <img src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/Mask-Group-17_180x.png?v=5748626191645242101" alt="Jessika Power celebrity testimonials">
+        <div>
+          <p><b class="primary-light">Jessika Power</b><br>MAFs star</p>
+          <p class="rating-wrapper">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </p>
+          <button aria-label="Video Modal" data-toggle="modal" data-target="#videoPopup" embedlink="https://www.youtube.com/embed/HEqthN_C37U" class="button button--primary video-link">{% render 'icon-play' %}&nbsp;Play Video</button>
+        </div>
+      </div>
+      <p>“I use these as a healthy snack in-between meals and it really curbs my cravings for high calorie treats like chips, or chocolate or muffins. These are great, they taste amazing and they really make me full too, so I don’t over eat on my main meals. So easy just pop them in my bag and I have a guilt-free snack when I’m on the go.”</p>
+    </div>
+    <div class="celebrity-testimonials--item">
+      <div class="celeb-content">
+        <img src="//cdn.shopify.com/s/files/1/0434/0246/1338/files/Mask-Group-18_180x.png?v=2263506471444497332" alt="Kirstie Roche celebrity testimonials">
+        <div>
+          <p><b class="primary-light">Kirstie Roche</b><br>Instagram Influencer</p>
+          <p class="rating-wrapper">
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+            {% render 'icon-star' %}
+          </p>
+          <button aria-label="Video Modal" data-toggle="modal" data-target="#videoPopup" embedlink="https://www.youtube.com/embed/0CIdwVACWBA" class="button button--primary video-link">{% render 'icon-play' %}&nbsp;Play Video</button>
+        </div>
+      </div>
+      <p>“I freaking love these cookies, they taste amazing!”</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #celebrity-testimonials {
+    display: grid;
+    gap: 2em;
+    background-image: url(//cdn.shopify.com/s/files/1/0434/0246/1338/files/meters_600x.png?v=1657803…);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 749px) { 
+    #celebrity-testimonials { 
+      padding-bottom: 150px;
+    }
+  }
+  @media screen and (min-width: 750px) { 
+    #celebrity-testimonials {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  #celebrity-testimonials .celebrity-testimonials--item .celeb-content {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+</style>

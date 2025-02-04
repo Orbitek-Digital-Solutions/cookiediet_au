@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17134640587e5536e6": {
+      "type": "apps",
+      "blocks": {
+        "smile_io_smile_points_on_account_page_w8YKFk": {
+          "type": "shopify://apps/smile-io/blocks/smile-points-on-account-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#121212",
+            "secondary_colour": "#F8F8F8",
+            "show_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_points_on_account_page_w8YKFk"
+      ],
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-account",
+      "custom_css": [
+        ":is(.account, .order) {margin-top: 4rem; margin-bottom: 3rem;}"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_CeJLLy": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div>\n      <h2>Manage Subscription</h2>\n      <!-- Begin ReCharge code -->\n      <p id=\"rc_link_container\">\n        <a href=\"/tools/recurring/login\">Manage Subscriptions</a>\n      </p>\n  \n    <!-- End ReCharge code -->\n    </div>",
+        "custom_class": "page-width",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "17134640587e5536e6",
+    "main",
+    "custom_liquid_CeJLLy"
+  ]
+}

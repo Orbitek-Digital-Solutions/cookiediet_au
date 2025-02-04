@@ -1,0 +1,521 @@
+<div class="page-width tabs nutritional-tabs-wrapper" id="nutritional-tabs">
+  <div class="tab-content">
+    <div class="nutritional-tabs-wrapper-head">
+      <div>
+      <h3 class="h1">All Natural, Australian Made Cookies</h1>
+      <div class="visible-xs">
+        <h3 style="margin-bottom:10px">Select Flavour:</h3>
+        <div id="select-flavour-mob-wrap">
+        <select id="select-flavour-mob" onchange="selectFlavour(this)"> 
+          <option value="chocolate-brownie" data-name="chocolate-brownie">Chocolate Brownie</option>
+          <option value="maple-pancakes" data-name="maple-pancakes">Maple Pancakes</option>
+          <option value="cinnamon-oatmeal" data-name="cinnamon-oatmeal">Cinnamon Oatmeal</option>
+          <option value="butterscotch" data-name="butterscotch">Butterscotch</option>
+        </select>
+        </div>
+      </div>
+
+      <ul class="nav nutrition-pills hidden-xs" style="border-bottom: 0" role="tablist">
+        <li class="tab-btn button button--secondary active" data-name="chocolate-brownie">Chocolate Brownie</li>
+        <li class="tab-btn button button--secondary" data-name="maple-pancakes">Maple Pancakes</li>
+        <li class="tab-btn button button--secondary" data-name="cinnamon-oatmeal">Cinnamon Oatmeal</li>
+        <li class="tab-btn button button--secondary" data-name="butterscotch">Butterscotch</li>
+      </ul>
+      </div>
+      <div>
+        <div class="nutrition-badges">
+          <img src="{{ '60_calories.svg' | file_url | svg_filter }}" width="130px" alt="60 calories"/>
+          <img src="{{ 'baked_fresh_in_sydney.svg' | file_url | svg_filter }}" width="130px" alt="baked fresh in sydney"/>
+          <img src="{{ 'free_of_preservative.svg' | file_url | svg_filter }}" width="130px" alt="free of preservative"/>
+          <img src="{{ 'no_artificial_flavours.svg' | file_url | svg_filter }}" width="130px" alt="no artificial flavours"/>
+        </div>
+      </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane fade in active chocolate-brownie">
+        <div>
+          <h3>Ingredients:</h3>
+          <p>SUGAR, WHEAT FLOUR, VINEGAR, CANOLA OIL,COCOA, MILK SOLIDS, EGG WHITE SOLIDS, WHOLE WHEAT FLOUR, GLYCEROL, OATMEAL, WHEY, CRISP RICE (RICE FLOUR, MALT EXTRACT SALT), VANILLA EXTRACT LEAVENING (SODIUM ACID PYROPHOSPHATE, BICARBONATE OF SODA, CORNSTARCH, MONOBASIC CALCIUM PHOSPHATE), BUCKWHEAT FLOUR, SPELT FLOUR, OAT BRAN. WHEAT BRAN, MOLASSES, SEA SALT. SODIUM BICARBONATE</p>
+          <h3>Contains</h3>
+          <p>MILK, EGGS, AND WHEAT. MAY CONTAIN TRACES OF SOY, TREE NUTS, PEANUT, SESAME SEED.</p>
+          <h3>Details</h3>
+          <p>Servings Per Package: 4.5<br>
+          Serving Size: 2 cookies (28g)</p>
+          <h3><a href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}" class="hidden-xs primary-light">Read FAQs</a></h3>
+        </div>
+        <div>
+          <table class="table table-responsive">
+            <tbody>
+              <tr>
+                <th></th>
+                <th>Quantity per serving</th>
+                <th>Quantity per 100g</th>
+
+              </tr>
+              <tr>
+                <td>Energy (kJ)</td>
+                <td>439</td>
+                <td>1568</td>
+              </tr>
+              <tr>
+                <td>Protein, total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Fat total (g)</td>
+                <td>3</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>Saturated</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Trans</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Cholesterol (mg)</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Carbohydrate (g)</td>
+                <td>16</td>
+                <td>57</td>
+              </tr>
+              <tr>
+                <td>Sugars</td>
+                <td>8</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <td>Dietary Fibre (g)</td>
+                <td>0.8</td>
+                <td>2.7</td>
+              </tr>
+              <tr>
+                <td>Sodium (mg)</td>
+                <td>170</td>
+                <td>607</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <h3 class="visible-xs"><a class="primary-light" href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}">Read FAQs</a></h3>
+    
+    </div>
+    <div role="tabpanel" class="tab-pane fade maple-pancakes">
+        <div>
+          <h3>Ingredients:</h3>
+          <p>SUGAR, WHEAT FLOUR, VINEGAR, CANOLA OIL, MILK SOLIDS, WHOLE WHEAT FLOUR, EGG WHITE SOLIDS GLYCEROL, OATMEAL, WHEY, CRISP RICE, RICE FLOUR, MALT EXTRACT, SALT), NATURAL MAPLE SYRUP FLAVOUR, VANILLA EXTRACT LEAVENING (SODIUM ACID PYROPHOSPHATE, BICARBONATE OF SODA, CORNSTARCH, MONOBASIC CALCIUM PHOSPHATE.), CORNSTARCH, BUCKWHEAT FLOUR, SPELT FLOUR, OAT BRAN, WHEAT BRAN, MOLASSES, SEA SALT, SODIUM BICARBONATE]</p>
+          <h3>Contains</h3>
+          <p>MILK, EGGS, AND WHEAT. MAY CONTAIN TRACES OF SOY, TREE NUTS, PEANUT, SESAME SEED.</p>
+          <h3>Details</h3>
+          <p>Servings Per Package: 4.5<br>
+          Serving Size: 2 cookies (28g)</p>
+          <h3><a href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}" class="hidden-xs">Read FAQs</a></h3>
+        </div>
+        <div>
+          <table class="table table-responsive">
+            <tbody>
+              <tr>
+                <th></th>
+                <th>Quantity per serving</th>
+                <th>Quantity per 100g</th>
+
+              </tr>
+              <tr>
+                <td>Energy (kJ)</td>
+                <td>460</td>
+                <td>1642</td>
+              </tr>
+              <tr>
+                <td>Protein, total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Fat total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Saturated</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Trans</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Cholesterol (mg)</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Carbohydrate (g)</td>
+                <td>15</td>
+                <td>54</td>
+              </tr>
+              <tr>
+                <td>Sugars</td>
+                <td>9</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>Dietary Fibre (g)</td>
+                <td>0.6</td>
+                <td>2.1</td>
+              </tr>
+              <tr>
+                <td>Sodium (mg)</td>
+                <td>170</td>
+                <td>607</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <h3 class="visible-xs"><a class="primary-light" href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}">Read FAQs</a></h3>
+    
+    </div>
+    <div role="tabpanel" class="tab-pane fade cinnamon-oatmeal">
+        <div>
+          <h3>Ingredients:</h3>
+          <p>SUGAR, WHEAT FLOUR, VINEGAR, CANOLA OIL, MILK SOLIDS, EGG WHITE SOLIDS, WHOLE WHEAT FLOUR, GLYCEROL, OATMEAL, WHEY, CRISP RICE (RICE FLOUR MALT EXTRACT, SALT), LEAVENING (SODIUM ACID PYROPHOSPHATE, BICARBONATE OF SODA, CORNSTARCH, MONOBASIC CALCIUM PHOSPHATE, CORNSTARCH, BUCKWHEAT FLOUR, SPELT FLOUR, OAT BRAN, WHEAT BRAN MOLASSES,CINNAMON, SEA SALT, SODIUM BICARBONATE</p>
+          <h3>Contains</h3>
+          <p>MILK, EGGS, AND WHEAT. MAY CONTAIN TRACES OF SOY, TREE NUTS, PEANUT, SESAME SEED.</p>
+          <h3>Details</h3>
+          <p>Servings Per Package: 4.5<br>
+          Serving Size: 2 cookies (28g)</p>
+          <h3><a href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}" class="hidden-xs">Read FAQs</a></h3>
+        </div>
+        <div>
+          <table class="table table-responsive">
+            <tbody>
+              <tr>
+                <th></th>
+                <th>Quantity per serving</th>
+                <th>Quantity per 100g</th>
+
+              </tr>
+              <tr>
+                <td>Energy (kJ)</td>
+                <td>502</td>
+                <td>1791</td>
+              </tr>
+              <tr>
+                <td>Protein, total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Fat total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Saturated</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Trans</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Cholesterol (mg)</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Carbohydrate (g)</td>
+                <td>16</td>
+                <td>57</td>
+              </tr>
+              <tr>
+                <td>Sugars</td>
+                <td>9</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>Dietary Fibre (g)</td>
+                <td>0.7</td>
+                <td>2.5</td>
+              </tr>
+              <tr>
+                <td>Sodium (mg)</td>
+                <td>200</td>
+                <td>714</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <h3 class="visible-xs"><a class="primary-light" href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}">Read FAQs</a></h3>
+    
+    </div>
+    <div role="tabpanel" class="tab-pane fade butterscotch">
+        <div>
+          <h3>Ingredients:</h3>
+          <p>SUGAR, WHEAT FLOUR, VINEGAR, CANOLA OIL, MILK SOLIDS, EGG WHITE SOLIDS, WHOLE WHEAT FLOUR, GLYCEROL, OATMEAL, WHEY, CRISP RICE (RICE FLOUR, MALT EXTRACT SALT), NATURAL BUTTERSCOTCH FLAVOUR, VANILLA EXTRACT, LEAVENING (SODIUM ACID PYROPHOSPHATE, BICARBONATE OF SODA, CORNSTARCH, MONOBASIC CALCIUM PHOSPHATE), CORN STARCH, BUCKWHEAT FLOUR, SPELT FLOUR, OAT BRAN. WHEAT BRAN, MOLASSES, SEA SALT. SODIUM BICARBONATE</p>
+          <h3>Contains</h3>
+          <p>MILK, EGGS, AND WHEAT. MAY CONTAIN TRACES OF SOY, TREE NUTS, PEANUT, SESAME SEED.</p>
+          <h3>Details</h3>
+          <p>Servings Per Package: 4.5<br>
+          Serving Size: 2 cookies (28g)</p>
+          <h3><a href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}" class="hidden-xs">Read FAQs</a></h3>
+        </div>
+        <div>
+          <table class="table table-responsive">
+            <tbody>
+              <tr>
+                <th></th>
+                <th>Quantity per serving</th>
+                <th>Quantity per 100g</th>
+
+              </tr>
+              <tr>
+                <td>Energy (kJ)</td>
+                <td>460</td>
+                <td>1642</td>
+              </tr>
+              <tr>
+                <td>Protein, total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Fat total (g)</td>
+                <td>4</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Saturated</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Trans</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Cholesterol (mg)</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Carbohydrate (g)</td>
+                <td>15</td>
+                <td>54</td>
+              </tr>
+              <tr>
+                <td>Sugars</td>
+                <td>9</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>Dietary Fibre (g)</td>
+                <td>0.6</td>
+                <td>2.1</td>
+              </tr>
+              <tr>
+                <td>Sodium (mg)</td>
+                <td>170</td>
+                <td>607</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <h3 class="visible-xs"><a class="primary-light" href="{% if product %}#faq-section{% else %}/pages/faqs{% endif %}">Read FAQs</a></h3>
+      
+    </div>
+  </div>
+</div>
+
+{% style %}
+#quick-facts ol li {
+   color: #797979;
+   font-size: 20px;
+   line-height: 26px;
+   padding: 15px 0 15px 5px;
+}
+#quick-facts ol li::marker {
+   color: #ff734c 
+}
+
+#select-flavour-mob-wrap {
+    padding: 5px 10px;
+    border-radius: 1em;
+    border: 1px solid #fd7251;
+    margin: 0 0 1em 0;
+}
+#select-flavour-mob {
+    background: transparent;
+    color: #000;
+    border: transparent !important;
+    width: 100%;
+    margin: 0;
+    outline: none !important;
+    font-size: 17px;
+    box-shadow: none !important;
+}
+.nutrition-pills {
+   display: inline-flex;
+   padding-left: 0;
+   list-style-type: none;
+   margin-bottom: 10px;
+   flex-wrap: wrap;
+   align-items: center;
+}
+.nutrition-pills > li {
+   opacity: .7;
+   text-align: left;
+   margin: 0 10px 10px 0;
+   margin-bottom: 10px;
+   padding: 0.7rem 0.8rem;
+}
+.nutrition-badges {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   flex-wrap: nowrap;
+   margin-bottom: 1em;
+   gap: 0 1rem;
+}
+.nutrition-badges img {
+   width: 130px;
+   margin: auto;
+}
+.nutrition-pills li.active {
+   opacity: 1;
+   border: 1px solid #fd7253;
+   color: #fd7253;
+}
+@media screen and (max-width: 749px) {
+  .nutritional-tabs-wrapper .tab-pane {
+    grid-template-columns: 1fr !important;
+  }
+  .nutritional-tabs-wrapper-head {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (min-width: 750px) {
+ .tab-pane div:nth-child(2) {
+    flex: 1;
+    float: right;
+  }
+  .tab-pane {
+      gap: 2em !important;
+  }
+  .nutritional-tabs-wrapper-head {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nutritional-tabs-wrapper-head .h1 {
+   margin: 0;
+}
+.nutritional-tabs-wrapper .tab-pane {
+   color: #262626;
+   transition: all 0.2s ease-in-out;
+   opacity: 0;
+   height: auto;
+   max-height: 0px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   overflow: hidden;
+   gap: 1em;
+}
+.lemon-ginger--button {
+   position: relative;
+}
+.lemon-ginger--button:before {
+   position: absolute;
+   content: "NEW!";
+   border-radius: 50%;
+   z-index: 4;
+   background: #ECA74C;
+   color: #fff;
+   top: -10px;
+   text-align: center;
+   letter-spacing: 0;
+   width: 35px;
+   font-size: 12px;
+   height: 35px;
+   right: -25px;
+   left: initial;
+   line-height: 35px;
+}
+.tab-pane.active{
+   opacity: 1;
+   height: auto;
+   max-height: 1500px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+   padding: 8px;
+   line-height: 1.42857143;
+   vertical-align: top;
+   text-align: left;
+   border-top: 1px solid #ddd;
+}
+.table {
+   border: 1px solid #ddd;
+   border-top: none;
+   width: 100%;
+}
+{% endstyle %}
+
+<script>
+   function initTab(elem) {
+      //addEventListener on mouse click
+      document.addEventListener('click', function (e) {
+        //check is the right element clicked
+        if (!e.target.matches(elem+' .tab-btn')) return;
+        else{
+          if(!e.target.classList.contains('active')){
+            //if option true remove active class from all other t-btn and t-panel 
+            findActiveElementAndRemoveIt(elem+' .tab-btn');
+            findActiveElementAndRemoveIt(elem+' .tab-pane');
+            //add active class on clicked tab  
+            e.target.classList.add('active');  
+            setTimeout(function(){                 
+              var panel = document.querySelectorAll(elem+' .tab-pane.'+e.target.dataset.name);
+              Array.prototype.forEach.call(panel, function (el) {
+                //add active class on right t-panel after 200ms because of the smooth animation  
+                el.classList.add('active');
+              });
+            }, 200);
+          }
+        }
+      });
+    }
+    //if option true remove active class from added element
+    function findActiveElementAndRemoveIt(elem){
+      var elementList = document.querySelectorAll(elem);
+      Array.prototype.forEach.call(elementList, function (e) {
+          e.classList.remove('active');
+      });
+    }
+    //activate tabs function
+    initTab('.tabs');
+
+  function selectFlavour(elem) {
+    const selectedFlavour = elem.value;
+    const tabpane = document.querySelectorAll('.tab-pane');
+    tabpane.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    setTimeout(function(){    
+      document.querySelector('.tab-pane.' + selectedFlavour).classList.add('active');
+    }, 200);
+  }
+</script>

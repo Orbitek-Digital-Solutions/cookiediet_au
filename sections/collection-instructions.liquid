@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+<div class="color-{{ section.settings.color_scheme }} gradient collection-instructions section-{{ section.id }}-padding">
+  <div class="page-width">
+  <slideshow-component class="slider-mobile-gutter">
+    
+    <ul class="contains-content-container grid grid--1-col grid--3-col-tablet slider slider--mobile slider--tablet grid--peek"
+     data-autoplay="true"
+    id="Slider-template--collection-instructons"
+     data-speed="4"
+     role="list"
+     aria-live="off"
+    >
+      <li id="Slide-template--collection-instructons-1" class="slideshow__slide  grid__item slider__slide center" aria-hidden="false" tabindex="-1">
+        <div class="collection-instructions--item">
+          <div class="collection-instructions--number font-heading">1</div>
+          <div>
+            <p class="collection-instructions--text">Select your supply of cookies and your favourite flavour.</p>
+            <h3 class="collection-instructions--title">We recommend the variety pack.</h3>
+          </div>
+        </div>
+      </li>
+      <li id="Slide-template--collection-instructons-2" class="slideshow__slide  grid__item slider__slide center" aria-hidden="true" tabindex="-1">
+        <div class="collection-instructions--item">
+          <div class="collection-instructions--number font-heading">2</div>
+          <div>
+            <p class="collection-instructions--text">Choose a one-time purchase or subscribe for easy auto-shipping.</p>
+            <h3 class="collection-instructions--title">MAKING CONVENIENCE EVEN EASIER.</h3>
+          </div>
+        </div>
+      </li>
+      <li id="Slide-template--collection-instructons-3" class="slideshow__slide  grid__item slider__slide center" aria-hidden="true" tabindex="-1">
+        <div class="collection-instructions--item">
+          <div class="collection-instructions--number font-heading">3</div>
+          <div>
+            <p class="collection-instructions--text">Eat 1-2 cookies every 2 hours, with one healthy light meal for dinner.</p>
+            <h3 class="collection-instructions--title">watch the weight go!</h3>
+          </div>
+        </div>
+      </li>
+    </ul>
+       <div class="slider-buttons-wrap slider-buttons no-js-hidden " style="display: none">
+     <button  type="button" class="slideshow__autoplay slider-button no-js-hidden" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+        {%- render 'icon-pause' -%}
+        {%- render 'icon-play' -%}
+      </button>
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+    </div>
+    </slideshow-component>
+  </div>
+</div>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+  {
+    "name": "Collection Instructions",
+    "settings": [
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }
+    ],
+    "presets": [{
+      "name": "Collection Instructions"
+    }]
+  }
+{% endschema %}

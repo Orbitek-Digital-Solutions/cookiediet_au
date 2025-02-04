@@ -1,0 +1,35 @@
+<div class="section home-hero">
+  <div class="page-width">
+    <div class="flex" style="text-align:center;">
+      <div>
+        {% if shop.metafields.arena.sale_status %}
+          <h1 class="home-hero--title primary-light h0">
+            EOFY SALE<br><span style="color: #000">20% OFF STOREWIDE</span></h1>
+          <p>Our Biggest Sale Yet.</p>
+
+          {% include 'countdown-timer',
+          end_date: "May 27, 2022"
+          %}
+
+          <a href="/collections/all" class="button button--primary">Shop Now</a>
+          <p style="font-size: 60%;">Min spend $100*</p>
+
+        {% else %}
+          <h1 class="home-hero--title h0" style="margin-bottom: 0;"><span class="primary-light">Mother's Day</span> Sale</h1>
+          <div style="margin-top: 0;margin-bottom: 10px;" class="h1">Treat your Mum with <span class="primary-light">20% OFF</span></div>
+          <a href="/products/1-month-supply" class="button button--primary">Get 20% OFF</a>
+          <p><small>Min. spend $150 | Ends midnight 14/05/23</small></p>
+          {% render 'countdown-timer',
+          end_date: "May 15, 2023"
+          %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
+<img class="visible-xs" src="{{'cookie-shoot-mobile-hero.jpg' | file_img_url: '750x'}}" alt="Cookie Diet hero"/>
+
+
+
+

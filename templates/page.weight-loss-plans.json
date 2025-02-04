@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1663928092df6610b1": {
+      "type": "image-banner-metafields",
+      "blocks": {
+        "1663928092b7eae1aa-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "1663928092b7eae1aa-0"
+      ],
+      "settings": {
+        "image_overlay_opacity": 70,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "link": "",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "166392922503dd5984": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render \"weight-loss-page\" %}",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1663934233044f1fd9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Most <span class=\"primary-light\">Popular</span>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "product-slider",
+        "products_to_show": 9,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "3d07220f-9431-4b33-93d1-04075efe1d4f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n<h2>Our Healthy Meal Plan for Weight Loss &ndash; with Cookies!</h2>\n<p>It may sound too good to be true, but with our diet plan for weight loss, you can lose weight by eating just 9 cookies a day, followed by a simple, healthy dinner of protein and greens (no more than 500-700 calories).</p><p>Over the course of the day, eat a cookie every 1-2 hours. They&rsquo;re easy to carry with you wherever you go &ndash; just pop them in your bag, and you&rsquo;re ready to go! Choose from our delicious flavours &ndash; with Maple Pancakes, Chocolate Brownie, Butterscotch and Cinnamon Oatmeal, dieting is never boring!<span id=\"dots\">...</span>\n</p>\n<div id=\"more\">\n<p>Our diet plans are completely flexible &ndash; start out with a&nbsp;<a href=\"https://www.cookiediet.com.au/products/1-week-supply\">1 week supply</a> to see if the diet is right for you; then we have diet plans available in 1 month, 2, 3 or 4 month supplies to keep you going. You can stock up with as little or as much as you need.&nbsp;</p>\n<p>Then, to maintain your weight once you achieve your goal, continue having cookies every 1-2 hours. This helps to keep the weight off so you can continue to be a new, healthier version of you. It&rsquo;s that simple!</p>\n<p>Achieving your goal weight has never been tastier or more convenient. Check out our range of scrumptious flavours and get started today. We also have a range of delicious recipes to try in our&nbsp;<a href=\"https://www.cookiediet.com.au/products/the-cookie-diet-cookbook\">e-book The Cookie Doctor Cookbook</a> by Dr. Sanford Siegal.</p>\n<p>Want to find out more? For further tips and information, get in touch with us at <a href=\"mailto:info@cookiediet.com.au\">info@cookiediet.com.au</a> or call on 1300 077 707.</p>\n<p>Check out our <a href=\"https://www.cookiediet.com.au/pages/reviews\">Reviews</a> today to find out what our happy customers have been saying!</p>\n\n  </div>\n<a onclick=\"readmorecontent()\" id=\"myBtn\">Read more</a><br>\n\n</div>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "9cac01cf-5d36-4974-b1c7-4ede6278e841": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"application/ld+json\">\n{\n\"@context\": \"https://schema.org/\",\n\"@type\": \"Product\",\n\"name\": \"Weight Loss Plans\",\n\"image\": [\"https://www.cookiediet.com.au/cdn/shop/files/CookieDiet_MasterLogo_OrangeOutline_FullColour_RGB.png?crop=center&height=32&v=1690789045&width=32\"],\n\"description\": \"Created by renowned physician, author, and weight-loss expert Dr. Sanford Siegal, Dr. Siegal’s COOKIE DIET is a proven, three-step plan that has helped more than a half million people lose weight since 1975. It’s a safe, fast, and affordable approach to weight loss and weight maintenance that hundreds of doctors throughout North America have used to help their patients lose weight. The cookies are all-natural, Kosher, and vegetarian, and people find them very tasty.\",\n\"review\": {\n\"@type\": \"Review\",\n\"reviewBody\": \"love all the flavors, the only diet that work for me, down 10 pounds in 30 days\",\n\"reviewRating\": {\n\"@type\": \"Rating\",\n\"ratingValue\": \"5\",\n\"bestRating\": \"5\"\n},\n\"author\": {\n\"@type\": \"Person\",\n\"name\": \"Hanh P.\"\n}\n},\n\"aggregateRating\": {\n\"@type\": \"AggregateRating\",\n\"ratingValue\": \"4.8\",\n\"reviewCount\": \"1317\"\n}\n};\n</script>",
+        "custom_class": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "1663928092df6610b1",
+    "main",
+    "166392922503dd5984",
+    "1663934233044f1fd9",
+    "3d07220f-9431-4b33-93d1-04075efe1d4f",
+    "9cac01cf-5d36-4974-b1c7-4ede6278e841"
+  ]
+}
