@@ -8,6 +8,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const bulkSass = require('gulp-sass-glob-use-forward');
+const eyeglass = require('eyeglass');
+
 
 function compileSass() {
     return gulp.src('styles/**/*.scss')
