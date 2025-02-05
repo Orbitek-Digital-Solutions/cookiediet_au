@@ -32,7 +32,8 @@
       }
     },
     "7820b316-ab69-43d1-8f62-5e9c1f860459": {
-      "type": "hero-html",
+      "type": "hero-banner",
+//      "type": "hero-html",
       "settings": {}
     },
     "16631542796ef9a762": {
