@@ -1,28 +1,33 @@
 {
   "name": "cookiediet_au",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Orbitek-Digital-Solutions/cookiediet_au.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Orbitek-Digital-Solutions/cookiediet_au/issues"
-  },
-  "homepage": "https://github.com/Orbitek-Digital-Solutions/cookiediet_au#readme",
-  "description": "",
+  "author": "Orbitek",
+  "description": "The node.js requirements to build this project.",
+  "version": "3.0.0",
+  "repository": {},
   "devDependencies": {
-    "breakpoint-sass": "^3.0.0",
-    "eyeglass": "^3.0.3",
-    "gulp": "^5.0.0",
-    "gulp-sass": "^6.0.0",
-    "gulp-sass-glob-use-forward": "^0.1.3",
-    "js-yaml": "^4.1.0",
-    "sass": "^1.83.4"
-  }
+    "breakpoint-sass": "^2",
+    "browserlist": "^1.0.1",
+    "del": "^6",
+    "esm": "^3.2.25",
+    "eyeglass": "^3",
+    "gulp": "^4",
+    "gulp-autoprefixer": "^8",
+    "gulp-sass": "^5",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-size": "^4",
+    "gulp-sourcemaps": "^3",
+    "js-yaml": "^4",
+    "node-sass": "^9.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./node_modules/gulp/bin/gulp.js watch",
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 3 Safari versions",
+    "last 2 Edge versions"
+  ]
 }

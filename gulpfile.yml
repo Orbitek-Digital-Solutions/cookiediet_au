@@ -1,0 +1,19 @@
+httpRoot: ""
+sass:
+  # Source *.scss files to build.
+  # @see gulpfiles/styles.js
+  # @see gulpfiles/config.js
+  src: src
+  # Destination of compiled CSS.
+  # @see gulpfiles/styles.js
+  dest: assets
+
+autoprefixer:
+  # Standard browser compatibility settings.
+  # @see https://github.com/ai/browserslist#queries
+  overrideBrowserslist:
+    - last 2 versions
+    - ie >= 10
+    - and_chr >= 2.3
+    - iOS >= 8.1
+    - firefox >= 45
