@@ -7,6 +7,7 @@
   "devDependencies": {
     "breakpoint-sass": "^2",
     "browserlist": "^1.0.1",
+    "chroma-sass": "^1.2.6",
     "del": "^6",
     "esm": "^3.2.25",
     "eyeglass": "^3",

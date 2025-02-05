@@ -19,15 +19,10 @@
 
   &__rating {
     svg {
-      color: #eca74c;
-      fill: #eca74c;
+      color: color('orange');
+      fill: color('orange');
       width: 15px;
     }
-
-  }
-
-  &__caption {
-
   }
 
   @include respond-to(tablet-portrait-up) {

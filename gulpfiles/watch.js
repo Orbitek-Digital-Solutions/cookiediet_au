@@ -20,8 +20,7 @@ let watchFiles = {
 
 // Watch options.
 let watchOptions = {
-  // This is required for watching to work inside vagrant.
-  usePolling: true
+  usePolling: false
 }
 
 /**
