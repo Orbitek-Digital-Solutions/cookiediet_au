@@ -1,3 +1,18 @@
+// Breakpoints
+//
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+//
+// *Mobile first breakpoints*
+// * `tablet-portrait-up` - 750px+
+// * `tablet-landscape-up` - 990px+
+// * `laptop-up` - 1200px+
+// * `desktop-up` - 1600px+
+//
+
 @import "breakpoint";
 
 @include add-breakpoint(tablet-portrait-up, 750px);
+@include add-breakpoint(tablet-landscape-up, 990px);
+@include add-breakpoint(laptop-up, 1200px);
+@include add-breakpoint(desktop-up, 1600px);
