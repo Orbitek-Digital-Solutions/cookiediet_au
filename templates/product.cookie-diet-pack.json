@@ -55,7 +55,7 @@
         "custom_liquid_jPxAzJ": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<kaching-bundle product-id=\"7850086138010\"></kaching-bundle>\n\n{{ 'kaching-bundle-custom.js' | asset_url | script_tag }}\n\n{{ 'kaching-bundle-custom.css' | asset_url | stylesheet_tag }}"
+            "custom_liquid": "{% if product.handle == 'the-cookie-diet-test' %}\n<kaching-bundle product-id=\"7850086138010\"></kaching-bundle>\n\n{{ 'kaching-bundle-custom.js' | asset_url | script_tag }}\n\n{{ 'kaching-bundle-custom.css' | asset_url | stylesheet_tag }}\n{% endif %}"
           }
         },
         "kaching_bundles_app_block_TNXUqt": {

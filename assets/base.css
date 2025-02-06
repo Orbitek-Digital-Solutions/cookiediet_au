@@ -3025,3 +3025,22 @@ details-disclosure > details {
     height: auto !important;
 }
 
+/*hide the Kaching 1 week bundle from the 1 week product */
+#shopify-block-ASjA0RFcyajhjM0xuM__kaching_bundles_app_block_TNXUqt {
+  display: none !important;
+}
+
+div[data-id="5505065910426"] .price-item--last {
+  /* visibility: hidden; */
+  /* position: relative; */
+}
+
+div[data-id="5505065910426"] .price-item--last:after {
+  /* visibility: visible; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* content: "From $79.95 AUD"; */
+  /* width: 150px */
+}
+
