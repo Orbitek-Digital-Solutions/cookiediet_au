@@ -15,7 +15,7 @@ import size from 'gulp-size';
 import config from './config';
 import * as clean from './clean';
 
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 
 
 // The scss files we are compiling.

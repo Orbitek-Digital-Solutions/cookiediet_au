@@ -7,6 +7,7 @@
   "devDependencies": {
     "breakpoint-sass": "^2",
     "browserlist": "^1.0.1",
+    "chroma-sass": "^1.2.6",
     "del": "^6",
     "esm": "^3.2.25",
     "eyeglass": "^3",
@@ -17,7 +18,7 @@
     "gulp-size": "^4",
     "gulp-sourcemaps": "^3",
     "js-yaml": "^4",
-    "node-sass": "^9.0.0"
+    "sass": "^1.83.4"
   },
   "private": true,
   "scripts": {

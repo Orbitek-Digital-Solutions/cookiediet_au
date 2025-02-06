@@ -20,16 +20,15 @@ let watchFiles = {
 
 // Watch options.
 let watchOptions = {
-  // This is required for watching to work inside vagrant.
-  usePolling: true
+  usePolling: false
 }
 
 /**
  * Watch sass files.
  *
  * Rather than doing a full reload of browserSync, the sass watcher will inject
- * CSS (see styles:development inside styles.js). This is a compromise
- * so you can get instant soft-refreshes to see changes to CSS rapidly. However
+ * CSS (see styles:development inside styles.js). This is a compromise,
+ * so you can get instant soft-refreshes to see changes to CSS rapidly. However,
  * if you make changes to styleguide comments inside a sass file, browserSync
  * won't automatically reload even though the html has changed. You'll need
  * to manually reload in those cases.
