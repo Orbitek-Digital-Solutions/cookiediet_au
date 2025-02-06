@@ -10,8 +10,8 @@ function kachingBundleDeselect(bundle) {
   const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function(mutation) {
       const bundle_week = document.querySelector('kaching-bundle[product-id="7850086138010"]');
-      const bundle_month = document.querySelector('kaching-bundle[product-id="5505065910426"]');
-      
+      const bundle_month = document.querySelector('kaching-bundle[product-id="8428651544730"]');
+ 
       bundle_week.querySelectorAll('.kaching-bundles__bar').forEach((el, index) => {
         el.addEventListener('click', function() {
           kachingBundleDeselect(bundle_month);

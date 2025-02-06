@@ -221,7 +221,6 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -375,60 +374,4 @@
   <script type="text/javascript" defer>
     var script_loaded=!1;function loadJSscripts(){script_loaded||(void 0!==observer&&observer.disconnect(),void 0!==window.yett&&window.yett.unblock(),script_loaded=!0,document.querySelectorAll("iframe[data-src], script[data-src]").forEach(e=>{datasrc=e.dataset.src,null!=datasrc&&(e.src=datasrc)}),document.querySelectorAll("link[data-href]").forEach(e=>{datahref=e.dataset.href,null!=datahref&&(e.href=datahref)}),document.querySelectorAll("script[type='text/lazyload']").forEach(e=>{var t=document.createElement("script");for(a=0;a<e.attributes.length;a++){var r=e.attributes[a];t.setAttribute(r.name,r.value)}t.type="text/javascript",t.innerHTML=e.innerHTML,e.parentNode.insertBefore(t,e),e.parentNode.removeChild(e)}),document.dispatchEvent(new CustomEvent("asyncLazyLoad")))}var activityEvents=["mousedown","mousemove","keydown","scroll","touchstart","click","keypress","touchmove"];activityEvents.forEach(function(e){window.addEventListener(e,loadJSscripts,!1)});
   </script>
-
-  <style>
-    /* Hide the original "Supply" label */
-    .kaching-bundles__bar-variant-names {
-      visibility: hidden; /* Make it invisible */
-    }
-
-    /* Add new label "Flavour" in the same position */
-    .kaching-bundles__bar-variant-names::after {
-      content: "Flavour";  /* Set new label text */
-      visibility: visible; /* Ensure the new label is visible */
-      display: inline-block; /* Make it inline-block to behave like text */
-      color: #333; /* Optional text color */
-      font-size: 12px; /* Optional font size */
-      position: absolute; /* Position it the same way as the original label */
-      top: 10; /* Keeps it in the same vertical position */
-      left: 10px; /* Aligns it to the left */
-    }
-  </style>
-  {% if template == 'product.cookie-diet-pack' and product.handle == '1-month-supply' %}
-    // product.handle value to be updated with the live product handle.
-    <script>
-      (function () {
-        const observer = new MutationObserver(function (mutations) {
-          mutations.forEach(function(mutation) {
-            const bundles = document.querySelectorAll('.kaching-bundles__bar');
-
-            bundles.forEach((bundle, index) => {
-              const supplyElements = bundle.querySelectorAll('select[data-name="Supply"]');
-              const flavourElements = bundle.querySelectorAll('select[data-name="Flavour"]');
-
-              // Disable all supply elements.
-              supplyElements.forEach((element, index) => {
-                element.disabled = true;
-                element.style.display = "none";
-              });
-
-              if (index === 0) {
-               // supplyElements.forEach((element, index) => {
-                //  element.value = "1 Week";
-               //   element.dispatchEvent(new Event("change"));
-              //  });
-
-                //flavourElements.forEach((element, index) => {
-                 // element.querySelector('option[value="Variety Pack"]').remove();
-               // });
-              }
-            });
-          });
-        });
-
-        // Observe changes to the document body (child elements) to catch dynamic updates
-        observer.observe(document.querySelector('kaching-bundle'), { childList: true, subtree: true });
-      })();
-    </script>
-  {% endif %}
 </html>
