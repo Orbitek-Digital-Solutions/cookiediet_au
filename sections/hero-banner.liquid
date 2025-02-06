@@ -1,7 +1,20 @@
+{% render 'hero-banner' %}
+
 {% schema %}
   {
     "name": "Hero Banner",
-    "settings": [],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "media_desktop",
+        "label": "Desktop image"
+      },
+      {
+        "type": "image_picker",
+        "id": "media_mobile",
+        "label": "Mobile image"
+      }
+    ],
     "presets": [
       {
         "name": "Hero Banner"
@@ -9,5 +22,3 @@
     ]
   }
 {% endschema %}
-
-{% render 'hero-banner' %}

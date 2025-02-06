@@ -3,10 +3,13 @@
 GULP=node --max-old-space-size=1024 ./node_modules/.bin/gulp
 
 init:
-	yarn install --non-interactive --no-progress --network-timeout 100000
+	npm install
 
 build:
 	$(GULP) build
+
+watch:
+	$(GULP)
 
 theme-pull:
 	shopify theme pull --store=cookie-diet-au.myshopify.com

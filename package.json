@@ -18,7 +18,7 @@
     "gulp-size": "^4",
     "gulp-sourcemaps": "^3",
     "js-yaml": "^4",
-    "node-sass": "^9.0.0"
+    "sass": "^1.83.4"
   },
   "private": true,
   "scripts": {

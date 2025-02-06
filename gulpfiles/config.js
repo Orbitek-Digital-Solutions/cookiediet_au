@@ -21,6 +21,11 @@ try {
 // node-sass / eyeglass global config.
 // This is used by styles and styleguide.
 config.sassOptions = {
+  silenceDeprecations: [
+      'global-builtin',
+      'import',
+      'legacy-js-api',
+  ],
   includePaths: [
     config.sass.src
   ],
