@@ -1,22 +1,3 @@
-/*hide the Kaching 1 week bundle from the 1 week product */
-#shopify-block-AbjdubGtwZzhyZ0lxa__kaching_bundles_app_block_TNXUqt {
-  /* display: none !important;  */
-}
-
-div[data-id="5505065910426"] .price-item--last {
-  /* visibility: hidden; */
-  /* position: relative; */
-}
-
-div[data-id="5505065910426"] .price-item--last:after {
-  /* visibility: visible; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* content: "From $79.95 AUD"; */
-  /* width: 150px */
-}
-
 .hero-banner {
   position: relative;
   padding: 30px 0 246px;
@@ -98,4 +79,70 @@ div[data-id="5505065910426"] .price-item--last:after {
   .hero-banner__caption {
     max-width: 40%;
   }
+}
+
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.benefits--overlayed {
+  position: relative;
+  z-index: 2;
+  padding-top: 0;
+  margin-top: -37.5px;
+}
+@media (min-width: 750px) {
+  .benefits__container {
+    padding: 0 5rem;
+  }
+}
+.benefits__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 60px;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.benefits__item {
+  background-color: rgb(238, 232, 218);
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding: 10px 40px 10px 10px;
+  border-radius: 100px;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+.benefits__item__title {
+  font-size: 20px;
+  line-height: 1.333;
+}
+.benefits__item__icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.benefits__item__icon img {
+  width: 100%;
+  height: 100%;
 }
