@@ -5,6 +5,7 @@
   "version": "3.0.0",
   "repository": {},
   "devDependencies": {
+    "@shopify/cli": "^3.75.0",
     "breakpoint-sass": "^2",
     "browserlist": "^1.0.1",
     "chroma-sass": "^1.2.6",
