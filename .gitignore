@@ -1,5 +1,4 @@
 .idea
 node_modules
-assets/theme.css
-assets/theme.css.map
+assets/*.css.map
 .eyeglass_cache
