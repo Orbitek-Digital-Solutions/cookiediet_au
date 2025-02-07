@@ -5,9 +5,10 @@
 // These colors make up the building blocks for component colors.
 $chroma: define-default-color-scheme('Descriptive color names for use in "functional" color names below.');
 $chroma: add-colors((
-    'white':                  #fff,
-    'rich black':             #000,
-    'orange':                 #f65c3c,
+        'white': #fff,
+        'rich black': #000,
+        'orange': #f65c3c,
+        'green': #007f4e,
 ));
 
 // The primary color scheme provides components with colors.
