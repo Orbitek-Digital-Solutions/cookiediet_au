@@ -19,6 +19,7 @@ jobs:
         run: |
           shopify theme push \
             --json \
-            --theme github_action \
+            --unpublished \
+            --theme github_action2 \
             --store cookieau-test \
             --password shptka_3936df6c6d68c76c21f9c6d1c6d1db65
