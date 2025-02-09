@@ -20,5 +20,5 @@ jobs:
           shopify theme push \
             --json \
             --theme github_action \
-            --store ${{ env.SHOPIFY_STORE }} \
+            --store cookieau-test \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
