@@ -17,9 +17,7 @@
 @include add-breakpoint(laptop-up, 1200px);
 @include add-breakpoint(desktop-up, 1600px);
 
-@include add-breakpoint(tablet-portrait-down, max-width 989px);
-@include add-breakpoint(tablet-landscape-down, max-width 1199px);
 @include add-breakpoint(laptop-down, max-width 1599px);
-
-@include add-breakpoint(small-phone-only, max-width 399px);
+@include add-breakpoint(tablet-landscape-down, max-width 1199px);
+@include add-breakpoint(tablet-portrait-down, max-width 989px);
 @include add-breakpoint(phone-only, max-width 749px);
