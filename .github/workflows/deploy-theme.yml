@@ -25,7 +25,6 @@ jobs:
         run: |
           shopify theme push \
             --json \
-            --unpublished \
-            --theme github_action2 \
+            --theme cookiediet_au \
             --store cookieau-test \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
