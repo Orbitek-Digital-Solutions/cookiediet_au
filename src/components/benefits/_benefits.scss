@@ -84,7 +84,7 @@
     --logo-width: 250px; /* Width of each logo */
     --logo-height: 100px; /* Height of each logo */
     --gap: calc(var(--logo-width) / 14); /* Space between logos, calculated based on logo width */
-    --duration: 60s; /* Duration of the scroll animation */
+    --duration: 30s; /* Duration of the scroll animation */
     --scroll-start: 0; /* Start position of scroll animation */
     --scroll-end: calc(-100% - var(--gap)); /* End position of scroll animation */
 
