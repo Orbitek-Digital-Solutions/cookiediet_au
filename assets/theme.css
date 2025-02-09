@@ -1,0 +1,237 @@
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.benefits--overlayed {
+  position: relative;
+  padding-top: 0;
+  margin-top: -23.5px;
+}
+@media (min-width: 750px) {
+  .benefits__container {
+    padding: 0 5rem;
+  }
+}
+.benefits__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 60px;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.benefits__item {
+  background-color: rgb(238, 232, 218);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 20px 6px 6px;
+  gap: 8px;
+  border-radius: 100px;
+}
+.benefits__item__title {
+  font-size: 18px;
+  line-height: 1;
+}
+.benefits__item__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.benefits__item__icon img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 750px) {
+  .benefits__items:last-child {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .benefits--overlayed {
+    margin-top: -37.5px;
+    padding: 0 5rem;
+  }
+  .benefits__item {
+    padding: 10px 40px 10px 10px;
+    gap: 16px;
+  }
+  .benefits__item__title {
+    font-size: 20px;
+  }
+  .benefits__item__icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 749px) {
+  .benefits {
+    /* Setting custom properties for logo dimensions, spacing, and animation duration */
+    /* https://jsdev.space/logo-scroll-css/ */
+    --logo-width: 250px; /* Width of each logo */
+    --logo-height: 100px; /* Height of each logo */
+    --gap: calc(var(--logo-width) / 14); /* Space between logos, calculated based on logo width */
+    --duration: 60s; /* Duration of the scroll animation */
+    --scroll-start: 0; /* Start position of scroll animation */
+    --scroll-end: calc(-100% - var(--gap)); /* End position of scroll animation */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stacks content vertically */
+    gap: var(--gap); /* Adds space between child elements */
+    max-width: 100vw; /* Limits width to the viewport */
+  }
+  .benefits__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    gap: var(--gap);
+  }
+}
+.benefits__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  -webkit-animation: scroll var(--duration) linear infinite;
+          animation: scroll var(--duration) linear infinite;
+}
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateX(var(--scroll-start));
+            transform: translateX(var(--scroll-start)); /* Animation start position */
+  }
+  to {
+    -webkit-transform: translateX(var(--scroll-end));
+            transform: translateX(var(--scroll-end)); /* Animation end position */
+  }
+}
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(var(--scroll-start));
+            transform: translateX(var(--scroll-start)); /* Animation start position */
+  }
+  to {
+    -webkit-transform: translateX(var(--scroll-end));
+            transform: translateX(var(--scroll-end)); /* Animation end position */
+  }
+}
+
+.hero-banner {
+  position: relative;
+  padding: 30px 0 246px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 6%, rgb(238, 232, 218) 100%);
+}
+.hero-banner__header {
+  color: #f65c3c;
+  font-size: 3rem;
+  line-height: 1;
+}
+.hero-banner__description {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0;
+  margin-top: 0.75rem;
+}
+.hero-banner__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-banner__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-banner__caption {
+  z-index: 1;
+}
+.hero-banner__rating {
+  font-size: 1.5rem;
+  line-height: 1.555;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.hero-banner__rating svg {
+  color: #72b043;
+  fill: #72b043;
+  width: 1.25rem;
+}
+.hero-banner__cta {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  padding: 0.6em 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (min-width: 750px) {
+  .hero-banner {
+    padding: 96px 0 166px;
+  }
+  .hero-banner__header {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  .hero-banner__description {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+  .hero-banner__cta {
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 0.6em 1.2em;
+  }
+  .hero-banner__rating {
+    font-size: 1.5rem;
+    line-height: 1.333;
+    margin-top: 1.5rem;
+  }
+  .hero-banner__rating svg {
+    width: 1.5rem;
+  }
+  .hero-banner__caption {
+    max-width: 40%;
+  }
+}
