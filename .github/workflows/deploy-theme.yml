@@ -21,4 +21,4 @@ jobs:
             --json \
             --theme github_action \
             --store cookieau-test \
-            --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+            --password shptka_3936df6c6d68c76c21f9c6d1c6d1db65
