@@ -12,6 +12,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Initialize project
+        run: make init
+
+      - name: Build project
+        run: make build
+
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli
 
