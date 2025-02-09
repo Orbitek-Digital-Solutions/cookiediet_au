@@ -80,6 +80,7 @@
 @media (max-width: 749px) {
   .benefits {
     /* Setting custom properties for logo dimensions, spacing, and animation duration */
+    /* https://jsdev.space/logo-scroll-css/ */
     --logo-width: 250px; /* Width of each logo */
     --logo-height: 100px; /* Height of each logo */
     --gap: calc(var(--logo-width) / 14); /* Space between logos, calculated based on logo width */
