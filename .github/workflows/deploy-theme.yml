@@ -32,5 +32,5 @@ jobs:
           shopify theme push \
             --json \
             --theme cookiediet_au/test \
-            --store cookieau-test \
+            --store cookie-diet-au \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
