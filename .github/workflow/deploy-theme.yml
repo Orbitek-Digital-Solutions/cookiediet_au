@@ -19,6 +19,6 @@ jobs:
         run: |
           shopify theme push \
             --json \
-            --theme your-theme-name-or-id \
-            --store ${{ secrets.SHOPIFY_STORE }} \
+            --theme github_action \
+            --store ${{ env.SHOPIFY_STORE }} \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
