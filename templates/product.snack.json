@@ -82,7 +82,7 @@
           }
         },
         "5cfecbd1-e8f5-40a1-98bd-af2a1e60f618": {
-          "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
           "disabled": true,
           "settings": {}
         },

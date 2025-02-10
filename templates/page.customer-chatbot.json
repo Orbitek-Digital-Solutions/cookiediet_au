@@ -46,27 +46,6 @@
     },
     "1728278669da3def38": {
       "type": "apps",
-      "blocks": {
-        "conversagent_gqa_block_tPkz44": {
-          "type": "shopify://apps/conversagent/blocks/gqa-block/9dcb9616-f02a-40f7-b434-36f4866f2140",
-          "settings": {
-            "gqa_agentName": "Cookie Diet",
-            "gqa_agentTagLine": "AI Assistant",
-            "gqa_waitForGreeting": false,
-            "gqa_isSearchSuggestion": false,
-            "gqa_theme_bodyBg": "#fff",
-            "gqa_theme_bodyBorderColor": "#bfbfbf",
-            "gqa_theme_msgBubbleUserBg": "#7123c0",
-            "gqa_theme_msgBubbleUserTextColor": "#fff",
-            "gqa_theme_msgBubbleAgentBg": "#f0f0f0",
-            "gqa_theme_msgBubbleAgentTextColor": "#000",
-            "gqa_customCSS": ""
-          }
-        }
-      },
-      "block_order": [
-        "conversagent_gqa_block_tPkz44"
-      ],
       "settings": {
         "include_margins": true,
         "color_scheme": "background-1",

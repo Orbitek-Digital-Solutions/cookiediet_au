@@ -11,7 +11,6 @@
   "sections": {
     "608d0a68-b01e-401e-b7ff-08633578eb26": {
       "type": "image-banner-metafields",
-      "disabled": true,
       "blocks": {
         "template--15817866182810__608d0a68-b01e-401e-b7ff-08633578eb26-1667592173ea1c02ae-0": {
           "type": "heading",
@@ -24,6 +23,7 @@
       "block_order": [
         "template--15817866182810__608d0a68-b01e-401e-b7ff-08633578eb26-1667592173ea1c02ae-0"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 50,
         "image_height": "small",
@@ -95,7 +95,7 @@
       "type": "apps",
       "blocks": {
         "6d25064d-15eb-441a-aa47-76eee575a968": {
-          "type": "shopify://apps/okendo-product-reviews-ugc/blocks/referral-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/referral-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {}
         }
       },
