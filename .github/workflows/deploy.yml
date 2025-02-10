@@ -1,12 +1,6 @@
 name: Deploy
 
-on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Choose branch name'     
-        required: true
-        default: 'master'
+on: [ "workflow_dispatch" ]
 
 jobs:
   deploy:
