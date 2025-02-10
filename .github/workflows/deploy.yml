@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Choose branch name'     
+        required: true
+        default: 'master'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Branch: ${{ github.event.inputs.branch }}"
