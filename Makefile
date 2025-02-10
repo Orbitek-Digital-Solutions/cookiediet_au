@@ -13,7 +13,7 @@ watch:
 	$(GULP)
 
 theme-pull:
-	$(SHOPIFY) theme pull --store=cookie-diet-au.myshopify.com
+	$(SHOPIFY) theme pull --store=cookie-diet-au
 
 dev:
-	$(SHOPIFY) theme dev
+	$(SHOPIFY) theme dev --store=cookie-diet-au

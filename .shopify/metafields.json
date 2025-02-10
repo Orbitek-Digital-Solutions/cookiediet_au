@@ -21,6 +21,16 @@
   "order": [],
   "page": [
     {
+      "key": "hero_image",
+      "namespace": "arena",
+      "name": "Hero Banner",
+      "description": "Insert file name path including extension (eg hero_banner_home.jpg)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
       "key": "hero_html",
       "namespace": "arena",
       "name": "Hero Title",
@@ -29,54 +39,24 @@
         "name": "multi_line_text_field",
         "category": "TEXT"
       }
-    },
-    {
-      "key": "hero_image",
-      "namespace": "arena",
-      "name": "Hero Banner Image",
-      "description": "Insert file name path including extension (eg hero_banner_home.jpg)",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
     }
   ],
   "product": [
     {
-      "key": "best_value_badge",
-      "namespace": "custom",
-      "name": "Best Value Badge",
-      "description": "Enable value badge on product card",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
-      "key": "bestseller_badge",
-      "namespace": "custom",
-      "name": "Bestseller Badge",
-      "description": "Enable bestseller badge on product card",
-      "type": {
-        "name": "boolean",
-        "category": "TRUE_FALSE"
-      }
-    },
-    {
       "key": "collection_image",
       "namespace": "custom",
-      "name": "Collection image",
-      "description": "Add collection page product image",
+      "name": "Collection image (desktop)",
+      "description": "Add collection page product image (landscape on desktop)",
       "type": {
         "name": "file_reference",
         "category": "REFERENCE"
       }
     },
     {
-      "key": "second_image_hover_",
+      "key": "collection_image_mobile_",
       "namespace": "custom",
-      "name": "Second Image (hover)",
-      "description": "Add second image to be displayed on hover",
+      "name": "Collection image (mobile)",
+      "description": "Add collection page product image (portrait on mobile)",
       "type": {
         "name": "file_reference",
         "category": "REFERENCE"
@@ -90,6 +70,126 @@
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
+      }
+    },
+    {
+      "key": "subtitle",
+      "namespace": "descriptors",
+      "name": "Product subtitle",
+      "description": "Used as a shorthand for a product name",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bestseller_badge",
+      "namespace": "custom",
+      "name": "Bestseller Badge",
+      "description": "Enable bestseller badge on product card",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "best_value_badge",
+      "namespace": "custom",
+      "name": "Best Value Badge",
+      "description": "Enable value badge on product card",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "second_image_hover_",
+      "namespace": "custom",
+      "name": "Second Image (hover)",
+      "description": "Add second image to be displayed on hover",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cookie_qty",
+      "namespace": "custom",
+      "name": "Cookie Qty",
+      "description": "Insert total amount of Cookies in each box",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "short_description",
+      "namespace": "custom",
+      "name": "Short Description",
+      "description": "Insert short description (HTML)",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_product",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Product",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "rrp_saving",
+      "namespace": "custom",
+      "name": "RRP Saving",
+      "description": "Insert amount saved in RRP",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
       }
     },
     {
@@ -133,6 +233,16 @@
       }
     },
     {
+      "key": "allergen-information",
+      "namespace": "shopify",
+      "name": "Allergen information",
+      "description": "Indicates potential allergens present in food or beverages, such as wheat or peanuts",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
       "key": "dietary-preferences",
       "namespace": "shopify",
       "name": "Dietary preferences",
@@ -153,6 +263,137 @@
       }
     }
   ],
-  "variant": [],
+  "variant": [
+    {
+      "key": "cookie_qty",
+      "namespace": "custom",
+      "name": "Cookie Qty",
+      "description": "Amount of Cookies in box",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "custom_label_4",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 4",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_3",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 3",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_2",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 2",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_1",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 1",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_0",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 0",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_system",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size System",
+      "description": "The country of the size system used by your product.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_type",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size Type",
+      "description": "Your apparel product’s cut.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "mpn",
+      "namespace": "mm-google-shopping",
+      "name": "Google: MPN",
+      "description": "Your product’s Manufacturer Part Number (MPN).",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "gender",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Gender",
+      "description": "The gender for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "condition",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Condition",
+      "description": "The condition of your product at time of sale.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "age_group",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Age Group",
+      "description": "The demographic for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "rrp_saving_variant",
+      "namespace": "custom",
+      "name": "RRP Saving Variant",
+      "description": "Enter savings from RRP",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    }
+  ],
   "shop": []
 }
