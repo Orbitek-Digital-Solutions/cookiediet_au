@@ -1,6 +1,12 @@
 name: Theme deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - test
+  pull_request:
+    branches:
+      - test
 
 jobs:
   deploy:
@@ -25,7 +31,6 @@ jobs:
         run: |
           shopify theme push \
             --json \
-            --unpublished \
-            --theme github_action2 \
-            --store cookieau-test \
+            --theme cookiediet_au/test \
+            --store cookie-diet-au \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
