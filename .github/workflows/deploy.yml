@@ -1,12 +1,6 @@
-name: Theme deploy
+name: Deploy
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [ "workflow_dispatch" ]
 
 jobs:
   deploy:
@@ -31,6 +25,7 @@ jobs:
         run: |
           shopify theme push \
             --json \
-            --theme cookiediet_au/test \
-            --store cookie-diet-au \
+            --unpublished \
+            --store ${{ vars.SHOPIFY_FLAG_STORE }} \
+            --theme cookiediet/${{ github.ref_name }} \
             --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
