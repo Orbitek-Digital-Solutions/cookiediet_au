@@ -7,7 +7,9 @@
   &__header {
     color: color('orange');
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.2;
+    font-family: inherit !important;
+    font-weight: 900 !important;
   }
 
   &__description {
@@ -61,7 +63,6 @@
 
     &__header {
       font-size: 4.5rem;
-      line-height: 1;
     }
 
     &__description {
