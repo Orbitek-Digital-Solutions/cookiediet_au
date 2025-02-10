@@ -2,10 +2,13 @@ name: Deploy
 
 on: [ "workflow_dispatch" ]
 
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Branch: ${{ github.event.inputs.branch }}"
+          echo "Branch: ${{ env.BRANCH_NAME }}"
