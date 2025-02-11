@@ -77,6 +77,12 @@
             "picker_type": "button"
           }
         },
+        "kaching_bundles_app_block_TNXUqt": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "custom_liquid_7C3JhB": {
           "type": "custom_liquid",
           "settings": {
@@ -120,12 +126,6 @@
             "custom_liquid": "{% if product.title contains '2 Week' %}\n{% render 'countdown-timer', end_date: \"Oct 30, 2023\" %}\n\n{% render 'blackfriday-banner' %}\n{% endif %}"
           }
         },
-        "kaching_bundles_app_block_TNXUqt": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "ebe3c6e1-487b-462f-a8e9-5a43908e5dc6": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
           "disabled": true,
@@ -166,6 +166,7 @@
         "price_DAXDU3",
         "custom_liquid_Me9zWW",
         "variant_picker_wLqkpC",
+        "kaching_bundles_app_block_TNXUqt",
         "custom_liquid_7C3JhB",
         "buy_buttons",
         "custom_liquid_qwGNY3",
@@ -173,7 +174,6 @@
         "custom_liquid_TpWFzW",
         "custom_liquid_VaGrJY",
         "f5558c4b-4a20-4ef6-89c4-dfb187cabc5c",
-        "kaching_bundles_app_block_TNXUqt",
         "ebe3c6e1-487b-462f-a8e9-5a43908e5dc6",
         "7e8a49bc-5048-4157-9149-2d2aec7ddcd5",
         "5cfecbd1-e8f5-40a1-98bd-af2a1e60f618",
