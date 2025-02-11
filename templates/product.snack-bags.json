@@ -77,6 +77,12 @@
             "picker_type": "button"
           }
         },
+        "custom_liquid_7C3JhB": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"text-align: center;\">\n  {% if product.handle == \"cookie-diet-snack-bags\" %}\n    <a href=\"{{ routes.root_url }}products/cookie-diet-snack-bags-buy-3-get-1-free\">Or Buy 3 & Get 1 Free</a>\n  {% endif %}\n</div>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -160,6 +166,7 @@
         "price_DAXDU3",
         "custom_liquid_Me9zWW",
         "variant_picker_wLqkpC",
+        "custom_liquid_7C3JhB",
         "buy_buttons",
         "custom_liquid_qwGNY3",
         "custom_liquid_MBFaij",
