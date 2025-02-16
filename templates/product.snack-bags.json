@@ -71,6 +71,12 @@
             "custom_liquid": "<div style=\"margin-top: -25px;\" class=\"benefit-block-1\"><p>/ bag (contains 9 delicious cookies)</p></div>"
           }
         },
+        "recharge_subscriptions_subscription_widget_GBB4fW": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker_wLqkpC": {
           "type": "variant_picker",
           "settings": {
@@ -165,6 +171,7 @@
         "bcefced5-b411-425e-87e1-51e8e8795241",
         "price_DAXDU3",
         "custom_liquid_Me9zWW",
+        "recharge_subscriptions_subscription_widget_GBB4fW",
         "variant_picker_wLqkpC",
         "kaching_bundles_app_block_TNXUqt",
         "custom_liquid_7C3JhB",
