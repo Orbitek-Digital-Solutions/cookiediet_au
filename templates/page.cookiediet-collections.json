@@ -89,6 +89,9 @@
         "featured_collection_GDqjr4",
         "featured_collection_wVCUrn"
       ],
+      "custom_css": [
+        ".card__heading {font-size: calc(var(--font-heading-scale) * 2.8rem);}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
