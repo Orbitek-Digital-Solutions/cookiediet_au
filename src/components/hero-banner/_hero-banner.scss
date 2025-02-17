@@ -10,6 +10,7 @@
     line-height: 1.2;
     font-family: inherit !important;
     font-weight: 900 !important;
+    margin: 0;
   }
 
   &__description {
@@ -57,7 +58,7 @@
     text-transform: uppercase;
     font-weight: 700;
   }
-
+  
   @include respond-to(tablet-portrait-up) {
     padding: 96px 0 166px;
 
@@ -89,7 +90,7 @@
     }
 
     &__caption {
-      max-width: 40%;
+      max-width: 50%;
     }
   }
 }
