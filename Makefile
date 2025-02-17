@@ -15,5 +15,5 @@ watch:
 theme-pull:
 	$(SHOPIFY) theme pull --store=cookie-diet-au
 
-dev:
+theme-dev:
 	$(SHOPIFY) theme dev --store=cookie-diet-au
