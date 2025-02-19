@@ -576,7 +576,25 @@ img {
 .card:not(.ratio)>.card__content {
   border-top: 1px solid #777;
 }
-    
+
+ .collection-list__item .card:not(.ratio)>.card__content {
+  border-bottom: 1px solid #777;
+   border-top: none;
+}
+
+.collection-list__item  .card .card__heading {
+    grid-template-columns: unset;
+    column-gap: 0px;
+    text-align: center;
+    display: block;
+}
+
+@media (min-width: 750px) {
+  .collection-list__item  .card .card__heading {
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
+  }
+}
+ 
 .card-wrapper {
   border: 1px solid #777;
   border-radius: .5rem;
