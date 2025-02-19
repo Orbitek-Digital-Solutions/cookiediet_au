@@ -11,21 +11,10 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "background-2"
-      }
-    },
-    "custom_liquid_xY6qpk": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{{ collection.description }}",
-        "custom_class": "collection__hero",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "show_collection_image": false,
+        "color_scheme": "background-1"
       }
     },
     "61d68504-dd63-40d5-92c3-b7ab5b68c75f": {
@@ -111,15 +100,6 @@
         "padding_bottom": 44
       }
     },
-    "b2d38c77-db8c-4b3b-bccd-4c938fb5c8fb": {
-      "type": "reviewsio-all",
-      "disabled": true,
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_scheme": "background-2"
-      }
-    },
     "1bb106e0-7149-496a-9255-022d785e0ed8": {
       "type": "rich-text",
       "blocks": {
@@ -129,31 +109,10 @@
             "heading": "<p>MORE PROOF THAT THE COOKIE DIET<br><span class=\"primary-light\">HELPS ACHIEVE RESULTS</span></p>",
             "heading_size": "h1"
           }
-        },
-        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-text-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-button-1": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
-        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-heading-1",
-        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-text-1",
-        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-button-1"
+        "template--16157132030106__1bb106e0-7149-496a-9255-022d785e0ed8-heading-1"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -221,12 +180,10 @@
   },
   "order": [
     "banner",
-    "custom_liquid_xY6qpk",
     "61d68504-dd63-40d5-92c3-b7ab5b68c75f",
     "product-grid",
     "7d121e15-839b-4f21-93ff-34174e16232c",
     "0ff72185-81b8-4121-9fc7-2391e712bc1c",
-    "b2d38c77-db8c-4b3b-bccd-4c938fb5c8fb",
     "1bb106e0-7149-496a-9255-022d785e0ed8",
     "169166547590e8e306",
     "c00c3651-0f85-425a-896a-c644a4754881",
