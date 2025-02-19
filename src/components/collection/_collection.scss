@@ -1,0 +1,14 @@
+.collection__hero,
+%collection__hero {
+  text-align: center;
+
+  h2 {
+    font-size: calc(var(--font-heading-scale)* 4rem);
+  }
+
+  @include respond-to(tablet-portrait-up) {
+    h2 {
+      font-size: calc(var(--font-heading-scale)* 5.2rem);
+    }
+  }
+}
