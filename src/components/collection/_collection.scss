@@ -4,6 +4,7 @@
 
   h2 {
     font-size: calc(var(--font-heading-scale)* 4rem);
+    margin: .83em 0;
   }
 
   @include respond-to(tablet-portrait-up) {
